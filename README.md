@@ -40,3 +40,19 @@ These datasets include:
 The next step is integrating verifiable dataset storage designed for AI workloads.
 
 Potential storage layer: **Shelby**.
+
+## AI Dataset Pipeline
+
+Hansen AI is designed to generate structured market datasets for AI-driven research.
+
+The system continuously collects market signals including:
+
+* volatility shifts
+* momentum changes
+* structural breakouts
+* cross-asset performance
+
+These signals are converted into machine-readable datasets that can be used for AI model training, research, and market intelligence analysis.
+
+Future versions will store these datasets on verifiable decentralized storage designed for AI workloads.
+
