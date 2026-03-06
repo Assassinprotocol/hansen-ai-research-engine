@@ -1,0 +1,9 @@
+{
+  "generated_at": "2026-03-06",
+  "engine": "Hansen AI Research Engine",
+  "signals": [
+    {"symbol": "BTCUSDT", "signal": "volatility rising"},
+    {"symbol": "ETHUSDT", "signal": "outperforming BTC"},
+    {"symbol": "SOLUSDT", "signal": "momentum increasing"}
+  ]
+}
