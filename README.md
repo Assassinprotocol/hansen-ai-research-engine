@@ -390,7 +390,7 @@ research "topic"              # Research topic
 * \[ ] Reinforcement learning trading agent
 * \[ ] Public dataset explorer
 * \[ ] Shelby mainnet dataset publishing
-* \[ ] Telegram bot + webhook alerts (P8)
+* \[ ] Discord bot + webhook alerts (P8)
 * \[ ] API monetization layer
 
 \---
