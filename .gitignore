@@ -1,0 +1,14 @@
+# runtime data
+data/*.json
+data/reports/
+
+# database
+*.db
+
+# python
+__pycache__/
+*.pyc
+
+# env
+venv/
+.env
