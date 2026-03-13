@@ -110,7 +110,7 @@ node uploader.js
 
 ## Architecture Overview
 
-!\[Architecture](docs/architecture.svg)
+![Architecture](https://raw.githubusercontent.com/Assassinprotocol/hansen-ai-research-engine/main/docs/architecture.svg)
 
 ```
 Binance Futures API
