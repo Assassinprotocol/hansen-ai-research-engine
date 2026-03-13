@@ -1,0 +1,114 @@
+{
+  "report_type": "flash",
+  "snapshot": {
+    "timestamp": 1773351240,
+    "datetime": "2026-03-13 04:34",
+    "top_sectors": [
+      {
+        "name": "Infrastructure",
+        "change": 8.639,
+        "trend": "bullish"
+      },
+      {
+        "name": "AI / Compute",
+        "change": 5.689,
+        "trend": "bullish"
+      },
+      {
+        "name": "Layer 2 / Scaling",
+        "change": 1.204,
+        "trend": "neutral"
+      },
+      {
+        "name": "Meme",
+        "change": -0.028,
+        "trend": "neutral"
+      },
+      {
+        "name": "DEX",
+        "change": -0.164,
+        "trend": "neutral"
+      }
+    ],
+    "bottom_sectors": [
+      {
+        "name": "DeFi",
+        "change": -2.061,
+        "trend": "bearish"
+      },
+      {
+        "name": "Layer 1",
+        "change": -2.392,
+        "trend": "bearish"
+      },
+      {
+        "name": "SocialFi",
+        "change": -2.915,
+        "trend": "bearish"
+      }
+    ],
+    "fear_greed_score": 50,
+    "fear_greed_level": "Neutral",
+    "green_ratio": 50,
+    "alerts_24h": 500,
+    "critical_alerts": 187,
+    "top_alerts": [
+      {
+        "message": "MAGMAUSDT down -5.12% in 24h",
+        "severity": "warning"
+      },
+      {
+        "message": "DEGOUSDT volume 3.8x above average ($268,290,346)",
+        "severity": "warning"
+      },
+      {
+        "message": "BNXUSDT volume 6.9x above average ($492,004,952)",
+        "severity": "warning"
+      },
+      {
+        "message": "LYNUSDT volume 4.1x above average ($294,192,751)",
+        "severity": "warning"
+      },
+      {
+        "message": "ACXUSDT volume 4.8x above average ($342,322,568)",
+        "severity": "warning"
+      }
+    ],
+    "whale_signals": 6,
+    "exchange_flow": "bearish",
+    "inflow_count": 2,
+    "outflow_count": 8,
+    "momentum_kings": [
+      {
+        "symbol": "ALPACA",
+        "change": 391.228
+      },
+      {
+        "symbol": "BNX",
+        "change": 66.376
+      },
+      {
+        "symbol": "UAI",
+        "change": 51.809
+      }
+    ],
+    "dip_buys": [
+      {
+        "symbol": "PORT3",
+        "change": -68.311
+      },
+      {
+        "symbol": "BSW",
+        "change": -55.164
+      },
+      {
+        "symbol": "NEIROETH",
+        "change": -47.282
+      }
+    ]
+  },
+  "timestamp": 1773351274,
+  "datetime": "2026-03-13 04:34:34",
+  "content": "[FLASH 2026-03-13 04:34] Market sentiment: Neutral (50/100). Green ratio: 50%. Exchange flow: bearish. Whale signals: 6. Critical alerts: 187.",
+  "generated_by": "fallback_template"
+}

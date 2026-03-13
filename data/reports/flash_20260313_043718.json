@@ -1,0 +1,114 @@
+{
+  "report_type": "flash",
+  "snapshot": {
+    "timestamp": 1773351339,
+    "datetime": "2026-03-13 04:35",
+    "top_sectors": [
+      {
+        "name": "AI / Compute",
+        "change": 2.811,
+        "trend": "bullish"
+      },
+      {
+        "name": "Meme",
+        "change": 2.605,
+        "trend": "bullish"
+      },
+      {
+        "name": "Layer 2 / Scaling",
+        "change": 0.935,
+        "trend": "neutral"
+      },
+      {
+        "name": "DEX",
+        "change": 0.433,
+        "trend": "neutral"
+      },
+      {
+        "name": "Liquid Staking",
+        "change": 0.386,
+        "trend": "neutral"
+      }
+    ],
+    "bottom_sectors": [
+      {
+        "name": "Oracle",
+        "change": -1.38,
+        "trend": "neutral"
+      },
+      {
+        "name": "Privacy",
+        "change": -2.362,
+        "trend": "bearish"
+      },
+      {
+        "name": "Gaming / GameFi",
+        "change": -7.946,
+        "trend": "bearish"
+      }
+    ],
+    "fear_greed_score": 50,
+    "fear_greed_level": "Neutral",
+    "green_ratio": 50,
+    "alerts_24h": 638,
+    "critical_alerts": 252,
+    "top_alerts": [
+      {
+        "message": "XPLUSDT up +6.63% in 24h",
+        "severity": "warning"
+      },
+      {
+        "message": "FLMUSDT dumped -30.51% in 24h",
+        "severity": "critical"
+      },
+      {
+        "message": "MEMEUSDT up +5.65% in 24h",
+        "severity": "warning"
+      },
+      {
+        "message": "CHESSUSDT dumped -30.75% in 24h",
+        "severity": "critical"
+      },
+      {
+        "message": "PORT3USDT dumped -68.31% in 24h",
+        "severity": "critical"
+      }
+    ],
+    "whale_signals": 6,
+    "exchange_flow": "bearish",
+    "inflow_count": 2,
+    "outflow_count": 7,
+    "momentum_kings": [
+      {
+        "symbol": "ALPACA",
+        "change": 391.228
+      },
+      {
+        "symbol": "BNX",
+        "change": 66.376
+      },
+      {
+        "symbol": "UAI",
+        "change": 51.809
+      }
+    ],
+    "dip_buys": [
+      {
+        "symbol": "PORT3",
+        "change": -68.311
+      },
+      {
+        "symbol": "BSW",
+        "change": -55.164
+      },
+      {
+        "symbol": "NEIROETH",
+        "change": -47.282
+      }
+    ]
+  },
+  "timestamp": 1773351376,
+  "datetime": "2026-03-13 04:36:16",
+  "content": "[FLASH 2026-03-13 04:35] Market sentiment: Neutral (50/100). Green ratio: 50%. Exchange flow: bearish. Whale signals: 6. Critical alerts: 252.",
+  "generated_by": "fallback_template"
+}

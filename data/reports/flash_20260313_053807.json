@@ -1,0 +1,411 @@
+{
+  "report_type": "flash",
+  "snapshot": {
+    "timestamp": 1773354952,
+    "data_sources": [
+      "sector_performance",
+      "sentiment",
+      "alerts",
+      "whale_activity",
+      "exchange_flow",
+      "screener",
+      "correlation"
+    ],
+    "sectors": {
+      "ranking": [
+        {
+          "name": "AI / Compute",
+          "change": 7.015,
+          "trend": "bullish",
+          "strength": 70.1,
+          "coins_up": 6,
+          "coins_down": 0
+        },
+        {
+          "name": "Infrastructure",
+          "change": 2.602,
+          "trend": "bullish",
+          "strength": 17.3,
+          "coins_up": 2,
+          "coins_down": 1
+        },
+        {
+          "name": "Meme",
+          "change": 1.804,
+          "trend": "neutral",
+          "strength": 18.0,
+          "coins_up": 1,
+          "coins_down": 0
+        },
+        {
+          "name": "Layer 1",
+          "change": 0.615,
+          "trend": "neutral",
+          "strength": 4.1,
+          "coins_up": 2,
+          "coins_down": 1
+        },
+        {
+          "name": "Exchange Tokens",
+          "change": -0.163,
+          "trend": "neutral",
+          "strength": 0,
+          "coins_up": 0,
+          "coins_down": 1
+        },
+        {
+          "name": "Store of Value",
+          "change": -0.541,
+          "trend": "neutral",
+          "strength": 0,
+          "coins_up": 0,
+          "coins_down": 2
+        },
+        {
+          "name": "DeFi",
+          "change": -0.883,
+          "trend": "neutral",
+          "strength": 3.5,
+          "coins_up": 2,
+          "coins_down": 3
+        },
+        {
+          "name": "Oracle",
+          "change": -2.039,
+          "trend": "bearish",
+          "strength": 0,
+          "coins_up": 0,
+          "coins_down": 1
+        },
+        {
+          "name": "Layer 2 / Scaling",
+          "change": -2.339,
+          "trend": "bearish",
+          "strength": 0,
+          "coins_up": 0,
+          "coins_down": 1
+        },
+        {
+          "name": "Gaming / GameFi",
+          "change": -3.792,
+          "trend": "bearish",
+          "strength": 15.2,
+          "coins_up": 2,
+          "coins_down": 3
+        }
+      ],
+      "top_3": [
+        "AI / Compute",
+        "Infrastructure",
+        "Meme"
+      ],
+      "bottom_3": [
+        "Oracle",
+        "Layer 2 / Scaling",
+        "Gaming / GameFi"
+      ]
+    },
+    "sector_rotation": {
+      "rotating_in": [],
+      "rotating_out": []
+    },
+    "sentiment": {
+      "score": 50,
+      "level": null,
+      "components": {},
+      "market_breadth": {
+        "total": null,
+        "green": null,
+        "red": null,
+        "green_ratio": null,
+        "avg_change": null
+      }
+    },
+    "active_narratives": [
+      {
+        "label": "AI Narrative Hot",
+        "description": "AI/Compute tokens leading \u2014 narrative-driven momentum",
+        "strength": 7.01,
+        "sentiment": "greedy"
+      }
+    ],
+    "alerts": {
+      "stats": {
+        "total_alerts": 826,
+        "last_hour": 649,
+        "last_24h": 826,
+        "critical_24h": 326,
+        "warning_24h": 500,
+        "active_cooldowns": 167
+      },
+      "recent": [
+        {
+          "type": "price_pump",
+          "severity": "warning",
+          "symbol": "ZEREBROUSDT",
+          "message": "ZEREBROUSDT up +7.27% in 24h"
+        },
+        {
+          "type": "price_dump",
+          "severity": "warning",
+          "symbol": "SXPUSDT",
+          "message": "SXPUSDT down -9.27% in 24h"
+        },
+        {
+          "type": "price_dump",
+          "severity": "critical",
+          "symbol": "CHESSUSDT",
+          "message": "CHESSUSDT dumped -30.75% in 24h"
+        },
+        {
+          "type": "price_dump",
+          "severity": "critical",
+          "symbol": "TROYUSDT",
+          "message": "TROYUSDT dumped -41.20% in 24h"
+        },
+        {
+          "type": "price_dump",
+          "severity": "warning",
+          "symbol": "STRAXUSDT",
+          "message": "STRAXUSDT down -9.66% in 24h"
+        },
+        {
+          "type": "price_dump",
+          "severity": "critical",
+          "symbol": "OBOLUSDT",
+          "message": "OBOLUSDT dumped -15.76% in 24h"
+        },
+        {
+          "type": "price_dump",
+          "severity": "warning",
+          "symbol": "CVXUSDT",
+          "message": "CVXUSDT down -7.62% in 24h"
+        },
+        {
+          "type": "price_pump",
+          "severity": "warning",
+          "symbol": "WCTUSDT",
+          "message": "WCTUSDT up +5.94% in 24h"
+        },
+        {
+          "type": "price_dump",
+          "severity": "warning",
+          "symbol": "SWELLUSDT",
+          "message": "SWELLUSDT down -6.56% in 24h"
+        },
+        {
+          "type": "price_dump",
+          "severity": "critical",
+          "symbol": "PORT3USDT",
+          "message": "PORT3USDT dumped -68.31% in 24h"
+        }
+      ]
+    },
+    "whale_activity": {
+      "total_signals": 6,
+      "total_volume": 27068532433.08,
+      "top_whales": [
+        {
+          "symbol": "BTC",
+          "direction": "neutral",
+          "score": 100,
+          "volume": 12910062029.81
+        },
+        {
+          "symbol": "ETH",
+          "direction": "neutral",
+          "score": 100,
+          "volume": 10569915071.62
+        },
+        {
+          "symbol": "SOL",
+          "direction": "distribution",
+          "score": 100,
+          "volume": 2036482955.83
+        },
+        {
+          "symbol": "XRP",
+          "direction": "distribution",
+          "score": 100,
+          "volume": 628559364.68
+        },
+        {
+          "symbol": "DOGE",
+          "direction": "neutral",
+          "score": 100,
+          "volume": 594810633.18
+        }
+      ]
+    },
+    "exchange_flow": {
+      "net_sentiment": "bearish",
+      "inflow": 2,
+      "outflow": 4,
+      "top_flows": [
+        {
+          "symbol": "BTC",
+          "type": "neutral",
+          "buy_pressure": 57.1
+        },
+        {
+          "symbol": "ETH",
+          "type": "neutral",
+          "buy_pressure": 56.5
+        },
+        {
+          "symbol": "SOL",
+          "type": "outflow",
+          "buy_pressure": 48.5
+        },
+        {
+          "symbol": "XRP",
+          "type": "outflow",
+          "buy_pressure": 34.6
+        },
+        {
+          "symbol": "DOGE",
+          "type": "inflow",
+          "buy_pressure": 67.2
+        }
+      ]
+    },
+    "stablecoin": {
+      "deployment_signal": "low",
+      "total_volume": 4015427.07
+    },
+    "opportunities": {
+      "momentum_kings": [
+        {
+          "symbol": "ALPACA",
+          "change": 391.228,
+          "volume": 2911352253.75,
+          "vol_ratio": 40.98
+        },
+        {
+          "symbol": "BNX",
+          "change": 66.376,
+          "volume": 492004952.04,
+          "vol_ratio": 6.93
+        },
+        {
+          "symbol": "UAI",
+          "change": 53.246,
+          "volume": 122465788.37,
+          "vol_ratio": 1.72
+        },
+        {
+          "symbol": "YALA",
+          "change": 50.718,
+          "volume": 66841744.36,
+          "vol_ratio": 0.94
+        },
+        {
+          "symbol": "LYN",
+          "change": 37.526,
+          "volume": 293859870.42,
+          "vol_ratio": 4.14
+        }
+      ],
+      "dip_buys": [
+        {
+          "symbol": "PORT3",
+          "change": -68.311,
+          "volume": 200374788.21
+        },
+        {
+          "symbol": "BSW",
+          "change": -55.164,
+          "volume": 65917286.3
+        },
+        {
+          "symbol": "NEIROETH",
+          "change": -47.282,
+          "volume": 83925618.84
+        },
+        {
+          "symbol": "VIDT",
+          "change": -42.436,
+          "volume": 116094468.4
+        },
+        {
+          "symbol": "TROY",
+          "change": -41.195,
+          "volume": 44261336.49
+        }
+      ],
+      "breakout_candidates": [
+        {
+          "symbol": "BTC",
+          "change": -0.334,
+          "vol_ratio": 181.71,
+          "range": 2.32
+        },
+        {
+          "symbol": "ETH",
+          "change": -0.161,
+          "vol_ratio": 148.77,
+          "range": 3.89
+        },
+        {
+          "symbol": "SOL",
+          "change": -1.057,
+          "vol_ratio": 28.66,
+          "range": 3.58
+        },
+        {
+          "symbol": "XAG",
+          "change": -1.258,
+          "vol_ratio": 19.5,
+          "range": 5.39
+        },
+        {
+          "symbol": "XAU",
+          "change": -1.399,
+          "vol_ratio": 14.27,
+          "range": 2.57
+        }
+      ]
+    },
+    "correlation": {
+      "strongest_pairs": [
+        {
+          "pair": "ARB/OP",
+          "correlation": 0.9091
+        },
+        {
+          "pair": "ARB/APT",
+          "correlation": 0.8969
+        },
+        {
+          "pair": "ARB/TIA",
+          "correlation": 0.8879
+        },
+        {
+          "pair": "BNB/LINK",
+          "correlation": 0.8859
+        },
+        {
+          "pair": "OP/TIA",
+          "correlation": 0.8682
+        }
+      ],
+      "high_beta": [
+        {
+          "symbol": "RENDER",
+          "beta": 1.242
+        }
+      ],
+      "low_beta": [
+        {
+          "symbol": "TON",
+          "beta": 0.392
+        }
+      ]
+    },
+    "total_data_sources": 7
+  },
+  "timestamp": 1773355024,
+  "datetime": "2026-03-13 05:37:04",
+  "content": "[FLASH N/A] Market sentiment: Neutral (50/100). Green ratio: 50%. Exchange flow: {'net_sentiment': 'bearish', 'inflow': 2, 'outflow': 4, 'top_flows': [{'symbol': 'BTC', 'type': 'neutral', 'buy_pressure': 57.1}, {'symbol': 'ETH', 'type': 'neutral', 'buy_pressure': 56.5}, {'symbol': 'SOL', 'type': 'outflow', 'buy_pressure': 48.5}, {'symbol': 'XRP', 'type': 'outflow', 'buy_pressure': 34.6}, {'symbol': 'DOGE', 'type': 'inflow', 'buy_pressure': 67.2}]}. Whale signals: 0. Critical alerts: 0.",
+  "generated_by": "fallback_template"
+}

@@ -1,0 +1,15 @@
+[
+    {
+        "text": "BTC funding rate becomes positive when longs dominate the market."
+    },
+    {
+        "text": "Bitcoin funding rate becomes positive when long positions dominate the market.\n\nWhen funding is highly positive it can signal overcrowded longs.\nWhen funding is negative it can signal short pressure."
+    },
+    {
+        "text": "Bitcoin funding rate becomes positive when long positions dominate the market.\n\nWhen funding is highly positive it can signal overcrowded longs.\nWhen funding is negative it can signal short pressure."
+    },
+    {
+        "text": "Bitcoin funding rate becomes positive when long positions dominate the market.\n\nWhen funding is highly positive it can signal overcrowded longs.\nWhen funding is negative it can signal short pressure.",
+        "source": "btc_funding.txt"
+    }
+]

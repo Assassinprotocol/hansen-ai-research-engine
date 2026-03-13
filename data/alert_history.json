@@ -1,0 +1,6869 @@
+[
+  {
+    "id": "1773371894_GRTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "GRTUSDT",
+    "message": "GRTUSDT up +9.30% in 24h",
+    "value": 9.298,
+    "threshold": 5.0,
+    "timestamp": 1773371894,
+    "datetime": "2026-03-13 10:18:14",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371894_XPLUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "XPLUSDT",
+    "message": "XPLUSDT up +7.93% in 24h",
+    "value": 7.932,
+    "threshold": 5.0,
+    "timestamp": 1773371894,
+    "datetime": "2026-03-13 10:18:14",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371894_BARDUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "BARDUSDT",
+    "message": "BARDUSDT up +6.42% in 24h",
+    "value": 6.422,
+    "threshold": 5.0,
+    "timestamp": 1773371894,
+    "datetime": "2026-03-13 10:18:14",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371894_PIXELUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "PIXELUSDT",
+    "message": "PIXELUSDT pumped +15.48% in 24h",
+    "value": 15.485,
+    "threshold": 10.0,
+    "timestamp": 1773371894,
+    "datetime": "2026-03-13 10:18:14",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.013238,
+      "volume": 461855510.628151
+    }
+  },
+  {
+    "id": "1773371894_MUBARAKUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "MUBARAKUSDT",
+    "message": "MUBARAKUSDT up +6.46% in 24h",
+    "value": 6.465,
+    "threshold": 5.0,
+    "timestamp": 1773371894,
+    "datetime": "2026-03-13 10:18:14",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371894_ALPACAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "ALPACAUSDT",
+    "message": "ALPACAUSDT pumped +391.23% in 24h",
+    "value": 391.228,
+    "threshold": 10.0,
+    "timestamp": 1773371894,
+    "datetime": "2026-03-13 10:18:14",
+    "acknowledged": false,
+    "extra": {
+      "price": 1.19,
+      "volume": 2911352253.74508
+    }
+  },
+  {
+    "id": "1773371894_LITUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "LITUSDT",
+    "message": "LITUSDT pumped +13.40% in 24h",
+    "value": 13.396,
+    "threshold": 10.0,
+    "timestamp": 1773371894,
+    "datetime": "2026-03-13 10:18:14",
+    "acknowledged": false,
+    "extra": {
+      "price": 1.202,
+      "volume": 19634536.1958
+    }
+  },
+  {
+    "id": "1773371894_NKNUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "NKNUSDT",
+    "message": "NKNUSDT dumped -21.98% in 24h",
+    "value": -21.975,
+    "threshold": -10.0,
+    "timestamp": 1773371894,
+    "datetime": "2026-03-13 10:18:14",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.00561,
+      "volume": 4848895.41413
+    }
+  },
+  {
+    "id": "1773371894_SKATEUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "SKATEUSDT",
+    "message": "SKATEUSDT dumped -52.59% in 24h",
+    "value": -52.59,
+    "threshold": -10.0,
+    "timestamp": 1773371894,
+    "datetime": "2026-03-13 10:18:14",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0051013,
+      "volume": 9813385.7179206
+    }
+  },
+  {
+    "id": "1773371894_AAVEUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "AAVEUSDT",
+    "message": "AAVEUSDT up +5.85% in 24h",
+    "value": 5.853,
+    "threshold": 5.0,
+    "timestamp": 1773371894,
+    "datetime": "2026-03-13 10:18:14",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371894_CUDISUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "CUDISUSDT",
+    "message": "CUDISUSDT up +5.73% in 24h",
+    "value": 5.728,
+    "threshold": 5.0,
+    "timestamp": 1773371894,
+    "datetime": "2026-03-13 10:18:14",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371894_COMMONUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "COMMONUSDT",
+    "message": "COMMONUSDT dumped -31.22% in 24h",
+    "value": -31.216,
+    "threshold": -10.0,
+    "timestamp": 1773371894,
+    "datetime": "2026-03-13 10:18:14",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0011143,
+      "volume": 10893940.6051056
+    }
+  },
+  {
+    "id": "1773371895_IOUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "IOUSDT",
+    "message": "IOUSDT up +6.29% in 24h",
+    "value": 6.289,
+    "threshold": 5.0,
+    "timestamp": 1773371895,
+    "datetime": "2026-03-13 10:18:15",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371895_ICNTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "ICNTUSDT",
+    "message": "ICNTUSDT pumped +10.26% in 24h",
+    "value": 10.264,
+    "threshold": 10.0,
+    "timestamp": 1773371895,
+    "datetime": "2026-03-13 10:18:15",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.3674,
+      "volume": 3987229.2205
+    }
+  },
+  {
+    "id": "1773371895_INXUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "INXUSDT",
+    "message": "INXUSDT up +5.62% in 24h",
+    "value": 5.617,
+    "threshold": 5.0,
+    "timestamp": 1773371895,
+    "datetime": "2026-03-13 10:18:15",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371895_DOODUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "DOODUSDT",
+    "message": "DOODUSDT up +7.42% in 24h",
+    "value": 7.419,
+    "threshold": 5.0,
+    "timestamp": 1773371895,
+    "datetime": "2026-03-13 10:18:15",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371895_AGIXUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "AGIXUSDT",
+    "message": "AGIXUSDT pumped +18.78% in 24h",
+    "value": 18.776,
+    "threshold": 10.0,
+    "timestamp": 1773371895,
+    "datetime": "2026-03-13 10:18:15",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.7009,
+      "volume": 113687318.3536
+    }
+  },
+  {
+    "id": "1773371895_XPINUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "XPINUSDT",
+    "message": "XPINUSDT pumped +17.36% in 24h",
+    "value": 17.363,
+    "threshold": 10.0,
+    "timestamp": 1773371895,
+    "datetime": "2026-03-13 10:18:15",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.001602,
+      "volume": 3411164.956459
+    }
+  },
+  {
+    "id": "1773371895_MEWUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "MEWUSDT",
+    "message": "MEWUSDT up +5.67% in 24h",
+    "value": 5.671,
+    "threshold": 5.0,
+    "timestamp": 1773371895,
+    "datetime": "2026-03-13 10:18:15",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371895_NAORISUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "NAORISUSDT",
+    "message": "NAORISUSDT up +7.66% in 24h",
+    "value": 7.659,
+    "threshold": 5.0,
+    "timestamp": 1773371895,
+    "datetime": "2026-03-13 10:18:15",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371895_OXTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "OXTUSDT",
+    "message": "OXTUSDT pumped +11.87% in 24h",
+    "value": 11.873,
+    "threshold": 10.0,
+    "timestamp": 1773371895,
+    "datetime": "2026-03-13 10:18:15",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.01941,
+      "volume": 29954543.01413
+    }
+  },
+  {
+    "id": "1773371895_UAIUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "UAIUSDT",
+    "message": "UAIUSDT pumped +57.67% in 24h",
+    "value": 57.669,
+    "threshold": 10.0,
+    "timestamp": 1773371895,
+    "datetime": "2026-03-13 10:18:15",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.3423,
+      "volume": 152790547.094
+    }
+  },
+  {
+    "id": "1773371895_ZRCUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "ZRCUSDT",
+    "message": "ZRCUSDT down -9.64% in 24h",
+    "value": -9.643,
+    "threshold": -5.0,
+    "timestamp": 1773371895,
+    "datetime": "2026-03-13 10:18:15",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371895_ROSEUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "ROSEUSDT",
+    "message": "ROSEUSDT up +5.59% in 24h",
+    "value": 5.588,
+    "threshold": 5.0,
+    "timestamp": 1773371895,
+    "datetime": "2026-03-13 10:18:15",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371895_SWELLUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "SWELLUSDT",
+    "message": "SWELLUSDT down -6.56% in 24h",
+    "value": -6.563,
+    "threshold": -5.0,
+    "timestamp": 1773371895,
+    "datetime": "2026-03-13 10:18:15",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371895_LINAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "LINAUSDT",
+    "message": "LINAUSDT pumped +13.63% in 24h",
+    "value": 13.629,
+    "threshold": 10.0,
+    "timestamp": 1773371895,
+    "datetime": "2026-03-13 10:18:15",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.000742,
+      "volume": 86817665.678621
+    }
+  },
+  {
+    "id": "1773371895_BSWUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "BSWUSDT",
+    "message": "BSWUSDT dumped -55.16% in 24h",
+    "value": -55.164,
+    "threshold": -10.0,
+    "timestamp": 1773371895,
+    "datetime": "2026-03-13 10:18:15",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0122,
+      "volume": 65917286.29962
+    }
+  },
+  {
+    "id": "1773371895_TAOUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "TAOUSDT",
+    "message": "TAOUSDT pumped +15.40% in 24h",
+    "value": 15.397,
+    "threshold": 10.0,
+    "timestamp": 1773371895,
+    "datetime": "2026-03-13 10:18:15",
+    "acknowledged": false,
+    "extra": {
+      "price": 231.29,
+      "volume": 199002147.93
+    }
+  },
+  {
+    "id": "1773371895_USUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "USUSDT",
+    "message": "USUSDT down -8.62% in 24h",
+    "value": -8.617,
+    "threshold": -5.0,
+    "timestamp": 1773371895,
+    "datetime": "2026-03-13 10:18:15",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371895_OCEANUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "OCEANUSDT",
+    "message": "OCEANUSDT pumped +18.94% in 24h",
+    "value": 18.943,
+    "threshold": 10.0,
+    "timestamp": 1773371895,
+    "datetime": "2026-03-13 10:18:15",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.707,
+      "volume": 65841451.8651
+    }
+  },
+  {
+    "id": "1773371895_VIDTUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "VIDTUSDT",
+    "message": "VIDTUSDT dumped -42.44% in 24h",
+    "value": -42.436,
+    "threshold": -10.0,
+    "timestamp": 1773371895,
+    "datetime": "2026-03-13 10:18:15",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.00293,
+      "volume": 116094468.40266
+    }
+  },
+  {
+    "id": "1773371895_RAVEUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "RAVEUSDT",
+    "message": "RAVEUSDT pumped +16.05% in 24h",
+    "value": 16.051,
+    "threshold": 10.0,
+    "timestamp": 1773371895,
+    "datetime": "2026-03-13 10:18:15",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.24431,
+      "volume": 12590144.24443
+    }
+  },
+  {
+    "id": "1773371895_BAKEUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "BAKEUSDT",
+    "message": "BAKEUSDT dumped -34.30% in 24h",
+    "value": -34.301,
+    "threshold": -10.0,
+    "timestamp": 1773371895,
+    "datetime": "2026-03-13 10:18:15",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0249,
+      "volume": 24688403.6875
+    }
+  },
+  {
+    "id": "1773371895_SHELLUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "SHELLUSDT",
+    "message": "SHELLUSDT up +7.26% in 24h",
+    "value": 7.258,
+    "threshold": 5.0,
+    "timestamp": 1773371895,
+    "datetime": "2026-03-13 10:18:15",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371895_TRIAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "TRIAUSDT",
+    "message": "TRIAUSDT up +8.06% in 24h",
+    "value": 8.064,
+    "threshold": 5.0,
+    "timestamp": 1773371895,
+    "datetime": "2026-03-13 10:18:15",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371895_SEIUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "SEIUSDT",
+    "message": "SEIUSDT up +5.20% in 24h",
+    "value": 5.203,
+    "threshold": 5.0,
+    "timestamp": 1773371895,
+    "datetime": "2026-03-13 10:18:15",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371896_GPSUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "GPSUSDT",
+    "message": "GPSUSDT up +5.52% in 24h",
+    "value": 5.516,
+    "threshold": 5.0,
+    "timestamp": 1773371896,
+    "datetime": "2026-03-13 10:18:16",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371896_GRIFFAINUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "GRIFFAINUSDT",
+    "message": "GRIFFAINUSDT pumped +12.81% in 24h",
+    "value": 12.809,
+    "threshold": 10.0,
+    "timestamp": 1773371896,
+    "datetime": "2026-03-13 10:18:16",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.010084,
+      "volume": 2175551.860281
+    }
+  },
+  {
+    "id": "1773371896_RESOLVUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "RESOLVUSDT",
+    "message": "RESOLVUSDT dumped -14.74% in 24h",
+    "value": -14.74,
+    "threshold": -10.0,
+    "timestamp": 1773371896,
+    "datetime": "2026-03-13 10:18:16",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.09469,
+      "volume": 45239961.7314
+    }
+  },
+  {
+    "id": "1773371896_DAMUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "DAMUSDT",
+    "message": "DAMUSDT down -6.20% in 24h",
+    "value": -6.2,
+    "threshold": -5.0,
+    "timestamp": 1773371896,
+    "datetime": "2026-03-13 10:18:16",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371896_42USDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "42USDT",
+    "message": "42USDT pumped +20.71% in 24h",
+    "value": 20.712,
+    "threshold": 10.0,
+    "timestamp": 1773371896,
+    "datetime": "2026-03-13 10:18:16",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0272447,
+      "volume": 34382770.22146
+    }
+  },
+  {
+    "id": "1773371896_FARTCOINUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "FARTCOINUSDT",
+    "message": "FARTCOINUSDT up +7.56% in 24h",
+    "value": 7.56,
+    "threshold": 5.0,
+    "timestamp": 1773371896,
+    "datetime": "2026-03-13 10:18:16",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371896_1000SATSUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "1000SATSUSDT",
+    "message": "1000SATSUSDT up +7.69% in 24h",
+    "value": 7.692,
+    "threshold": 5.0,
+    "timestamp": 1773371896,
+    "datetime": "2026-03-13 10:18:16",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371896_HUMAUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "HUMAUSDT",
+    "message": "HUMAUSDT dumped -26.39% in 24h",
+    "value": -26.388,
+    "threshold": -10.0,
+    "timestamp": 1773371896,
+    "datetime": "2026-03-13 10:18:16",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.016146,
+      "volume": 110924757.120237
+    }
+  },
+  {
+    "id": "1773371896_BRETTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "BRETTUSDT",
+    "message": "BRETTUSDT up +7.57% in 24h",
+    "value": 7.566,
+    "threshold": 5.0,
+    "timestamp": 1773371896,
+    "datetime": "2026-03-13 10:18:16",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371896_AGTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "AGTUSDT",
+    "message": "AGTUSDT up +5.55% in 24h",
+    "value": 5.552,
+    "threshold": 5.0,
+    "timestamp": 1773371896,
+    "datetime": "2026-03-13 10:18:16",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371896_MAGMAUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "MAGMAUSDT",
+    "message": "MAGMAUSDT down -7.78% in 24h",
+    "value": -7.782,
+    "threshold": -5.0,
+    "timestamp": 1773371896,
+    "datetime": "2026-03-13 10:18:16",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371896_NEIROUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "NEIROUSDT",
+    "message": "NEIROUSDT pumped +11.68% in 24h",
+    "value": 11.68,
+    "threshold": 10.0,
+    "timestamp": 1773371896,
+    "datetime": "2026-03-13 10:18:16",
+    "acknowledged": false,
+    "extra": {
+      "price": 7.391e-05,
+      "volume": 22306123.14963929
+    }
+  },
+  {
+    "id": "1773371896_EDUUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "EDUUSDT",
+    "message": "EDUUSDT down -7.23% in 24h",
+    "value": -7.229,
+    "threshold": -5.0,
+    "timestamp": 1773371896,
+    "datetime": "2026-03-13 10:18:16",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371896_DEEPUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "DEEPUSDT",
+    "message": "DEEPUSDT up +7.70% in 24h",
+    "value": 7.699,
+    "threshold": 5.0,
+    "timestamp": 1773371896,
+    "datetime": "2026-03-13 10:18:16",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371896_IDOLUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "IDOLUSDT",
+    "message": "IDOLUSDT up +6.50% in 24h",
+    "value": 6.504,
+    "threshold": 5.0,
+    "timestamp": 1773371896,
+    "datetime": "2026-03-13 10:18:16",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371896_EPTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "EPTUSDT",
+    "message": "EPTUSDT pumped +34.54% in 24h",
+    "value": 34.542,
+    "threshold": 10.0,
+    "timestamp": 1773371896,
+    "datetime": "2026-03-13 10:18:16",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0016024,
+      "volume": 30649553.1927408
+    }
+  },
+  {
+    "id": "1773371896_ALGOUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "ALGOUSDT",
+    "message": "ALGOUSDT up +6.92% in 24h",
+    "value": 6.925,
+    "threshold": 5.0,
+    "timestamp": 1773371896,
+    "datetime": "2026-03-13 10:18:16",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371896_MEMEUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "MEMEUSDT",
+    "message": "MEMEUSDT up +5.91% in 24h",
+    "value": 5.91,
+    "threshold": 5.0,
+    "timestamp": 1773371896,
+    "datetime": "2026-03-13 10:18:16",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371896_FIGHTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "FIGHTUSDT",
+    "message": "FIGHTUSDT up +9.23% in 24h",
+    "value": 9.231,
+    "threshold": 5.0,
+    "timestamp": 1773371896,
+    "datetime": "2026-03-13 10:18:16",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371896_ESPUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "ESPUSDT",
+    "message": "ESPUSDT up +9.34% in 24h",
+    "value": 9.344,
+    "threshold": 5.0,
+    "timestamp": 1773371896,
+    "datetime": "2026-03-13 10:18:16",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371896_LYNUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "LYNUSDT",
+    "message": "LYNUSDT pumped +74.88% in 24h",
+    "value": 74.878,
+    "threshold": 10.0,
+    "timestamp": 1773371896,
+    "datetime": "2026-03-13 10:18:16",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.27197,
+      "volume": 322410156.9827
+    }
+  },
+  {
+    "id": "1773371896_ANIMEUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "ANIMEUSDT",
+    "message": "ANIMEUSDT up +5.88% in 24h",
+    "value": 5.88,
+    "threshold": 5.0,
+    "timestamp": 1773371896,
+    "datetime": "2026-03-13 10:18:16",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371896_NULSUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "NULSUSDT",
+    "message": "NULSUSDT dumped -24.21% in 24h",
+    "value": -24.213,
+    "threshold": -10.0,
+    "timestamp": 1773371896,
+    "datetime": "2026-03-13 10:18:16",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0313,
+      "volume": 19986545.1954
+    }
+  },
+  {
+    "id": "1773371896_SUIUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "SUIUSDT",
+    "message": "SUIUSDT up +5.45% in 24h",
+    "value": 5.448,
+    "threshold": 5.0,
+    "timestamp": 1773371896,
+    "datetime": "2026-03-13 10:18:16",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371896_MOODENGUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "MOODENGUSDT",
+    "message": "MOODENGUSDT up +7.46% in 24h",
+    "value": 7.458,
+    "threshold": 5.0,
+    "timestamp": 1773371896,
+    "datetime": "2026-03-13 10:18:16",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371897_SIGNUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "SIGNUSDT",
+    "message": "SIGNUSDT down -6.25% in 24h",
+    "value": -6.251,
+    "threshold": -5.0,
+    "timestamp": 1773371897,
+    "datetime": "2026-03-13 10:18:17",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371897_BOMEUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "BOMEUSDT",
+    "message": "BOMEUSDT up +7.50% in 24h",
+    "value": 7.498,
+    "threshold": 5.0,
+    "timestamp": 1773371897,
+    "datetime": "2026-03-13 10:18:17",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371897_TANSSIUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "TANSSIUSDT",
+    "message": "TANSSIUSDT pumped +35.26% in 24h",
+    "value": 35.263,
+    "threshold": 10.0,
+    "timestamp": 1773371897,
+    "datetime": "2026-03-13 10:18:17",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.011335,
+      "volume": 28037445.47324
+    }
+  },
+  {
+    "id": "1773371897_FUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "FUSDT",
+    "message": "FUSDT pumped +13.00% in 24h",
+    "value": 12.997,
+    "threshold": 10.0,
+    "timestamp": 1773371897,
+    "datetime": "2026-03-13 10:18:17",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.005999,
+      "volume": 13111209.478815
+    }
+  },
+  {
+    "id": "1773371897_SUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "SUSDT",
+    "message": "SUSDT up +6.25% in 24h",
+    "value": 6.255,
+    "threshold": 5.0,
+    "timestamp": 1773371897,
+    "datetime": "2026-03-13 10:18:17",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371897_PYTHUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "PYTHUSDT",
+    "message": "PYTHUSDT up +5.38% in 24h",
+    "value": 5.375,
+    "threshold": 5.0,
+    "timestamp": 1773371897,
+    "datetime": "2026-03-13 10:18:17",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371897_HYPEUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "HYPEUSDT",
+    "message": "HYPEUSDT volume 5.9x above average ($468,662,341)",
+    "value": 468662340.6178,
+    "threshold": 198492614.9819,
+    "timestamp": 1773371897,
+    "datetime": "2026-03-13 10:18:17",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 5.9
+    }
+  },
+  {
+    "id": "1773371897_DOGEUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "DOGEUSDT",
+    "message": "DOGEUSDT volume 9.0x above average ($718,276,948)",
+    "value": 718276947.7579,
+    "threshold": 198492614.9819,
+    "timestamp": 1773371897,
+    "datetime": "2026-03-13 10:18:17",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 9.05
+    }
+  },
+  {
+    "id": "1773371897_LYNUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "LYNUSDT",
+    "message": "LYNUSDT volume 4.1x above average ($322,431,832)",
+    "value": 322431832.327,
+    "threshold": 198492614.9819,
+    "timestamp": 1773371897,
+    "datetime": "2026-03-13 10:18:17",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 4.06
+    }
+  },
+  {
+    "id": "1773371897_PIXELUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "PIXELUSDT",
+    "message": "PIXELUSDT volume 5.8x above average ($462,127,149)",
+    "value": 462127148.9189,
+    "threshold": 198492614.9819,
+    "timestamp": 1773371897,
+    "datetime": "2026-03-13 10:18:17",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 5.82
+    }
+  },
+  {
+    "id": "1773371897_XRPUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "XRPUSDT",
+    "message": "XRPUSDT volume 10.1x above average ($798,038,555)",
+    "value": 798038554.8694,
+    "threshold": 198492614.9819,
+    "timestamp": 1773371897,
+    "datetime": "2026-03-13 10:18:17",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 10.05
+    }
+  },
+  {
+    "id": "1773371897_ALPHAUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "ALPHAUSDT",
+    "message": "ALPHAUSDT volume 4.7x above average ($370,575,972)",
+    "value": 370575971.6945,
+    "threshold": 198492614.9819,
+    "timestamp": 1773371897,
+    "datetime": "2026-03-13 10:18:17",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 4.67
+    }
+  },
+  {
+    "id": "1773371897_ACXUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "ACXUSDT",
+    "message": "ACXUSDT volume 3.1x above average ($243,078,172)",
+    "value": 243078171.7419,
+    "threshold": 198492614.9819,
+    "timestamp": 1773371897,
+    "datetime": "2026-03-13 10:18:17",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 3.06
+    }
+  },
+  {
+    "id": "1773371897_BTCUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "BTCUSDT",
+    "message": "BTCUSDT volume 186.4x above average ($14,797,651,109)",
+    "value": 14797651109.16,
+    "threshold": 198492614.9819,
+    "timestamp": 1773371897,
+    "datetime": "2026-03-13 10:18:17",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 186.38
+    }
+  },
+  {
+    "id": "1773371897_BNXUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "BNXUSDT",
+    "message": "BNXUSDT volume 6.2x above average ($492,004,952)",
+    "value": 492004952.045,
+    "threshold": 198492614.9819,
+    "timestamp": 1773371897,
+    "datetime": "2026-03-13 10:18:17",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 6.2
+    }
+  },
+  {
+    "id": "1773371897_1000PEPEUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "1000PEPEUSDT",
+    "message": "1000PEPEUSDT volume 3.5x above average ($277,226,360)",
+    "value": 277226359.7368,
+    "threshold": 198492614.9819,
+    "timestamp": 1773371897,
+    "datetime": "2026-03-13 10:18:17",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 3.49
+    }
+  },
+  {
+    "id": "1773371897_SOLUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "SOLUSDT",
+    "message": "SOLUSDT volume 32.3x above average ($2,564,659,019)",
+    "value": 2564659019.05,
+    "threshold": 198492614.9819,
+    "timestamp": 1773371897,
+    "datetime": "2026-03-13 10:18:17",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 32.3
+    }
+  },
+  {
+    "id": "1773371897_DEGOUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "DEGOUSDT",
+    "message": "DEGOUSDT volume 3.1x above average ($245,410,751)",
+    "value": 245410751.0431,
+    "threshold": 198492614.9819,
+    "timestamp": 1773371897,
+    "datetime": "2026-03-13 10:18:17",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 3.09
+    }
+  },
+  {
+    "id": "1773371897_PORT3USDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "PORT3USDT",
+    "message": "PORT3USDT volume 2.5x above average ($200,374,788)",
+    "value": 200374788.2137,
+    "threshold": 198492614.9819,
+    "timestamp": 1773371897,
+    "datetime": "2026-03-13 10:18:17",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 2.52
+    }
+  },
+  {
+    "id": "1773371897_ZECUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "ZECUSDT",
+    "message": "ZECUSDT volume 4.3x above average ($345,113,540)",
+    "value": 345113540.01,
+    "threshold": 198492614.9819,
+    "timestamp": 1773371897,
+    "datetime": "2026-03-13 10:18:17",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 4.35
+    }
+  },
+  {
+    "id": "1773371897_TURBOUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "TURBOUSDT",
+    "message": "TURBOUSDT volume 3.0x above average ($241,613,628)",
+    "value": 241613628.2843,
+    "threshold": 198492614.9819,
+    "timestamp": 1773371897,
+    "datetime": "2026-03-13 10:18:17",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 3.04
+    }
+  },
+  {
+    "id": "1773371897_XAGUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "XAGUSDT",
+    "message": "XAGUSDT volume 17.0x above average ($1,352,130,264)",
+    "value": 1352130263.8869,
+    "threshold": 198492614.9819,
+    "timestamp": 1773371897,
+    "datetime": "2026-03-13 10:18:17",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 17.03
+    }
+  },
+  {
+    "id": "1773371898_ALPACAUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "ALPACAUSDT",
+    "message": "ALPACAUSDT volume 36.7x above average ($2,911,352,254)",
+    "value": 2911352253.7451,
+    "threshold": 198492614.9819,
+    "timestamp": 1773371898,
+    "datetime": "2026-03-13 10:18:18",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 36.67
+    }
+  },
+  {
+    "id": "1773371898_RIVERUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "RIVERUSDT",
+    "message": "RIVERUSDT volume 5.7x above average ($449,739,296)",
+    "value": 449739296.0361,
+    "threshold": 198492614.9819,
+    "timestamp": 1773371898,
+    "datetime": "2026-03-13 10:18:18",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 5.66
+    }
+  },
+  {
+    "id": "1773371898_ETHUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "ETHUSDT",
+    "message": "ETHUSDT volume 161.6x above average ($12,831,424,868)",
+    "value": 12831424868.15,
+    "threshold": 198492614.9819,
+    "timestamp": 1773371898,
+    "datetime": "2026-03-13 10:18:18",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 161.61
+    }
+  },
+  {
+    "id": "1773371898_BNBUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "BNBUSDT",
+    "message": "BNBUSDT volume 4.6x above average ($367,103,023)",
+    "value": 367103023.152,
+    "threshold": 198492614.9819,
+    "timestamp": 1773371898,
+    "datetime": "2026-03-13 10:18:18",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 4.62
+    }
+  },
+  {
+    "id": "1773371898_TAOUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "TAOUSDT",
+    "message": "TAOUSDT volume 2.5x above average ($199,107,328)",
+    "value": 199107327.77,
+    "threshold": 198492614.9819,
+    "timestamp": 1773371898,
+    "datetime": "2026-03-13 10:18:18",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 2.51
+    }
+  },
+  {
+    "id": "1773371898_XAUUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "XAUUSDT",
+    "message": "XAUUSDT volume 12.1x above average ($961,245,430)",
+    "value": 961245429.5,
+    "threshold": 198492614.9819,
+    "timestamp": 1773371898,
+    "datetime": "2026-03-13 10:18:18",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 12.11
+    }
+  },
+  {
+    "id": "1773371898_SUIUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "SUIUSDT",
+    "message": "SUIUSDT volume 2.8x above average ($220,869,012)",
+    "value": 220869011.812,
+    "threshold": 198492614.9819,
+    "timestamp": 1773371898,
+    "datetime": "2026-03-13 10:18:18",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 2.78
+    }
+  },
+  {
+    "id": "1773371932_SOLVUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "SOLVUSDT",
+    "message": "SOLVUSDT down -5.21% in 24h",
+    "value": -5.208,
+    "threshold": -5.0,
+    "timestamp": 1773371932,
+    "datetime": "2026-03-13 10:18:52",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371932_SUSHIUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "SUSHIUSDT",
+    "message": "SUSHIUSDT up +5.11% in 24h",
+    "value": 5.114,
+    "threshold": 5.0,
+    "timestamp": 1773371932,
+    "datetime": "2026-03-13 10:18:52",
+    "acknowledged": false
+  },
+  {
+    "id": "1773371933_OLUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "OLUSDT",
+    "message": "OLUSDT up +5.13% in 24h",
+    "value": 5.134,
+    "threshold": 5.0,
+    "timestamp": 1773371933,
+    "datetime": "2026-03-13 10:18:53",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372072_BASUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "BASUSDT",
+    "message": "BASUSDT up +5.07% in 24h",
+    "value": 5.07,
+    "threshold": 5.0,
+    "timestamp": 1773372072,
+    "datetime": "2026-03-13 10:21:12",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372074_DYDXUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "DYDXUSDT",
+    "message": "DYDXUSDT up +5.88% in 24h",
+    "value": 5.882,
+    "threshold": 5.0,
+    "timestamp": 1773372074,
+    "datetime": "2026-03-13 10:21:14",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372076_\u5e01\u5b89\u4eba\u751fUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "\u5e01\u5b89\u4eba\u751fUSDT",
+    "message": "\u5e01\u5b89\u4eba\u751fUSDT up +5.01% in 24h",
+    "value": 5.007,
+    "threshold": 5.0,
+    "timestamp": 1773372076,
+    "datetime": "2026-03-13 10:21:16",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372224_SIGNUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "SIGNUSDT",
+    "message": "SIGNUSDT down -6.59% in 24h",
+    "value": -6.588,
+    "threshold": -5.0,
+    "timestamp": 1773372224,
+    "datetime": "2026-03-13 10:23:44",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372229_HUMAUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "HUMAUSDT",
+    "message": "HUMAUSDT dumped -21.71% in 24h",
+    "value": -21.714,
+    "threshold": -10.0,
+    "timestamp": 1773372229,
+    "datetime": "2026-03-13 10:23:49",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.016058,
+      "volume": 108208308.892965
+    }
+  },
+  {
+    "id": "1773372231_MILKUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "MILKUSDT",
+    "message": "MILKUSDT dumped -14.94% in 24h",
+    "value": -14.937,
+    "threshold": -10.0,
+    "timestamp": 1773372231,
+    "datetime": "2026-03-13 10:23:51",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.01008,
+      "volume": 6202620.77018
+    }
+  },
+  {
+    "id": "1773372233_ANIMEUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "ANIMEUSDT",
+    "message": "ANIMEUSDT up +5.94% in 24h",
+    "value": 5.942,
+    "threshold": 5.0,
+    "timestamp": 1773372233,
+    "datetime": "2026-03-13 10:23:53",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372236_NEIROUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "NEIROUSDT",
+    "message": "NEIROUSDT pumped +12.11% in 24h",
+    "value": 12.107,
+    "threshold": 10.0,
+    "timestamp": 1773372236,
+    "datetime": "2026-03-13 10:23:56",
+    "acknowledged": false,
+    "extra": {
+      "price": 7.417e-05,
+      "volume": 22360203.52970764
+    }
+  },
+  {
+    "id": "1773372241_MEMEUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "MEMEUSDT",
+    "message": "MEMEUSDT up +5.83% in 24h",
+    "value": 5.835,
+    "threshold": 5.0,
+    "timestamp": 1773372241,
+    "datetime": "2026-03-13 10:24:01",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372247_RIVERUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "RIVERUSDT",
+    "message": "RIVERUSDT up +9.84% in 24h",
+    "value": 9.839,
+    "threshold": 5.0,
+    "timestamp": 1773372247,
+    "datetime": "2026-03-13 10:24:07",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372258_ALGOUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "ALGOUSDT",
+    "message": "ALGOUSDT up +7.05% in 24h",
+    "value": 7.051,
+    "threshold": 5.0,
+    "timestamp": 1773372258,
+    "datetime": "2026-03-13 10:24:18",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372259_TANSSIUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "TANSSIUSDT",
+    "message": "TANSSIUSDT pumped +35.26% in 24h",
+    "value": 35.263,
+    "threshold": 10.0,
+    "timestamp": 1773372259,
+    "datetime": "2026-03-13 10:24:19",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.011335,
+      "volume": 28037445.47324
+    }
+  },
+  {
+    "id": "1773372260_KEYUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "KEYUSDT",
+    "message": "KEYUSDT up +9.11% in 24h",
+    "value": 9.109,
+    "threshold": 5.0,
+    "timestamp": 1773372260,
+    "datetime": "2026-03-13 10:24:20",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372261_ILVUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "ILVUSDT",
+    "message": "ILVUSDT up +7.17% in 24h",
+    "value": 7.165,
+    "threshold": 5.0,
+    "timestamp": 1773372261,
+    "datetime": "2026-03-13 10:24:21",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372263_MUBARAKUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "MUBARAKUSDT",
+    "message": "MUBARAKUSDT up +6.33% in 24h",
+    "value": 6.334,
+    "threshold": 5.0,
+    "timestamp": 1773372263,
+    "datetime": "2026-03-13 10:24:23",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372263_INXUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "INXUSDT",
+    "message": "INXUSDT up +5.91% in 24h",
+    "value": 5.914,
+    "threshold": 5.0,
+    "timestamp": 1773372263,
+    "datetime": "2026-03-13 10:24:23",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372264_GRIFFAINUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "GRIFFAINUSDT",
+    "message": "GRIFFAINUSDT pumped +12.52% in 24h",
+    "value": 12.521,
+    "threshold": 10.0,
+    "timestamp": 1773372264,
+    "datetime": "2026-03-13 10:24:24",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.010065,
+      "volume": 2174220.453899
+    }
+  },
+  {
+    "id": "1773372265_VVVUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "VVVUSDT",
+    "message": "VVVUSDT pumped +11.13% in 24h",
+    "value": 11.133,
+    "threshold": 10.0,
+    "timestamp": 1773372265,
+    "datetime": "2026-03-13 10:24:25",
+    "acknowledged": false,
+    "extra": {
+      "price": 6.349,
+      "volume": 37377041.24514
+    }
+  },
+  {
+    "id": "1773372266_SWELLUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "SWELLUSDT",
+    "message": "SWELLUSDT down -6.56% in 24h",
+    "value": -6.563,
+    "threshold": -5.0,
+    "timestamp": 1773372266,
+    "datetime": "2026-03-13 10:24:26",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372267_OCEANUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "OCEANUSDT",
+    "message": "OCEANUSDT pumped +18.94% in 24h",
+    "value": 18.943,
+    "threshold": 10.0,
+    "timestamp": 1773372267,
+    "datetime": "2026-03-13 10:24:27",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.707,
+      "volume": 65841451.8651
+    }
+  },
+  {
+    "id": "1773372268_FETUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "FETUSDT",
+    "message": "FETUSDT pumped +18.11% in 24h",
+    "value": 18.108,
+    "threshold": 10.0,
+    "timestamp": 1773372268,
+    "datetime": "2026-03-13 10:24:28",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.1885,
+      "volume": 51114996.2412
+    }
+  },
+  {
+    "id": "1773372269_EVAAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "EVAAUSDT",
+    "message": "EVAAUSDT pumped +11.79% in 24h",
+    "value": 11.789,
+    "threshold": 10.0,
+    "timestamp": 1773372269,
+    "datetime": "2026-03-13 10:24:29",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.5841,
+      "volume": 7984011.52578
+    }
+  },
+  {
+    "id": "1773372269_PENGUUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "PENGUUSDT",
+    "message": "PENGUUSDT up +5.34% in 24h",
+    "value": 5.34,
+    "threshold": 5.0,
+    "timestamp": 1773372269,
+    "datetime": "2026-03-13 10:24:29",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372270_OXTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "OXTUSDT",
+    "message": "OXTUSDT pumped +11.89% in 24h",
+    "value": 11.894,
+    "threshold": 10.0,
+    "timestamp": 1773372270,
+    "datetime": "2026-03-13 10:24:30",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.01938,
+      "volume": 29951395.62467
+    }
+  },
+  {
+    "id": "1773372270_SKATEUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "SKATEUSDT",
+    "message": "SKATEUSDT dumped -52.59% in 24h",
+    "value": -52.59,
+    "threshold": -10.0,
+    "timestamp": 1773372270,
+    "datetime": "2026-03-13 10:24:30",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0051013,
+      "volume": 9813385.7179206
+    }
+  },
+  {
+    "id": "1773372270_\u6211\u8e0f\u9a6c\u6765\u4e86USDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "\u6211\u8e0f\u9a6c\u6765\u4e86USDT",
+    "message": "\u6211\u8e0f\u9a6c\u6765\u4e86USDT pumped +14.85% in 24h",
+    "value": 14.847,
+    "threshold": 10.0,
+    "timestamp": 1773372270,
+    "datetime": "2026-03-13 10:24:30",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.00895,
+      "volume": 13699338.483073
+    }
+  },
+  {
+    "id": "1773372271_DMCUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "DMCUSDT",
+    "message": "DMCUSDT dumped -26.29% in 24h",
+    "value": -26.294,
+    "threshold": -10.0,
+    "timestamp": 1773372271,
+    "datetime": "2026-03-13 10:24:31",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.000698,
+      "volume": 3249038.306719
+    }
+  },
+  {
+    "id": "1773372272_DARUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "DARUSDT",
+    "message": "DARUSDT down -7.71% in 24h",
+    "value": -7.707,
+    "threshold": -5.0,
+    "timestamp": 1773372272,
+    "datetime": "2026-03-13 10:24:32",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372273_MYXUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "MYXUSDT",
+    "message": "MYXUSDT up +5.98% in 24h",
+    "value": 5.977,
+    "threshold": 5.0,
+    "timestamp": 1773372273,
+    "datetime": "2026-03-13 10:24:33",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372273_PROMUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "PROMUSDT",
+    "message": "PROMUSDT up +5.15% in 24h",
+    "value": 5.147,
+    "threshold": 5.0,
+    "timestamp": 1773372273,
+    "datetime": "2026-03-13 10:24:33",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372274_1000XUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "1000XUSDT",
+    "message": "1000XUSDT dumped -14.49% in 24h",
+    "value": -14.491,
+    "threshold": -10.0,
+    "timestamp": 1773372274,
+    "datetime": "2026-03-13 10:24:34",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.02555,
+      "volume": 3854733.07023
+    }
+  },
+  {
+    "id": "1773372275_STOUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "STOUSDT",
+    "message": "STOUSDT up +6.08% in 24h",
+    "value": 6.085,
+    "threshold": 5.0,
+    "timestamp": 1773372275,
+    "datetime": "2026-03-13 10:24:35",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372275_BTRUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "BTRUSDT",
+    "message": "BTRUSDT dumped -19.93% in 24h",
+    "value": -19.928,
+    "threshold": -10.0,
+    "timestamp": 1773372275,
+    "datetime": "2026-03-13 10:24:35",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.11986,
+      "volume": 35360608.67193
+    }
+  },
+  {
+    "id": "1773372276_GTCUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "GTCUSDT",
+    "message": "GTCUSDT down -6.36% in 24h",
+    "value": -6.364,
+    "threshold": -5.0,
+    "timestamp": 1773372276,
+    "datetime": "2026-03-13 10:24:36",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372277_NFPUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "NFPUSDT",
+    "message": "NFPUSDT up +5.10% in 24h",
+    "value": 5.097,
+    "threshold": 5.0,
+    "timestamp": 1773372277,
+    "datetime": "2026-03-13 10:24:37",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372278_ALLOUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "ALLOUSDT",
+    "message": "ALLOUSDT up +6.80% in 24h",
+    "value": 6.797,
+    "threshold": 5.0,
+    "timestamp": 1773372278,
+    "datetime": "2026-03-13 10:24:38",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372280_HANAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "HANAUSDT",
+    "message": "HANAUSDT up +7.86% in 24h",
+    "value": 7.864,
+    "threshold": 5.0,
+    "timestamp": 1773372280,
+    "datetime": "2026-03-13 10:24:40",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372281_PUMPUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "PUMPUSDT",
+    "message": "PUMPUSDT up +9.13% in 24h",
+    "value": 9.132,
+    "threshold": 5.0,
+    "timestamp": 1773372281,
+    "datetime": "2026-03-13 10:24:41",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372282_SPXUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "SPXUSDT",
+    "message": "SPXUSDT up +7.48% in 24h",
+    "value": 7.483,
+    "threshold": 5.0,
+    "timestamp": 1773372282,
+    "datetime": "2026-03-13 10:24:42",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372284_GHSTUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "GHSTUSDT",
+    "message": "GHSTUSDT dumped -19.84% in 24h",
+    "value": -19.842,
+    "threshold": -10.0,
+    "timestamp": 1773372284,
+    "datetime": "2026-03-13 10:24:44",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.083525,
+      "volume": 3982589.9436
+    }
+  },
+  {
+    "id": "1773372285_TIAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "TIAUSDT",
+    "message": "TIAUSDT up +5.90% in 24h",
+    "value": 5.898,
+    "threshold": 5.0,
+    "timestamp": 1773372285,
+    "datetime": "2026-03-13 10:24:45",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372286_USELESSUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "USELESSUSDT",
+    "message": "USELESSUSDT up +5.55% in 24h",
+    "value": 5.553,
+    "threshold": 5.0,
+    "timestamp": 1773372286,
+    "datetime": "2026-03-13 10:24:46",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372287_SHELLUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "SHELLUSDT",
+    "message": "SHELLUSDT up +8.07% in 24h",
+    "value": 8.074,
+    "threshold": 5.0,
+    "timestamp": 1773372287,
+    "datetime": "2026-03-13 10:24:47",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372287_MMTUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "MMTUSDT",
+    "message": "MMTUSDT down -9.29% in 24h",
+    "value": -9.286,
+    "threshold": -5.0,
+    "timestamp": 1773372287,
+    "datetime": "2026-03-13 10:24:47",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372288_DFUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "DFUSDT",
+    "message": "DFUSDT dumped -17.18% in 24h",
+    "value": -17.179,
+    "threshold": -10.0,
+    "timestamp": 1773372288,
+    "datetime": "2026-03-13 10:24:48",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0042073,
+      "volume": 3434013.6808638
+    }
+  },
+  {
+    "id": "1773372288_CETUSUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "CETUSUSDT",
+    "message": "CETUSUSDT up +6.80% in 24h",
+    "value": 6.801,
+    "threshold": 5.0,
+    "timestamp": 1773372288,
+    "datetime": "2026-03-13 10:24:48",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372288_PORT3USDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "PORT3USDT",
+    "message": "PORT3USDT dumped -68.31% in 24h",
+    "value": -68.311,
+    "threshold": -10.0,
+    "timestamp": 1773372288,
+    "datetime": "2026-03-13 10:24:48",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.01182,
+      "volume": 200374788.21369
+    }
+  },
+  {
+    "id": "1773372288_MYROUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "MYROUSDT",
+    "message": "MYROUSDT dumped -14.22% in 24h",
+    "value": -14.225,
+    "threshold": -10.0,
+    "timestamp": 1773372288,
+    "datetime": "2026-03-13 10:24:48",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.01001,
+      "volume": 4016063.57685
+    }
+  },
+  {
+    "id": "1773372288_PERPUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "PERPUSDT",
+    "message": "PERPUSDT dumped -20.14% in 24h",
+    "value": -20.143,
+    "threshold": -10.0,
+    "timestamp": 1773372288,
+    "datetime": "2026-03-13 10:24:48",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0781,
+      "volume": 1561495.09146
+    }
+  },
+  {
+    "id": "1773372288_COMBOUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "COMBOUSDT",
+    "message": "COMBOUSDT down -9.03% in 24h",
+    "value": -9.031,
+    "threshold": -5.0,
+    "timestamp": 1773372288,
+    "datetime": "2026-03-13 10:24:48",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372288_KATUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "KATUSDT",
+    "message": "KATUSDT pumped +19.85% in 24h",
+    "value": 19.849,
+    "threshold": 10.0,
+    "timestamp": 1773372288,
+    "datetime": "2026-03-13 10:24:48",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.01588,
+      "volume": 7929278.6383
+    }
+  },
+  {
+    "id": "1773372288_FLMUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "FLMUSDT",
+    "message": "FLMUSDT dumped -30.51% in 24h",
+    "value": -30.508,
+    "threshold": -10.0,
+    "timestamp": 1773372288,
+    "datetime": "2026-03-13 10:24:48",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0082,
+      "volume": 6048396.4552
+    }
+  },
+  {
+    "id": "1773372288_CHESSUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "CHESSUSDT",
+    "message": "CHESSUSDT dumped -30.75% in 24h",
+    "value": -30.748,
+    "threshold": -10.0,
+    "timestamp": 1773372288,
+    "datetime": "2026-03-13 10:24:48",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0185458,
+      "volume": 34803123.04749
+    }
+  },
+  {
+    "id": "1773372288_BSWUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "BSWUSDT",
+    "message": "BSWUSDT dumped -55.16% in 24h",
+    "value": -55.164,
+    "threshold": -10.0,
+    "timestamp": 1773372288,
+    "datetime": "2026-03-13 10:24:48",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0122,
+      "volume": 65917286.29962
+    }
+  },
+  {
+    "id": "1773372288_BARDUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "BARDUSDT",
+    "message": "BARDUSDT up +5.41% in 24h",
+    "value": 5.405,
+    "threshold": 5.0,
+    "timestamp": 1773372288,
+    "datetime": "2026-03-13 10:24:48",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372288_BAKEUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "BAKEUSDT",
+    "message": "BAKEUSDT dumped -34.30% in 24h",
+    "value": -34.301,
+    "threshold": -10.0,
+    "timestamp": 1773372288,
+    "datetime": "2026-03-13 10:24:48",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0249,
+      "volume": 24688403.6875
+    }
+  },
+  {
+    "id": "1773372288_LEVERUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "LEVERUSDT",
+    "message": "LEVERUSDT dumped -14.51% in 24h",
+    "value": -14.514,
+    "threshold": -10.0,
+    "timestamp": 1773372288,
+    "datetime": "2026-03-13 10:24:48",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0001125,
+      "volume": 84688815.4293736
+    }
+  },
+  {
+    "id": "1773372288_EPTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "EPTUSDT",
+    "message": "EPTUSDT pumped +34.54% in 24h",
+    "value": 34.542,
+    "threshold": 10.0,
+    "timestamp": 1773372288,
+    "datetime": "2026-03-13 10:24:48",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0016024,
+      "volume": 30649553.1927408
+    }
+  },
+  {
+    "id": "1773372288_FIGHTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "FIGHTUSDT",
+    "message": "FIGHTUSDT up +7.24% in 24h",
+    "value": 7.244,
+    "threshold": 5.0,
+    "timestamp": 1773372288,
+    "datetime": "2026-03-13 10:24:48",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372288_ESPUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "ESPUSDT",
+    "message": "ESPUSDT up +8.76% in 24h",
+    "value": 8.757,
+    "threshold": 5.0,
+    "timestamp": 1773372288,
+    "datetime": "2026-03-13 10:24:48",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372288_LOKAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "LOKAUSDT",
+    "message": "LOKAUSDT pumped +10.64% in 24h",
+    "value": 10.641,
+    "threshold": 10.0,
+    "timestamp": 1773372288,
+    "datetime": "2026-03-13 10:24:48",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.11323,
+      "volume": 19782534.19488
+    }
+  },
+  {
+    "id": "1773372289_SYRUPUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "SYRUPUSDT",
+    "message": "SYRUPUSDT up +7.08% in 24h",
+    "value": 7.081,
+    "threshold": 5.0,
+    "timestamp": 1773372289,
+    "datetime": "2026-03-13 10:24:49",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372289_KMNOUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "KMNOUSDT",
+    "message": "KMNOUSDT up +6.73% in 24h",
+    "value": 6.731,
+    "threshold": 5.0,
+    "timestamp": 1773372289,
+    "datetime": "2026-03-13 10:24:49",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372289_SUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "SUSDT",
+    "message": "SUSDT up +6.80% in 24h",
+    "value": 6.799,
+    "threshold": 5.0,
+    "timestamp": 1773372289,
+    "datetime": "2026-03-13 10:24:49",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372289_TOKENUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "TOKENUSDT",
+    "message": "TOKENUSDT dumped -11.42% in 24h",
+    "value": -11.418,
+    "threshold": -10.0,
+    "timestamp": 1773372289,
+    "datetime": "2026-03-13 10:24:49",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.003817,
+      "volume": 1578511.372704
+    }
+  },
+  {
+    "id": "1773372289_EDUUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "EDUUSDT",
+    "message": "EDUUSDT down -7.52% in 24h",
+    "value": -7.523,
+    "threshold": -5.0,
+    "timestamp": 1773372289,
+    "datetime": "2026-03-13 10:24:49",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372289_HIFIUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "HIFIUSDT",
+    "message": "HIFIUSDT dumped -19.12% in 24h",
+    "value": -19.121,
+    "threshold": -10.0,
+    "timestamp": 1773372289,
+    "datetime": "2026-03-13 10:24:49",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0939,
+      "volume": 37328390.6661
+    }
+  },
+  {
+    "id": "1773372289_ALPHAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "ALPHAUSDT",
+    "message": "ALPHAUSDT pumped +36.41% in 24h",
+    "value": 36.406,
+    "threshold": 10.0,
+    "timestamp": 1773372289,
+    "datetime": "2026-03-13 10:24:49",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.02027,
+      "volume": 370575971.69449
+    }
+  },
+  {
+    "id": "1773372289_GPSUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "GPSUSDT",
+    "message": "GPSUSDT up +5.30% in 24h",
+    "value": 5.3,
+    "threshold": 5.0,
+    "timestamp": 1773372289,
+    "datetime": "2026-03-13 10:24:49",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372289_STRKUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "STRKUSDT",
+    "message": "STRKUSDT up +6.76% in 24h",
+    "value": 6.764,
+    "threshold": 5.0,
+    "timestamp": 1773372289,
+    "datetime": "2026-03-13 10:24:49",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372289_COMMONUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "COMMONUSDT",
+    "message": "COMMONUSDT dumped -31.22% in 24h",
+    "value": -31.216,
+    "threshold": -10.0,
+    "timestamp": 1773372289,
+    "datetime": "2026-03-13 10:24:49",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0011143,
+      "volume": 10893940.6051056
+    }
+  },
+  {
+    "id": "1773372289_AVNTUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "AVNTUSDT",
+    "message": "AVNTUSDT down -5.79% in 24h",
+    "value": -5.786,
+    "threshold": -5.0,
+    "timestamp": 1773372289,
+    "datetime": "2026-03-13 10:24:49",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372289_ENSOUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "ENSOUSDT",
+    "message": "ENSOUSDT pumped +23.24% in 24h",
+    "value": 23.236,
+    "threshold": 10.0,
+    "timestamp": 1773372289,
+    "datetime": "2026-03-13 10:24:49",
+    "acknowledged": false,
+    "extra": {
+      "price": 1.3742,
+      "volume": 140399573.08036
+    }
+  },
+  {
+    "id": "1773372289_OLUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "OLUSDT",
+    "message": "OLUSDT up +5.13% in 24h",
+    "value": 5.126,
+    "threshold": 5.0,
+    "timestamp": 1773372289,
+    "datetime": "2026-03-13 10:24:49",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372289_AGTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "AGTUSDT",
+    "message": "AGTUSDT up +5.89% in 24h",
+    "value": 5.895,
+    "threshold": 5.0,
+    "timestamp": 1773372289,
+    "datetime": "2026-03-13 10:24:49",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372290_FORMUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "FORMUSDT",
+    "message": "FORMUSDT up +5.28% in 24h",
+    "value": 5.284,
+    "threshold": 5.0,
+    "timestamp": 1773372290,
+    "datetime": "2026-03-13 10:24:50",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372290_1000BONKUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "1000BONKUSDT",
+    "message": "1000BONKUSDT up +6.19% in 24h",
+    "value": 6.19,
+    "threshold": 5.0,
+    "timestamp": 1773372290,
+    "datetime": "2026-03-13 10:24:50",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372290_PYTHUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "PYTHUSDT",
+    "message": "PYTHUSDT up +5.79% in 24h",
+    "value": 5.789,
+    "threshold": 5.0,
+    "timestamp": 1773372290,
+    "datetime": "2026-03-13 10:24:50",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372290_LITUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "LITUSDT",
+    "message": "LITUSDT pumped +13.49% in 24h",
+    "value": 13.491,
+    "threshold": 10.0,
+    "timestamp": 1773372290,
+    "datetime": "2026-03-13 10:24:50",
+    "acknowledged": false,
+    "extra": {
+      "price": 1.203,
+      "volume": 19726877.0223
+    }
+  },
+  {
+    "id": "1773372290_DEGENUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "DEGENUSDT",
+    "message": "DEGENUSDT up +5.06% in 24h",
+    "value": 5.063,
+    "threshold": 5.0,
+    "timestamp": 1773372290,
+    "datetime": "2026-03-13 10:24:50",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372290_BRETTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "BRETTUSDT",
+    "message": "BRETTUSDT up +7.71% in 24h",
+    "value": 7.715,
+    "threshold": 5.0,
+    "timestamp": 1773372290,
+    "datetime": "2026-03-13 10:24:50",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372290_GRTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "GRTUSDT",
+    "message": "GRTUSDT up +9.37% in 24h",
+    "value": 9.373,
+    "threshold": 5.0,
+    "timestamp": 1773372290,
+    "datetime": "2026-03-13 10:24:50",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372290_MERLUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "MERLUSDT",
+    "message": "MERLUSDT up +5.70% in 24h",
+    "value": 5.702,
+    "threshold": 5.0,
+    "timestamp": 1773372290,
+    "datetime": "2026-03-13 10:24:50",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372290_CUDISUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "CUDISUSDT",
+    "message": "CUDISUSDT up +5.73% in 24h",
+    "value": 5.728,
+    "threshold": 5.0,
+    "timestamp": 1773372290,
+    "datetime": "2026-03-13 10:24:50",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372290_SUIUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "SUIUSDT",
+    "message": "SUIUSDT up +5.31% in 24h",
+    "value": 5.312,
+    "threshold": 5.0,
+    "timestamp": 1773372290,
+    "datetime": "2026-03-13 10:24:50",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372290_TRIAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "TRIAUSDT",
+    "message": "TRIAUSDT up +8.32% in 24h",
+    "value": 8.322,
+    "threshold": 5.0,
+    "timestamp": 1773372290,
+    "datetime": "2026-03-13 10:24:50",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372291_MEWUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "MEWUSDT",
+    "message": "MEWUSDT up +5.83% in 24h",
+    "value": 5.835,
+    "threshold": 5.0,
+    "timestamp": 1773372291,
+    "datetime": "2026-03-13 10:24:51",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372291_AIAUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "AIAUSDT",
+    "message": "AIAUSDT down -9.89% in 24h",
+    "value": -9.888,
+    "threshold": -5.0,
+    "timestamp": 1773372291,
+    "datetime": "2026-03-13 10:24:51",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372291_\u9f99\u867eUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "\u9f99\u867eUSDT",
+    "message": "\u9f99\u867eUSDT pumped +16.34% in 24h",
+    "value": 16.339,
+    "threshold": 10.0,
+    "timestamp": 1773372291,
+    "datetime": "2026-03-13 10:24:51",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.022714,
+      "volume": 99309928.897509
+    }
+  },
+  {
+    "id": "1773372291_1000CATUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "1000CATUSDT",
+    "message": "1000CATUSDT up +5.17% in 24h",
+    "value": 5.168,
+    "threshold": 5.0,
+    "timestamp": 1773372291,
+    "datetime": "2026-03-13 10:24:51",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372291_ACXUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "ACXUSDT",
+    "message": "ACXUSDT dumped -18.28% in 24h",
+    "value": -18.28,
+    "threshold": -10.0,
+    "timestamp": 1773372291,
+    "datetime": "2026-03-13 10:24:51",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.05141,
+      "volume": 241836156.628912
+    }
+  },
+  {
+    "id": "1773372291_B3USDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "B3USDT",
+    "message": "B3USDT up +6.80% in 24h",
+    "value": 6.804,
+    "threshold": 5.0,
+    "timestamp": 1773372291,
+    "datetime": "2026-03-13 10:24:51",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372291_EDENUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "EDENUSDT",
+    "message": "EDENUSDT up +6.86% in 24h",
+    "value": 6.864,
+    "threshold": 5.0,
+    "timestamp": 1773372291,
+    "datetime": "2026-03-13 10:24:51",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372291_AAVEUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "AAVEUSDT",
+    "message": "AAVEUSDT up +5.77% in 24h",
+    "value": 5.767,
+    "threshold": 5.0,
+    "timestamp": 1773372291,
+    "datetime": "2026-03-13 10:24:51",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372291_ARKMUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "ARKMUSDT",
+    "message": "ARKMUSDT up +9.65% in 24h",
+    "value": 9.647,
+    "threshold": 5.0,
+    "timestamp": 1773372291,
+    "datetime": "2026-03-13 10:24:51",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372291_MEMEFIUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "MEMEFIUSDT",
+    "message": "MEMEFIUSDT dumped -30.48% in 24h",
+    "value": -30.48,
+    "threshold": -10.0,
+    "timestamp": 1773372291,
+    "datetime": "2026-03-13 10:24:51",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.002201,
+      "volume": 86505432.148509
+    }
+  },
+  {
+    "id": "1773372291_HYPEUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "HYPEUSDT",
+    "message": "HYPEUSDT up +6.25% in 24h",
+    "value": 6.253,
+    "threshold": 5.0,
+    "timestamp": 1773372291,
+    "datetime": "2026-03-13 10:24:51",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372291_DEEPUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "DEEPUSDT",
+    "message": "DEEPUSDT up +8.80% in 24h",
+    "value": 8.8,
+    "threshold": 5.0,
+    "timestamp": 1773372291,
+    "datetime": "2026-03-13 10:24:51",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372291_FUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "FUSDT",
+    "message": "FUSDT pumped +12.86% in 24h",
+    "value": 12.858,
+    "threshold": 10.0,
+    "timestamp": 1773372291,
+    "datetime": "2026-03-13 10:24:51",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.005986,
+      "volume": 13186360.902718
+    }
+  },
+  {
+    "id": "1773372291_PIEVERSEUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "PIEVERSEUSDT",
+    "message": "PIEVERSEUSDT up +8.10% in 24h",
+    "value": 8.102,
+    "threshold": 5.0,
+    "timestamp": 1773372291,
+    "datetime": "2026-03-13 10:24:51",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372292_POPCATUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "POPCATUSDT",
+    "message": "POPCATUSDT up +5.99% in 24h",
+    "value": 5.992,
+    "threshold": 5.0,
+    "timestamp": 1773372292,
+    "datetime": "2026-03-13 10:24:52",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372292_NEIROETHUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "NEIROETHUSDT",
+    "message": "NEIROETHUSDT dumped -47.28% in 24h",
+    "value": -47.282,
+    "threshold": -10.0,
+    "timestamp": 1773372292,
+    "datetime": "2026-03-13 10:24:52",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.00863,
+      "volume": 83925618.84424
+    }
+  },
+  {
+    "id": "1773372292_TAOUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "TAOUSDT",
+    "message": "TAOUSDT pumped +15.21% in 24h",
+    "value": 15.215,
+    "threshold": 10.0,
+    "timestamp": 1773372292,
+    "datetime": "2026-03-13 10:24:52",
+    "acknowledged": false,
+    "extra": {
+      "price": 229.37,
+      "volume": 199880640.6
+    }
+  },
+  {
+    "id": "1773372292_TURBOUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "TURBOUSDT",
+    "message": "TURBOUSDT pumped +26.43% in 24h",
+    "value": 26.426,
+    "threshold": 10.0,
+    "timestamp": 1773372292,
+    "datetime": "2026-03-13 10:24:52",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0011592,
+      "volume": 242234061.5172503
+    }
+  },
+  {
+    "id": "1773372292_DAMUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "DAMUSDT",
+    "message": "DAMUSDT down -5.81% in 24h",
+    "value": -5.81,
+    "threshold": -5.0,
+    "timestamp": 1773372292,
+    "datetime": "2026-03-13 10:24:52",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372292_IOUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "IOUSDT",
+    "message": "IOUSDT up +7.44% in 24h",
+    "value": 7.444,
+    "threshold": 5.0,
+    "timestamp": 1773372292,
+    "datetime": "2026-03-13 10:24:52",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372292_AMBUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "AMBUSDT",
+    "message": "AMBUSDT dumped -34.26% in 24h",
+    "value": -34.256,
+    "threshold": -10.0,
+    "timestamp": 1773372292,
+    "datetime": "2026-03-13 10:24:52",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.001188,
+      "volume": 66723120.397096
+    }
+  },
+  {
+    "id": "1773372292_RAVEUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "RAVEUSDT",
+    "message": "RAVEUSDT pumped +16.94% in 24h",
+    "value": 16.936,
+    "threshold": 10.0,
+    "timestamp": 1773372292,
+    "datetime": "2026-03-13 10:24:52",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.24345,
+      "volume": 12596036.29189
+    }
+  },
+  {
+    "id": "1773372292_DGBUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "DGBUSDT",
+    "message": "DGBUSDT pumped +18.86% in 24h",
+    "value": 18.862,
+    "threshold": 10.0,
+    "timestamp": 1773372292,
+    "datetime": "2026-03-13 10:24:52",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.01922,
+      "volume": 45674718.93021
+    }
+  },
+  {
+    "id": "1773372292_ARIAUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "ARIAUSDT",
+    "message": "ARIAUSDT down -6.43% in 24h",
+    "value": -6.429,
+    "threshold": -5.0,
+    "timestamp": 1773372292,
+    "datetime": "2026-03-13 10:24:52",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372292_AVAAIUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "AVAAIUSDT",
+    "message": "AVAAIUSDT up +5.14% in 24h",
+    "value": 5.145,
+    "threshold": 5.0,
+    "timestamp": 1773372292,
+    "datetime": "2026-03-13 10:24:52",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372292_NKNUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "NKNUSDT",
+    "message": "NKNUSDT dumped -21.98% in 24h",
+    "value": -21.975,
+    "threshold": -10.0,
+    "timestamp": 1773372292,
+    "datetime": "2026-03-13 10:24:52",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.00561,
+      "volume": 4848895.41413
+    }
+  },
+  {
+    "id": "1773372292_KITEUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "KITEUSDT",
+    "message": "KITEUSDT down -8.30% in 24h",
+    "value": -8.301,
+    "threshold": -5.0,
+    "timestamp": 1773372292,
+    "datetime": "2026-03-13 10:24:52",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372292_APEUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "APEUSDT",
+    "message": "APEUSDT up +6.01% in 24h",
+    "value": 6.006,
+    "threshold": 5.0,
+    "timestamp": 1773372292,
+    "datetime": "2026-03-13 10:24:52",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372292_UNFIUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "UNFIUSDT",
+    "message": "UNFIUSDT down -5.46% in 24h",
+    "value": -5.464,
+    "threshold": -5.0,
+    "timestamp": 1773372292,
+    "datetime": "2026-03-13 10:24:52",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372292_ICNTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "ICNTUSDT",
+    "message": "ICNTUSDT pumped +11.82% in 24h",
+    "value": 11.817,
+    "threshold": 10.0,
+    "timestamp": 1773372292,
+    "datetime": "2026-03-13 10:24:52",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.3681,
+      "volume": 3965524.0835
+    }
+  },
+  {
+    "id": "1773372292_IDOLUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "IDOLUSDT",
+    "message": "IDOLUSDT up +7.26% in 24h",
+    "value": 7.256,
+    "threshold": 5.0,
+    "timestamp": 1773372292,
+    "datetime": "2026-03-13 10:24:52",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372292_BROCCOLI714USDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "BROCCOLI714USDT",
+    "message": "BROCCOLI714USDT up +7.42% in 24h",
+    "value": 7.424,
+    "threshold": 5.0,
+    "timestamp": 1773372292,
+    "datetime": "2026-03-13 10:24:52",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372293_LYNUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "LYNUSDT",
+    "message": "LYNUSDT pumped +59.48% in 24h",
+    "value": 59.48,
+    "threshold": 10.0,
+    "timestamp": 1773372293,
+    "datetime": "2026-03-13 10:24:53",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.26539,
+      "volume": 323521131.46909
+    }
+  },
+  {
+    "id": "1773372293_PORTALUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "PORTALUSDT",
+    "message": "PORTALUSDT up +5.87% in 24h",
+    "value": 5.873,
+    "threshold": 5.0,
+    "timestamp": 1773372293,
+    "datetime": "2026-03-13 10:24:53",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372293_JTOUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "JTOUSDT",
+    "message": "JTOUSDT up +7.07% in 24h",
+    "value": 7.069,
+    "threshold": 5.0,
+    "timestamp": 1773372293,
+    "datetime": "2026-03-13 10:24:53",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372293_USUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "USUSDT",
+    "message": "USUSDT down -9.14% in 24h",
+    "value": -9.141,
+    "threshold": -5.0,
+    "timestamp": 1773372293,
+    "datetime": "2026-03-13 10:24:53",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372293_OMNIUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "OMNIUSDT",
+    "message": "OMNIUSDT up +5.25% in 24h",
+    "value": 5.245,
+    "threshold": 5.0,
+    "timestamp": 1773372293,
+    "datetime": "2026-03-13 10:24:53",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372293_MOODENGUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "MOODENGUSDT",
+    "message": "MOODENGUSDT up +7.52% in 24h",
+    "value": 7.52,
+    "threshold": 5.0,
+    "timestamp": 1773372293,
+    "datetime": "2026-03-13 10:24:53",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372293_COLLECTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "COLLECTUSDT",
+    "message": "COLLECTUSDT pumped +28.08% in 24h",
+    "value": 28.083,
+    "threshold": 10.0,
+    "timestamp": 1773372293,
+    "datetime": "2026-03-13 10:24:53",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.06449,
+      "volume": 24413805.88334
+    }
+  },
+  {
+    "id": "1773372293_NULSUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "NULSUSDT",
+    "message": "NULSUSDT dumped -24.21% in 24h",
+    "value": -24.213,
+    "threshold": -10.0,
+    "timestamp": 1773372293,
+    "datetime": "2026-03-13 10:24:53",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0313,
+      "volume": 19986545.1954
+    }
+  },
+  {
+    "id": "1773372293_SEIUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "SEIUSDT",
+    "message": "SEIUSDT up +5.55% in 24h",
+    "value": 5.548,
+    "threshold": 5.0,
+    "timestamp": 1773372293,
+    "datetime": "2026-03-13 10:24:53",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372293_NOTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "NOTUSDT",
+    "message": "NOTUSDT up +6.15% in 24h",
+    "value": 6.153,
+    "threshold": 5.0,
+    "timestamp": 1773372293,
+    "datetime": "2026-03-13 10:24:53",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372293_VINEUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "VINEUSDT",
+    "message": "VINEUSDT up +9.66% in 24h",
+    "value": 9.658,
+    "threshold": 5.0,
+    "timestamp": 1773372293,
+    "datetime": "2026-03-13 10:24:53",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372293_LIGHTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "LIGHTUSDT",
+    "message": "LIGHTUSDT up +5.63% in 24h",
+    "value": 5.626,
+    "threshold": 5.0,
+    "timestamp": 1773372293,
+    "datetime": "2026-03-13 10:24:53",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372293_AINUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "AINUSDT",
+    "message": "AINUSDT dumped -10.05% in 24h",
+    "value": -10.051,
+    "threshold": -10.0,
+    "timestamp": 1773372293,
+    "datetime": "2026-03-13 10:24:53",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0545,
+      "volume": 4512672.41123
+    }
+  },
+  {
+    "id": "1773372293_CRVUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "CRVUSDT",
+    "message": "CRVUSDT up +5.20% in 24h",
+    "value": 5.195,
+    "threshold": 5.0,
+    "timestamp": 1773372293,
+    "datetime": "2026-03-13 10:24:53",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372293_PUFFERUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "PUFFERUSDT",
+    "message": "PUFFERUSDT up +8.15% in 24h",
+    "value": 8.146,
+    "threshold": 5.0,
+    "timestamp": 1773372293,
+    "datetime": "2026-03-13 10:24:53",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372293_MDTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "MDTUSDT",
+    "message": "MDTUSDT up +7.65% in 24h",
+    "value": 7.652,
+    "threshold": 5.0,
+    "timestamp": 1773372293,
+    "datetime": "2026-03-13 10:24:53",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372293_UAIUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "UAIUSDT",
+    "message": "UAIUSDT pumped +57.34% in 24h",
+    "value": 57.341,
+    "threshold": 10.0,
+    "timestamp": 1773372293,
+    "datetime": "2026-03-13 10:24:53",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.3408,
+      "volume": 153195135.3463
+    }
+  },
+  {
+    "id": "1773372294_XCNUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "XCNUSDT",
+    "message": "XCNUSDT down -6.16% in 24h",
+    "value": -6.161,
+    "threshold": -5.0,
+    "timestamp": 1773372294,
+    "datetime": "2026-03-13 10:24:54",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372294_REEFUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "REEFUSDT",
+    "message": "REEFUSDT down -5.78% in 24h",
+    "value": -5.782,
+    "threshold": -5.0,
+    "timestamp": 1773372294,
+    "datetime": "2026-03-13 10:24:54",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372294_XPINUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "XPINUSDT",
+    "message": "XPINUSDT pumped +20.41% in 24h",
+    "value": 20.411,
+    "threshold": 10.0,
+    "timestamp": 1773372294,
+    "datetime": "2026-03-13 10:24:54",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.00164,
+      "volume": 3567537.687476
+    }
+  },
+  {
+    "id": "1773372294_PIXELUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "PIXELUSDT",
+    "message": "PIXELUSDT pumped +17.34% in 24h",
+    "value": 17.342,
+    "threshold": 10.0,
+    "timestamp": 1773372294,
+    "datetime": "2026-03-13 10:24:54",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.013485,
+      "volume": 465775970.273859
+    }
+  },
+  {
+    "id": "1773372294_BANKUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "BANKUSDT",
+    "message": "BANKUSDT down -7.82% in 24h",
+    "value": -7.824,
+    "threshold": -5.0,
+    "timestamp": 1773372294,
+    "datetime": "2026-03-13 10:24:54",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372294_YALAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "YALAUSDT",
+    "message": "YALAUSDT pumped +50.72% in 24h",
+    "value": 50.718,
+    "threshold": 10.0,
+    "timestamp": 1773372294,
+    "datetime": "2026-03-13 10:24:54",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0144086,
+      "volume": 66841744.3618888
+    }
+  },
+  {
+    "id": "1773372294_ROBOUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "ROBOUSDT",
+    "message": "ROBOUSDT up +7.98% in 24h",
+    "value": 7.977,
+    "threshold": 5.0,
+    "timestamp": 1773372294,
+    "datetime": "2026-03-13 10:24:54",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372294_BOMEUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "BOMEUSDT",
+    "message": "BOMEUSDT up +7.68% in 24h",
+    "value": 7.68,
+    "threshold": 5.0,
+    "timestamp": 1773372294,
+    "datetime": "2026-03-13 10:24:54",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372294_CFXUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "CFXUSDT",
+    "message": "CFXUSDT pumped +11.43% in 24h",
+    "value": 11.429,
+    "threshold": 10.0,
+    "timestamp": 1773372294,
+    "datetime": "2026-03-13 10:24:54",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.05772,
+      "volume": 7402626.79854
+    }
+  },
+  {
+    "id": "1773372294_XAIUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "XAIUSDT",
+    "message": "XAIUSDT up +8.16% in 24h",
+    "value": 8.165,
+    "threshold": 5.0,
+    "timestamp": 1773372294,
+    "datetime": "2026-03-13 10:24:54",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372294_FTMUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "FTMUSDT",
+    "message": "FTMUSDT down -7.36% in 24h",
+    "value": -7.361,
+    "threshold": -5.0,
+    "timestamp": 1773372294,
+    "datetime": "2026-03-13 10:24:54",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372294_NAORISUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "NAORISUSDT",
+    "message": "NAORISUSDT up +6.69% in 24h",
+    "value": 6.686,
+    "threshold": 5.0,
+    "timestamp": 1773372294,
+    "datetime": "2026-03-13 10:24:54",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372294_AGLDUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "AGLDUSDT",
+    "message": "AGLDUSDT up +8.24% in 24h",
+    "value": 8.239,
+    "threshold": 5.0,
+    "timestamp": 1773372294,
+    "datetime": "2026-03-13 10:24:54",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372294_AGIXUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "AGIXUSDT",
+    "message": "AGIXUSDT pumped +18.78% in 24h",
+    "value": 18.776,
+    "threshold": 10.0,
+    "timestamp": 1773372294,
+    "datetime": "2026-03-13 10:24:54",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.7009,
+      "volume": 113687318.3536
+    }
+  },
+  {
+    "id": "1773372294_RENDERUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "RENDERUSDT",
+    "message": "RENDERUSDT pumped +16.76% in 24h",
+    "value": 16.756,
+    "threshold": 10.0,
+    "timestamp": 1773372294,
+    "datetime": "2026-03-13 10:24:54",
+    "acknowledged": false,
+    "extra": {
+      "price": 1.749,
+      "volume": 47711675.067
+    }
+  },
+  {
+    "id": "1773372294_NEARUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "NEARUSDT",
+    "message": "NEARUSDT up +7.79% in 24h",
+    "value": 7.788,
+    "threshold": 5.0,
+    "timestamp": 1773372294,
+    "datetime": "2026-03-13 10:24:54",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372294_BIDUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "BIDUSDT",
+    "message": "BIDUSDT dumped -20.64% in 24h",
+    "value": -20.64,
+    "threshold": -10.0,
+    "timestamp": 1773372294,
+    "datetime": "2026-03-13 10:24:54",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0140784,
+      "volume": 2331742.338438
+    }
+  },
+  {
+    "id": "1773372294_OBOLUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "OBOLUSDT",
+    "message": "OBOLUSDT dumped -15.76% in 24h",
+    "value": -15.757,
+    "threshold": -10.0,
+    "timestamp": 1773372294,
+    "datetime": "2026-03-13 10:24:54",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0332,
+      "volume": 1579493.47287
+    }
+  },
+  {
+    "id": "1773372294_XEMUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "XEMUSDT",
+    "message": "XEMUSDT dumped -10.11% in 24h",
+    "value": -10.106,
+    "threshold": -10.0,
+    "timestamp": 1773372294,
+    "datetime": "2026-03-13 10:24:54",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0338,
+      "volume": 9727490.2775
+    }
+  },
+  {
+    "id": "1773372294_UXLINKUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "UXLINKUSDT",
+    "message": "UXLINKUSDT up +6.89% in 24h",
+    "value": 6.891,
+    "threshold": 5.0,
+    "timestamp": 1773372294,
+    "datetime": "2026-03-13 10:24:54",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372294_DOODUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "DOODUSDT",
+    "message": "DOODUSDT up +7.45% in 24h",
+    "value": 7.446,
+    "threshold": 5.0,
+    "timestamp": 1773372294,
+    "datetime": "2026-03-13 10:24:54",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372295_RVVUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "RVVUSDT",
+    "message": "RVVUSDT dumped -61.55% in 24h",
+    "value": -61.553,
+    "threshold": -10.0,
+    "timestamp": 1773372295,
+    "datetime": "2026-03-13 10:24:55",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0005075,
+      "volume": 24070289.528804
+    }
+  },
+  {
+    "id": "1773372295_BNXUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "BNXUSDT",
+    "message": "BNXUSDT pumped +66.38% in 24h",
+    "value": 66.376,
+    "threshold": 10.0,
+    "timestamp": 1773372295,
+    "datetime": "2026-03-13 10:24:55",
+    "acknowledged": false,
+    "extra": {
+      "price": 2.0,
+      "volume": 492004952.04499
+    }
+  },
+  {
+    "id": "1773372295_XPLUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "XPLUSDT",
+    "message": "XPLUSDT up +7.82% in 24h",
+    "value": 7.816,
+    "threshold": 5.0,
+    "timestamp": 1773372295,
+    "datetime": "2026-03-13 10:24:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372295_ELSAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "ELSAUSDT",
+    "message": "ELSAUSDT up +6.49% in 24h",
+    "value": 6.493,
+    "threshold": 5.0,
+    "timestamp": 1773372295,
+    "datetime": "2026-03-13 10:24:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372295_LOOMUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "LOOMUSDT",
+    "message": "LOOMUSDT up +5.60% in 24h",
+    "value": 5.598,
+    "threshold": 5.0,
+    "timestamp": 1773372295,
+    "datetime": "2026-03-13 10:24:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372295_2ZUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "2ZUSDT",
+    "message": "2ZUSDT up +7.50% in 24h",
+    "value": 7.504,
+    "threshold": 5.0,
+    "timestamp": 1773372295,
+    "datetime": "2026-03-13 10:24:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372295_ALPACAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "ALPACAUSDT",
+    "message": "ALPACAUSDT pumped +391.23% in 24h",
+    "value": 391.228,
+    "threshold": 10.0,
+    "timestamp": 1773372295,
+    "datetime": "2026-03-13 10:24:55",
+    "acknowledged": false,
+    "extra": {
+      "price": 1.19,
+      "volume": 2911352253.74508
+    }
+  },
+  {
+    "id": "1773372295_ZRCUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "ZRCUSDT",
+    "message": "ZRCUSDT down -9.64% in 24h",
+    "value": -9.643,
+    "threshold": -5.0,
+    "timestamp": 1773372295,
+    "datetime": "2026-03-13 10:24:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372295_VIDTUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "VIDTUSDT",
+    "message": "VIDTUSDT dumped -42.44% in 24h",
+    "value": -42.436,
+    "threshold": -10.0,
+    "timestamp": 1773372295,
+    "datetime": "2026-03-13 10:24:55",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.00293,
+      "volume": 116094468.40266
+    }
+  },
+  {
+    "id": "1773372295_VIRTUALUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "VIRTUALUSDT",
+    "message": "VIRTUALUSDT up +8.95% in 24h",
+    "value": 8.95,
+    "threshold": 5.0,
+    "timestamp": 1773372295,
+    "datetime": "2026-03-13 10:24:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372295_CATIUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "CATIUSDT",
+    "message": "CATIUSDT down -5.05% in 24h",
+    "value": -5.049,
+    "threshold": -5.0,
+    "timestamp": 1773372295,
+    "datetime": "2026-03-13 10:24:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372295_FARTCOINUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "FARTCOINUSDT",
+    "message": "FARTCOINUSDT up +7.55% in 24h",
+    "value": 7.55,
+    "threshold": 5.0,
+    "timestamp": 1773372295,
+    "datetime": "2026-03-13 10:24:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372295_RSRUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "RSRUSDT",
+    "message": "RSRUSDT up +5.49% in 24h",
+    "value": 5.49,
+    "threshold": 5.0,
+    "timestamp": 1773372295,
+    "datetime": "2026-03-13 10:24:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372295_SXPUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "SXPUSDT",
+    "message": "SXPUSDT down -9.27% in 24h",
+    "value": -9.267,
+    "threshold": -5.0,
+    "timestamp": 1773372295,
+    "datetime": "2026-03-13 10:24:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372295_NIGHTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "NIGHTUSDT",
+    "message": "NIGHTUSDT up +9.54% in 24h",
+    "value": 9.541,
+    "threshold": 5.0,
+    "timestamp": 1773372295,
+    "datetime": "2026-03-13 10:24:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372295_ENAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "ENAUSDT",
+    "message": "ENAUSDT up +6.14% in 24h",
+    "value": 6.142,
+    "threshold": 5.0,
+    "timestamp": 1773372295,
+    "datetime": "2026-03-13 10:24:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372295_BRUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "BRUSDT",
+    "message": "BRUSDT down -8.73% in 24h",
+    "value": -8.728,
+    "threshold": -5.0,
+    "timestamp": 1773372295,
+    "datetime": "2026-03-13 10:24:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372295_OPNUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "OPNUSDT",
+    "message": "OPNUSDT up +8.47% in 24h",
+    "value": 8.472,
+    "threshold": 5.0,
+    "timestamp": 1773372295,
+    "datetime": "2026-03-13 10:24:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372295_QUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "QUSDT",
+    "message": "QUSDT up +5.06% in 24h",
+    "value": 5.056,
+    "threshold": 5.0,
+    "timestamp": 1773372295,
+    "datetime": "2026-03-13 10:24:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372295_42USDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "42USDT",
+    "message": "42USDT pumped +20.71% in 24h",
+    "value": 20.712,
+    "threshold": 10.0,
+    "timestamp": 1773372295,
+    "datetime": "2026-03-13 10:24:55",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0272447,
+      "volume": 34382770.22146
+    }
+  },
+  {
+    "id": "1773372296_LINAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "LINAUSDT",
+    "message": "LINAUSDT pumped +13.63% in 24h",
+    "value": 13.629,
+    "threshold": 10.0,
+    "timestamp": 1773372296,
+    "datetime": "2026-03-13 10:24:56",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.000742,
+      "volume": 86817665.678621
+    }
+  },
+  {
+    "id": "1773372296_RESOLVUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "RESOLVUSDT",
+    "message": "RESOLVUSDT dumped -15.22% in 24h",
+    "value": -15.219,
+    "threshold": -10.0,
+    "timestamp": 1773372296,
+    "datetime": "2026-03-13 10:24:56",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.09426,
+      "volume": 45176774.00168
+    }
+  },
+  {
+    "id": "1773372296_AKTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "AKTUSDT",
+    "message": "AKTUSDT up +8.51% in 24h",
+    "value": 8.505,
+    "threshold": 5.0,
+    "timestamp": 1773372296,
+    "datetime": "2026-03-13 10:24:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372296_MAGMAUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "MAGMAUSDT",
+    "message": "MAGMAUSDT down -7.51% in 24h",
+    "value": -7.508,
+    "threshold": -5.0,
+    "timestamp": 1773372296,
+    "datetime": "2026-03-13 10:24:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372296_TROYUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "TROYUSDT",
+    "message": "TROYUSDT dumped -41.20% in 24h",
+    "value": -41.195,
+    "threshold": -10.0,
+    "timestamp": 1773372296,
+    "datetime": "2026-03-13 10:24:56",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.000187,
+      "volume": 44261336.491637
+    }
+  },
+  {
+    "id": "1773372296_STRAXUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "STRAXUSDT",
+    "message": "STRAXUSDT down -9.66% in 24h",
+    "value": -9.662,
+    "threshold": -5.0,
+    "timestamp": 1773372296,
+    "datetime": "2026-03-13 10:24:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372296_OGNUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "OGNUSDT",
+    "message": "OGNUSDT up +5.77% in 24h",
+    "value": 5.769,
+    "threshold": 5.0,
+    "timestamp": 1773372296,
+    "datetime": "2026-03-13 10:24:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372296_1000SATSUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "1000SATSUSDT",
+    "message": "1000SATSUSDT up +7.63% in 24h",
+    "value": 7.627,
+    "threshold": 5.0,
+    "timestamp": 1773372296,
+    "datetime": "2026-03-13 10:24:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372296_REIUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "REIUSDT",
+    "message": "REIUSDT down -5.30% in 24h",
+    "value": -5.305,
+    "threshold": -5.0,
+    "timestamp": 1773372296,
+    "datetime": "2026-03-13 10:24:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372296_AZTECUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "AZTECUSDT",
+    "message": "AZTECUSDT up +9.05% in 24h",
+    "value": 9.053,
+    "threshold": 5.0,
+    "timestamp": 1773372296,
+    "datetime": "2026-03-13 10:24:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372296_ROSEUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "ROSEUSDT",
+    "message": "ROSEUSDT up +5.50% in 24h",
+    "value": 5.495,
+    "threshold": 5.0,
+    "timestamp": 1773372296,
+    "datetime": "2026-03-13 10:24:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773372296_SOLUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "SOLUSDT",
+    "message": "SOLUSDT volume 32.3x above average ($2,563,932,578)",
+    "value": 2563932578.3673,
+    "threshold": 198374415.865,
+    "timestamp": 1773372296,
+    "datetime": "2026-03-13 10:24:56",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 32.31
+    }
+  },
+  {
+    "id": "1773372296_BNXUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "BNXUSDT",
+    "message": "BNXUSDT volume 6.2x above average ($492,004,952)",
+    "value": 492004952.045,
+    "threshold": 198374415.865,
+    "timestamp": 1773372296,
+    "datetime": "2026-03-13 10:24:56",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 6.2
+    }
+  },
+  {
+    "id": "1773372296_TURBOUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "TURBOUSDT",
+    "message": "TURBOUSDT volume 3.1x above average ($242,357,695)",
+    "value": 242357695.1322,
+    "threshold": 198374415.865,
+    "timestamp": 1773372296,
+    "datetime": "2026-03-13 10:24:56",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 3.05
+    }
+  },
+  {
+    "id": "1773372296_ZECUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "ZECUSDT",
+    "message": "ZECUSDT volume 4.4x above average ($345,227,546)",
+    "value": 345227546.0,
+    "threshold": 198374415.865,
+    "timestamp": 1773372296,
+    "datetime": "2026-03-13 10:24:56",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 4.35
+    }
+  },
+  {
+    "id": "1773372296_1000PEPEUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "1000PEPEUSDT",
+    "message": "1000PEPEUSDT volume 3.5x above average ($277,365,746)",
+    "value": 277365746.0267,
+    "threshold": 198374415.865,
+    "timestamp": 1773372296,
+    "datetime": "2026-03-13 10:24:56",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 3.5
+    }
+  },
+  {
+    "id": "1773372297_SUIUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "SUIUSDT",
+    "message": "SUIUSDT volume 2.8x above average ($221,080,048)",
+    "value": 221080047.6455,
+    "threshold": 198374415.865,
+    "timestamp": 1773372297,
+    "datetime": "2026-03-13 10:24:57",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 2.79
+    }
+  },
+  {
+    "id": "1773372297_RIVERUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "RIVERUSDT",
+    "message": "RIVERUSDT volume 5.6x above average ($444,880,340)",
+    "value": 444880340.1269,
+    "threshold": 198374415.865,
+    "timestamp": 1773372297,
+    "datetime": "2026-03-13 10:24:57",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 5.61
+    }
+  },
+  {
+    "id": "1773372297_LYNUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "LYNUSDT",
+    "message": "LYNUSDT volume 4.1x above average ($323,791,691)",
+    "value": 323791691.4854,
+    "threshold": 198374415.865,
+    "timestamp": 1773372297,
+    "datetime": "2026-03-13 10:24:57",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 4.08
+    }
+  },
+  {
+    "id": "1773372297_ALPHAUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "ALPHAUSDT",
+    "message": "ALPHAUSDT volume 4.7x above average ($370,575,972)",
+    "value": 370575971.6945,
+    "threshold": 198374415.865,
+    "timestamp": 1773372297,
+    "datetime": "2026-03-13 10:24:57",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 4.67
+    }
+  },
+  {
+    "id": "1773372297_PORT3USDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "PORT3USDT",
+    "message": "PORT3USDT volume 2.5x above average ($200,374,788)",
+    "value": 200374788.2137,
+    "threshold": 198374415.865,
+    "timestamp": 1773372297,
+    "datetime": "2026-03-13 10:24:57",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 2.53
+    }
+  },
+  {
+    "id": "1773372297_HYPEUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "HYPEUSDT",
+    "message": "HYPEUSDT volume 6.0x above average ($473,103,280)",
+    "value": 473103280.1079,
+    "threshold": 198374415.865,
+    "timestamp": 1773372297,
+    "datetime": "2026-03-13 10:24:57",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 5.96
+    }
+  },
+  {
+    "id": "1773372297_XAGUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "XAGUSDT",
+    "message": "XAGUSDT volume 17.1x above average ($1,353,122,026)",
+    "value": 1353122025.6711,
+    "threshold": 198374415.865,
+    "timestamp": 1773372297,
+    "datetime": "2026-03-13 10:24:57",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 17.05
+    }
+  },
+  {
+    "id": "1773372297_XAUUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "XAUUSDT",
+    "message": "XAUUSDT volume 12.1x above average ($960,166,534)",
+    "value": 960166534.2,
+    "threshold": 198374415.865,
+    "timestamp": 1773372297,
+    "datetime": "2026-03-13 10:24:57",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 12.1
+    }
+  },
+  {
+    "id": "1773372297_BTCUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "BTCUSDT",
+    "message": "BTCUSDT volume 186.1x above average ($14,768,709,181)",
+    "value": 14768709180.67,
+    "threshold": 198374415.865,
+    "timestamp": 1773372297,
+    "datetime": "2026-03-13 10:24:57",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 186.12
+    }
+  },
+  {
+    "id": "1773372297_TAOUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "TAOUSDT",
+    "message": "TAOUSDT volume 2.5x above average ($200,135,244)",
+    "value": 200135244.09,
+    "threshold": 198374415.865,
+    "timestamp": 1773372297,
+    "datetime": "2026-03-13 10:24:57",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 2.52
+    }
+  },
+  {
+    "id": "1773372297_DEGOUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "DEGOUSDT",
+    "message": "DEGOUSDT volume 3.1x above average ($245,167,825)",
+    "value": 245167824.8474,
+    "threshold": 198374415.865,
+    "timestamp": 1773372297,
+    "datetime": "2026-03-13 10:24:57",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 3.09
+    }
+  },
+  {
+    "id": "1773372297_DOGEUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "DOGEUSDT",
+    "message": "DOGEUSDT volume 9.1x above average ($718,752,012)",
+    "value": 718752012.1013,
+    "threshold": 198374415.865,
+    "timestamp": 1773372297,
+    "datetime": "2026-03-13 10:24:57",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 9.06
+    }
+  },
+  {
+    "id": "1773372297_ALPACAUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "ALPACAUSDT",
+    "message": "ALPACAUSDT volume 36.7x above average ($2,911,352,254)",
+    "value": 2911352253.7451,
+    "threshold": 198374415.865,
+    "timestamp": 1773372297,
+    "datetime": "2026-03-13 10:24:57",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 36.69
+    }
+  },
+  {
+    "id": "1773372297_PIXELUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "PIXELUSDT",
+    "message": "PIXELUSDT volume 5.9x above average ($466,696,820)",
+    "value": 466696820.275,
+    "threshold": 198374415.865,
+    "timestamp": 1773372297,
+    "datetime": "2026-03-13 10:24:57",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 5.88
+    }
+  },
+  {
+    "id": "1773372297_BNBUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "BNBUSDT",
+    "message": "BNBUSDT volume 4.6x above average ($366,363,378)",
+    "value": 366363378.382,
+    "threshold": 198374415.865,
+    "timestamp": 1773372297,
+    "datetime": "2026-03-13 10:24:57",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 4.62
+    }
+  },
+  {
+    "id": "1773372297_XRPUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "XRPUSDT",
+    "message": "XRPUSDT volume 10.1x above average ($798,107,126)",
+    "value": 798107125.6738,
+    "threshold": 198374415.865,
+    "timestamp": 1773372297,
+    "datetime": "2026-03-13 10:24:57",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 10.06
+    }
+  },
+  {
+    "id": "1773372297_ACXUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "ACXUSDT",
+    "message": "ACXUSDT volume 3.0x above average ($241,528,897)",
+    "value": 241528897.3651,
+    "threshold": 198374415.865,
+    "timestamp": 1773372297,
+    "datetime": "2026-03-13 10:24:57",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 3.04
+    }
+  },
+  {
+    "id": "1773372297_ETHUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "ETHUSDT",
+    "message": "ETHUSDT volume 161.6x above average ($12,825,656,825)",
+    "value": 12825656825.08,
+    "threshold": 198374415.865,
+    "timestamp": 1773372297,
+    "datetime": "2026-03-13 10:24:57",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 161.63
+    }
+  },
+  {
+    "id": "1773373310_TOKENUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "TOKENUSDT",
+    "message": "TOKENUSDT dumped -11.42% in 24h",
+    "value": -11.418,
+    "threshold": -10.0,
+    "timestamp": 1773373310,
+    "datetime": "2026-03-13 10:41:50",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.003817,
+      "volume": 1578511.372704
+    }
+  },
+  {
+    "id": "1773373310_TANSSIUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "TANSSIUSDT",
+    "message": "TANSSIUSDT pumped +35.26% in 24h",
+    "value": 35.263,
+    "threshold": 10.0,
+    "timestamp": 1773373310,
+    "datetime": "2026-03-13 10:41:50",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.011335,
+      "volume": 28037445.47324
+    }
+  },
+  {
+    "id": "1773373310_POPCATUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "POPCATUSDT",
+    "message": "POPCATUSDT up +5.40% in 24h",
+    "value": 5.396,
+    "threshold": 5.0,
+    "timestamp": 1773373310,
+    "datetime": "2026-03-13 10:41:50",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373310_SIGNUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "SIGNUSDT",
+    "message": "SIGNUSDT down -6.82% in 24h",
+    "value": -6.818,
+    "threshold": -5.0,
+    "timestamp": 1773373310,
+    "datetime": "2026-03-13 10:41:50",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373311_TURBOUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "TURBOUSDT",
+    "message": "TURBOUSDT pumped +25.21% in 24h",
+    "value": 25.209,
+    "threshold": 10.0,
+    "timestamp": 1773373311,
+    "datetime": "2026-03-13 10:41:51",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0011533,
+      "volume": 244731783.5270388
+    }
+  },
+  {
+    "id": "1773373311_DGBUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "DGBUSDT",
+    "message": "DGBUSDT pumped +18.86% in 24h",
+    "value": 18.862,
+    "threshold": 10.0,
+    "timestamp": 1773373311,
+    "datetime": "2026-03-13 10:41:51",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.01922,
+      "volume": 45674718.93021
+    }
+  },
+  {
+    "id": "1773373312_BROCCOLI714USDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "BROCCOLI714USDT",
+    "message": "BROCCOLI714USDT up +6.21% in 24h",
+    "value": 6.207,
+    "threshold": 5.0,
+    "timestamp": 1773373312,
+    "datetime": "2026-03-13 10:41:52",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373312_AZTECUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "AZTECUSDT",
+    "message": "AZTECUSDT up +8.42% in 24h",
+    "value": 8.422,
+    "threshold": 5.0,
+    "timestamp": 1773373312,
+    "datetime": "2026-03-13 10:41:52",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373313_NKNUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "NKNUSDT",
+    "message": "NKNUSDT dumped -21.98% in 24h",
+    "value": -21.975,
+    "threshold": -10.0,
+    "timestamp": 1773373313,
+    "datetime": "2026-03-13 10:41:53",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.00561,
+      "volume": 4848895.41413
+    }
+  },
+  {
+    "id": "1773373313_MDTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "MDTUSDT",
+    "message": "MDTUSDT up +7.65% in 24h",
+    "value": 7.652,
+    "threshold": 5.0,
+    "timestamp": 1773373313,
+    "datetime": "2026-03-13 10:41:53",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373314_NIGHTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "NIGHTUSDT",
+    "message": "NIGHTUSDT up +7.83% in 24h",
+    "value": 7.826,
+    "threshold": 5.0,
+    "timestamp": 1773373314,
+    "datetime": "2026-03-13 10:41:54",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373314_PUFFERUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "PUFFERUSDT",
+    "message": "PUFFERUSDT up +7.81% in 24h",
+    "value": 7.807,
+    "threshold": 5.0,
+    "timestamp": 1773373314,
+    "datetime": "2026-03-13 10:41:54",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373314_OCEANUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "OCEANUSDT",
+    "message": "OCEANUSDT pumped +18.94% in 24h",
+    "value": 18.943,
+    "threshold": 10.0,
+    "timestamp": 1773373314,
+    "datetime": "2026-03-13 10:41:54",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.707,
+      "volume": 65841451.8651
+    }
+  },
+  {
+    "id": "1773373314_NEIROUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "NEIROUSDT",
+    "message": "NEIROUSDT pumped +11.60% in 24h",
+    "value": 11.596,
+    "threshold": 10.0,
+    "timestamp": 1773373314,
+    "datetime": "2026-03-13 10:41:54",
+    "acknowledged": false,
+    "extra": {
+      "price": 7.41e-05,
+      "volume": 22476806.20353055
+    }
+  },
+  {
+    "id": "1773373314_MILKUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "MILKUSDT",
+    "message": "MILKUSDT dumped -14.94% in 24h",
+    "value": -14.937,
+    "threshold": -10.0,
+    "timestamp": 1773373314,
+    "datetime": "2026-03-13 10:41:54",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.01008,
+      "volume": 6202620.77018
+    }
+  },
+  {
+    "id": "1773373314_ENAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "ENAUSDT",
+    "message": "ENAUSDT up +5.94% in 24h",
+    "value": 5.939,
+    "threshold": 5.0,
+    "timestamp": 1773373314,
+    "datetime": "2026-03-13 10:41:54",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373314_1000XUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "1000XUSDT",
+    "message": "1000XUSDT dumped -14.49% in 24h",
+    "value": -14.491,
+    "threshold": -10.0,
+    "timestamp": 1773373314,
+    "datetime": "2026-03-13 10:41:54",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.02555,
+      "volume": 3854733.07023
+    }
+  },
+  {
+    "id": "1773373314_BRETTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "BRETTUSDT",
+    "message": "BRETTUSDT up +7.11% in 24h",
+    "value": 7.106,
+    "threshold": 5.0,
+    "timestamp": 1773373314,
+    "datetime": "2026-03-13 10:41:54",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373314_BIDUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "BIDUSDT",
+    "message": "BIDUSDT dumped -20.64% in 24h",
+    "value": -20.64,
+    "threshold": -10.0,
+    "timestamp": 1773373314,
+    "datetime": "2026-03-13 10:41:54",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0140784,
+      "volume": 2331742.338438
+    }
+  },
+  {
+    "id": "1773373315_RAVEUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "RAVEUSDT",
+    "message": "RAVEUSDT pumped +16.73% in 24h",
+    "value": 16.727,
+    "threshold": 10.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.24362,
+      "volume": 12712147.68275
+    }
+  },
+  {
+    "id": "1773373315_BARDUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "BARDUSDT",
+    "message": "BARDUSDT up +6.76% in 24h",
+    "value": 6.763,
+    "threshold": 5.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373315_42USDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "42USDT",
+    "message": "42USDT pumped +20.71% in 24h",
+    "value": 20.712,
+    "threshold": 10.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0272447,
+      "volume": 34382770.22146
+    }
+  },
+  {
+    "id": "1773373315_FETUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "FETUSDT",
+    "message": "FETUSDT pumped +16.19% in 24h",
+    "value": 16.186,
+    "threshold": 10.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.1852,
+      "volume": 52199007.5531
+    }
+  },
+  {
+    "id": "1773373315_RENDERUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "RENDERUSDT",
+    "message": "RENDERUSDT pumped +15.95% in 24h",
+    "value": 15.947,
+    "threshold": 10.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false,
+    "extra": {
+      "price": 1.745,
+      "volume": 48308821.4924
+    }
+  },
+  {
+    "id": "1773373315_BAKEUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "BAKEUSDT",
+    "message": "BAKEUSDT dumped -34.30% in 24h",
+    "value": -34.301,
+    "threshold": -10.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0249,
+      "volume": 24688403.6875
+    }
+  },
+  {
+    "id": "1773373315_ARCUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "ARCUSDT",
+    "message": "ARCUSDT up +5.40% in 24h",
+    "value": 5.401,
+    "threshold": 5.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373315_BANKUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "BANKUSDT",
+    "message": "BANKUSDT down -8.48% in 24h",
+    "value": -8.482,
+    "threshold": -5.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373315_EDUUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "EDUUSDT",
+    "message": "EDUUSDT down -7.92% in 24h",
+    "value": -7.916,
+    "threshold": -5.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373315_AMBUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "AMBUSDT",
+    "message": "AMBUSDT dumped -34.26% in 24h",
+    "value": -34.256,
+    "threshold": -10.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.001188,
+      "volume": 66723120.397096
+    }
+  },
+  {
+    "id": "1773373315_HANAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "HANAUSDT",
+    "message": "HANAUSDT up +8.86% in 24h",
+    "value": 8.86,
+    "threshold": 5.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373315_CFXUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "CFXUSDT",
+    "message": "CFXUSDT pumped +10.38% in 24h",
+    "value": 10.379,
+    "threshold": 10.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.05764,
+      "volume": 7818809.21317
+    }
+  },
+  {
+    "id": "1773373315_AGLDUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "AGLDUSDT",
+    "message": "AGLDUSDT up +7.12% in 24h",
+    "value": 7.116,
+    "threshold": 5.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373315_2ZUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "2ZUSDT",
+    "message": "2ZUSDT up +7.67% in 24h",
+    "value": 7.665,
+    "threshold": 5.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373315_DMCUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "DMCUSDT",
+    "message": "DMCUSDT dumped -26.29% in 24h",
+    "value": -26.294,
+    "threshold": -10.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.000698,
+      "volume": 3249038.306719
+    }
+  },
+  {
+    "id": "1773373315_UAIUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "UAIUSDT",
+    "message": "UAIUSDT pumped +54.17% in 24h",
+    "value": 54.174,
+    "threshold": 10.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.3361,
+      "volume": 154849029.0487
+    }
+  },
+  {
+    "id": "1773373315_MEWUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "MEWUSDT",
+    "message": "MEWUSDT up +5.18% in 24h",
+    "value": 5.179,
+    "threshold": 5.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373315_ZRCUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "ZRCUSDT",
+    "message": "ZRCUSDT down -9.64% in 24h",
+    "value": -9.643,
+    "threshold": -5.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373315_ALPACAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "ALPACAUSDT",
+    "message": "ALPACAUSDT pumped +391.23% in 24h",
+    "value": 391.228,
+    "threshold": 10.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false,
+    "extra": {
+      "price": 1.19,
+      "volume": 2911352253.74508
+    }
+  },
+  {
+    "id": "1773373315_AAVEUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "AAVEUSDT",
+    "message": "AAVEUSDT up +5.57% in 24h",
+    "value": 5.571,
+    "threshold": 5.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373315_ESPUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "ESPUSDT",
+    "message": "ESPUSDT up +9.06% in 24h",
+    "value": 9.057,
+    "threshold": 5.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373315_DAMUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "DAMUSDT",
+    "message": "DAMUSDT down -6.07% in 24h",
+    "value": -6.074,
+    "threshold": -5.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373315_LOOMUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "LOOMUSDT",
+    "message": "LOOMUSDT up +5.60% in 24h",
+    "value": 5.598,
+    "threshold": 5.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373315_\u6211\u8e0f\u9a6c\u6765\u4e86USDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "\u6211\u8e0f\u9a6c\u6765\u4e86USDT",
+    "message": "\u6211\u8e0f\u9a6c\u6765\u4e86USDT pumped +12.08% in 24h",
+    "value": 12.084,
+    "threshold": 10.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.008756,
+      "volume": 13965847.779643
+    }
+  },
+  {
+    "id": "1773373315_AKTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "AKTUSDT",
+    "message": "AKTUSDT up +8.54% in 24h",
+    "value": 8.537,
+    "threshold": 5.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373315_\u9f99\u867eUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "\u9f99\u867eUSDT",
+    "message": "\u9f99\u867eUSDT pumped +19.70% in 24h",
+    "value": 19.704,
+    "threshold": 10.0,
+    "timestamp": 1773373315,
+    "datetime": "2026-03-13 10:41:55",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0228,
+      "volume": 99145363.755937
+    }
+  },
+  {
+    "id": "1773373316_KMNOUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "KMNOUSDT",
+    "message": "KMNOUSDT up +5.04% in 24h",
+    "value": 5.037,
+    "threshold": 5.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373316_KATUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "KATUSDT",
+    "message": "KATUSDT pumped +17.51% in 24h",
+    "value": 17.506,
+    "threshold": 10.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.01564,
+      "volume": 8220109.547
+    }
+  },
+  {
+    "id": "1773373316_ILVUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "ILVUSDT",
+    "message": "ILVUSDT up +6.51% in 24h",
+    "value": 6.511,
+    "threshold": 5.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373316_TRIAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "TRIAUSDT",
+    "message": "TRIAUSDT up +8.70% in 24h",
+    "value": 8.7,
+    "threshold": 5.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373316_UXLINKUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "UXLINKUSDT",
+    "message": "UXLINKUSDT up +6.89% in 24h",
+    "value": 6.891,
+    "threshold": 5.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373316_SPXUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "SPXUSDT",
+    "message": "SPXUSDT up +6.85% in 24h",
+    "value": 6.848,
+    "threshold": 5.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373316_MEMEFIUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "MEMEFIUSDT",
+    "message": "MEMEFIUSDT dumped -30.48% in 24h",
+    "value": -30.48,
+    "threshold": -10.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.002201,
+      "volume": 86505432.148509
+    }
+  },
+  {
+    "id": "1773373316_FUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "FUSDT",
+    "message": "FUSDT up +9.94% in 24h",
+    "value": 9.94,
+    "threshold": 5.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373316_AGTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "AGTUSDT",
+    "message": "AGTUSDT up +5.94% in 24h",
+    "value": 5.939,
+    "threshold": 5.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373316_RVVUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "RVVUSDT",
+    "message": "RVVUSDT dumped -61.55% in 24h",
+    "value": -61.553,
+    "threshold": -10.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0005075,
+      "volume": 24070289.528804
+    }
+  },
+  {
+    "id": "1773373316_MEMEUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "MEMEUSDT",
+    "message": "MEMEUSDT up +5.02% in 24h",
+    "value": 5.021,
+    "threshold": 5.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373316_DARUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "DARUSDT",
+    "message": "DARUSDT down -7.71% in 24h",
+    "value": -7.707,
+    "threshold": -5.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373316_MAGMAUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "MAGMAUSDT",
+    "message": "MAGMAUSDT down -7.36% in 24h",
+    "value": -7.36,
+    "threshold": -5.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373316_SKATEUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "SKATEUSDT",
+    "message": "SKATEUSDT dumped -52.59% in 24h",
+    "value": -52.59,
+    "threshold": -10.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0051013,
+      "volume": 9813385.7179206
+    }
+  },
+  {
+    "id": "1773373316_REIUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "REIUSDT",
+    "message": "REIUSDT down -5.30% in 24h",
+    "value": -5.305,
+    "threshold": -5.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373316_STRKUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "STRKUSDT",
+    "message": "STRKUSDT up +6.01% in 24h",
+    "value": 6.015,
+    "threshold": 5.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373316_LITUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "LITUSDT",
+    "message": "LITUSDT pumped +12.70% in 24h",
+    "value": 12.7,
+    "threshold": 10.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false,
+    "extra": {
+      "price": 1.198,
+      "volume": 19798685.1484
+    }
+  },
+  {
+    "id": "1773373316_MYROUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "MYROUSDT",
+    "message": "MYROUSDT dumped -14.22% in 24h",
+    "value": -14.225,
+    "threshold": -10.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.01001,
+      "volume": 4016063.57685
+    }
+  },
+  {
+    "id": "1773373316_ROBOUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "ROBOUSDT",
+    "message": "ROBOUSDT up +8.56% in 24h",
+    "value": 8.561,
+    "threshold": 5.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373316_AIAUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "AIAUSDT",
+    "message": "AIAUSDT dumped -11.33% in 24h",
+    "value": -11.33,
+    "threshold": -10.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.09172,
+      "volume": 6079133.29318
+    }
+  },
+  {
+    "id": "1773373316_AINUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "AINUSDT",
+    "message": "AINUSDT down -9.26% in 24h",
+    "value": -9.26,
+    "threshold": -5.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373316_NULSUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "NULSUSDT",
+    "message": "NULSUSDT dumped -24.21% in 24h",
+    "value": -24.213,
+    "threshold": -10.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0313,
+      "volume": 19986545.1954
+    }
+  },
+  {
+    "id": "1773373316_DEGOUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "DEGOUSDT",
+    "message": "DEGOUSDT down -6.13% in 24h",
+    "value": -6.126,
+    "threshold": -5.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373316_IDOLUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "IDOLUSDT",
+    "message": "IDOLUSDT up +6.28% in 24h",
+    "value": 6.284,
+    "threshold": 5.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373316_OBOLUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "OBOLUSDT",
+    "message": "OBOLUSDT dumped -15.76% in 24h",
+    "value": -15.757,
+    "threshold": -10.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0332,
+      "volume": 1579493.47287
+    }
+  },
+  {
+    "id": "1773373316_EDENUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "EDENUSDT",
+    "message": "EDENUSDT up +6.96% in 24h",
+    "value": 6.958,
+    "threshold": 5.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373316_OPNUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "OPNUSDT",
+    "message": "OPNUSDT up +8.90% in 24h",
+    "value": 8.899,
+    "threshold": 5.0,
+    "timestamp": 1773373316,
+    "datetime": "2026-03-13 10:41:56",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373317_KEYUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "KEYUSDT",
+    "message": "KEYUSDT up +9.11% in 24h",
+    "value": 9.109,
+    "threshold": 5.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373317_FARTCOINUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "FARTCOINUSDT",
+    "message": "FARTCOINUSDT up +6.88% in 24h",
+    "value": 6.878,
+    "threshold": 5.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373317_SHELLUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "SHELLUSDT",
+    "message": "SHELLUSDT up +7.09% in 24h",
+    "value": 7.09,
+    "threshold": 5.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373317_XAIUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "XAIUSDT",
+    "message": "XAIUSDT up +5.49% in 24h",
+    "value": 5.488,
+    "threshold": 5.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373317_ARIAUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "ARIAUSDT",
+    "message": "ARIAUSDT down -5.69% in 24h",
+    "value": -5.69,
+    "threshold": -5.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373317_LEVERUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "LEVERUSDT",
+    "message": "LEVERUSDT dumped -14.51% in 24h",
+    "value": -14.514,
+    "threshold": -10.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0001125,
+      "volume": 84688815.4293736
+    }
+  },
+  {
+    "id": "1773373317_RESOLVUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "RESOLVUSDT",
+    "message": "RESOLVUSDT dumped -14.97% in 24h",
+    "value": -14.971,
+    "threshold": -10.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.09354,
+      "volume": 45079955.56256
+    }
+  },
+  {
+    "id": "1773373317_NAORISUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "NAORISUSDT",
+    "message": "NAORISUSDT up +9.91% in 24h",
+    "value": 9.912,
+    "threshold": 5.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373317_OXTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "OXTUSDT",
+    "message": "OXTUSDT pumped +11.05% in 24h",
+    "value": 11.047,
+    "threshold": 10.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0192,
+      "volume": 29974338.7384
+    }
+  },
+  {
+    "id": "1773373317_LINAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "LINAUSDT",
+    "message": "LINAUSDT pumped +13.63% in 24h",
+    "value": 13.629,
+    "threshold": 10.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.000742,
+      "volume": 86817665.678621
+    }
+  },
+  {
+    "id": "1773373317_BTRUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "BTRUSDT",
+    "message": "BTRUSDT dumped -20.17% in 24h",
+    "value": -20.167,
+    "threshold": -10.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.11975,
+      "volume": 35480457.96988
+    }
+  },
+  {
+    "id": "1773373317_1000SATSUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "1000SATSUSDT",
+    "message": "1000SATSUSDT up +7.63% in 24h",
+    "value": 7.627,
+    "threshold": 5.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373317_DFUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "DFUSDT",
+    "message": "DFUSDT dumped -17.18% in 24h",
+    "value": -17.179,
+    "threshold": -10.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0042073,
+      "volume": 3434013.6808638
+    }
+  },
+  {
+    "id": "1773373317_ALGOUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "ALGOUSDT",
+    "message": "ALGOUSDT up +6.19% in 24h",
+    "value": 6.192,
+    "threshold": 5.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373317_FLMUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "FLMUSDT",
+    "message": "FLMUSDT dumped -30.51% in 24h",
+    "value": -30.508,
+    "threshold": -10.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0082,
+      "volume": 6048396.4552
+    }
+  },
+  {
+    "id": "1773373317_RIVERUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "RIVERUSDT",
+    "message": "RIVERUSDT pumped +13.90% in 24h",
+    "value": 13.899,
+    "threshold": 10.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false,
+    "extra": {
+      "price": 19.291,
+      "volume": 449041872.4246
+    }
+  },
+  {
+    "id": "1773373317_YALAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "YALAUSDT",
+    "message": "YALAUSDT pumped +50.72% in 24h",
+    "value": 50.718,
+    "threshold": 10.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0144086,
+      "volume": 66841744.3618888
+    }
+  },
+  {
+    "id": "1773373317_HUMAUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "HUMAUSDT",
+    "message": "HUMAUSDT dumped -17.63% in 24h",
+    "value": -17.628,
+    "threshold": -10.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.01606,
+      "volume": 105029390.288147
+    }
+  },
+  {
+    "id": "1773373317_PORT3USDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "PORT3USDT",
+    "message": "PORT3USDT dumped -68.31% in 24h",
+    "value": -68.311,
+    "threshold": -10.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.01182,
+      "volume": 200374788.21369
+    }
+  },
+  {
+    "id": "1773373317_CHESSUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "CHESSUSDT",
+    "message": "CHESSUSDT dumped -30.75% in 24h",
+    "value": -30.748,
+    "threshold": -10.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0185458,
+      "volume": 34803123.04749
+    }
+  },
+  {
+    "id": "1773373317_COMBOUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "COMBOUSDT",
+    "message": "COMBOUSDT down -9.03% in 24h",
+    "value": -9.031,
+    "threshold": -5.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373317_B3USDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "B3USDT",
+    "message": "B3USDT up +5.23% in 24h",
+    "value": 5.229,
+    "threshold": 5.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373317_FIGHTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "FIGHTUSDT",
+    "message": "FIGHTUSDT up +7.13% in 24h",
+    "value": 7.135,
+    "threshold": 5.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373317_DEEPUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "DEEPUSDT",
+    "message": "DEEPUSDT pumped +10.26% in 24h",
+    "value": 10.256,
+    "threshold": 10.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0358,
+      "volume": 20533862.02479
+    }
+  },
+  {
+    "id": "1773373317_MMTUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "MMTUSDT",
+    "message": "MMTUSDT down -9.28% in 24h",
+    "value": -9.281,
+    "threshold": -5.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373317_OGNUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "OGNUSDT",
+    "message": "OGNUSDT up +5.08% in 24h",
+    "value": 5.078,
+    "threshold": 5.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373317_SUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "SUSDT",
+    "message": "SUSDT up +6.08% in 24h",
+    "value": 6.085,
+    "threshold": 5.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373317_BASUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "BASUSDT",
+    "message": "BASUSDT up +6.52% in 24h",
+    "value": 6.517,
+    "threshold": 5.0,
+    "timestamp": 1773373317,
+    "datetime": "2026-03-13 10:41:57",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373318_XEMUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "XEMUSDT",
+    "message": "XEMUSDT dumped -10.11% in 24h",
+    "value": -10.106,
+    "threshold": -10.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0338,
+      "volume": 9727490.2775
+    }
+  },
+  {
+    "id": "1773373318_BRUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "BRUSDT",
+    "message": "BRUSDT down -8.84% in 24h",
+    "value": -8.839,
+    "threshold": -5.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373318_APRUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "APRUSDT",
+    "message": "APRUSDT up +5.04% in 24h",
+    "value": 5.043,
+    "threshold": 5.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373318_HYPEUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "HYPEUSDT",
+    "message": "HYPEUSDT up +5.70% in 24h",
+    "value": 5.701,
+    "threshold": 5.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373318_COMMONUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "COMMONUSDT",
+    "message": "COMMONUSDT dumped -31.22% in 24h",
+    "value": -31.216,
+    "threshold": -10.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0011143,
+      "volume": 10893940.6051056
+    }
+  },
+  {
+    "id": "1773373318_PERPUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "PERPUSDT",
+    "message": "PERPUSDT dumped -20.14% in 24h",
+    "value": -20.143,
+    "threshold": -10.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0781,
+      "volume": 1561495.09146
+    }
+  },
+  {
+    "id": "1773373318_PUMPUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "PUMPUSDT",
+    "message": "PUMPUSDT up +8.78% in 24h",
+    "value": 8.781,
+    "threshold": 5.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373318_COLLECTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "COLLECTUSDT",
+    "message": "COLLECTUSDT pumped +30.86% in 24h",
+    "value": 30.865,
+    "threshold": 10.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.06538,
+      "volume": 24659782.2324
+    }
+  },
+  {
+    "id": "1773373318_DOODUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "DOODUSDT",
+    "message": "DOODUSDT up +6.25% in 24h",
+    "value": 6.248,
+    "threshold": 5.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373318_ARKMUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "ARKMUSDT",
+    "message": "ARKMUSDT up +9.34% in 24h",
+    "value": 9.342,
+    "threshold": 5.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373318_VIDTUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "VIDTUSDT",
+    "message": "VIDTUSDT dumped -42.44% in 24h",
+    "value": -42.436,
+    "threshold": -10.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.00293,
+      "volume": 116094468.40266
+    }
+  },
+  {
+    "id": "1773373318_QUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "QUSDT",
+    "message": "QUSDT up +5.21% in 24h",
+    "value": 5.205,
+    "threshold": 5.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373318_SIRENUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "SIRENUSDT",
+    "message": "SIRENUSDT up +5.78% in 24h",
+    "value": 5.777,
+    "threshold": 5.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373318_SWELLUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "SWELLUSDT",
+    "message": "SWELLUSDT down -6.56% in 24h",
+    "value": -6.563,
+    "threshold": -5.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373318_XCNUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "XCNUSDT",
+    "message": "XCNUSDT down -6.16% in 24h",
+    "value": -6.161,
+    "threshold": -5.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373318_BLESSUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "BLESSUSDT",
+    "message": "BLESSUSDT down -5.07% in 24h",
+    "value": -5.07,
+    "threshold": -5.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373318_AGIXUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "AGIXUSDT",
+    "message": "AGIXUSDT pumped +18.78% in 24h",
+    "value": 18.776,
+    "threshold": 10.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.7009,
+      "volume": 113687318.3536
+    }
+  },
+  {
+    "id": "1773373318_ENSOUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "ENSOUSDT",
+    "message": "ENSOUSDT pumped +28.23% in 24h",
+    "value": 28.227,
+    "threshold": 10.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false,
+    "extra": {
+      "price": 1.4346,
+      "volume": 146847215.88977
+    }
+  },
+  {
+    "id": "1773373318_FTMUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "FTMUSDT",
+    "message": "FTMUSDT down -7.36% in 24h",
+    "value": -7.361,
+    "threshold": -5.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373318_OMNIUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "OMNIUSDT",
+    "message": "OMNIUSDT up +5.25% in 24h",
+    "value": 5.245,
+    "threshold": 5.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373318_XPINUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "XPINUSDT",
+    "message": "XPINUSDT pumped +24.58% in 24h",
+    "value": 24.582,
+    "threshold": 10.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.001713,
+      "volume": 5260211.732479
+    }
+  },
+  {
+    "id": "1773373318_KITEUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "KITEUSDT",
+    "message": "KITEUSDT down -7.48% in 24h",
+    "value": -7.478,
+    "threshold": -5.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373318_GRTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "GRTUSDT",
+    "message": "GRTUSDT up +9.31% in 24h",
+    "value": 9.315,
+    "threshold": 5.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373318_LOKAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "LOKAUSDT",
+    "message": "LOKAUSDT pumped +10.64% in 24h",
+    "value": 10.641,
+    "threshold": 10.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.11323,
+      "volume": 19782534.19488
+    }
+  },
+  {
+    "id": "1773373318_TAOUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "TAOUSDT",
+    "message": "TAOUSDT pumped +14.76% in 24h",
+    "value": 14.759,
+    "threshold": 10.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false,
+    "extra": {
+      "price": 229.46,
+      "volume": 203426752.87
+    }
+  },
+  {
+    "id": "1773373318_NEIROETHUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "NEIROETHUSDT",
+    "message": "NEIROETHUSDT dumped -47.28% in 24h",
+    "value": -47.282,
+    "threshold": -10.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.00863,
+      "volume": 83925618.84424
+    }
+  },
+  {
+    "id": "1773373318_AVNTUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "AVNTUSDT",
+    "message": "AVNTUSDT down -7.36% in 24h",
+    "value": -7.355,
+    "threshold": -5.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373318_XPLUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "XPLUSDT",
+    "message": "XPLUSDT up +7.79% in 24h",
+    "value": 7.792,
+    "threshold": 5.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373318_GHSTUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "GHSTUSDT",
+    "message": "GHSTUSDT dumped -19.84% in 24h",
+    "value": -19.842,
+    "threshold": -10.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.083525,
+      "volume": 3982589.9436
+    }
+  },
+  {
+    "id": "1773373318_INXUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "INXUSDT",
+    "message": "INXUSDT up +6.01% in 24h",
+    "value": 6.015,
+    "threshold": 5.0,
+    "timestamp": 1773373318,
+    "datetime": "2026-03-13 10:41:58",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373319_APEUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "APEUSDT",
+    "message": "APEUSDT up +5.05% in 24h",
+    "value": 5.047,
+    "threshold": 5.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373319_CETUSUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "CETUSUSDT",
+    "message": "CETUSUSDT up +5.41% in 24h",
+    "value": 5.405,
+    "threshold": 5.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373319_JTOUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "JTOUSDT",
+    "message": "JTOUSDT up +5.43% in 24h",
+    "value": 5.429,
+    "threshold": 5.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373319_ELSAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "ELSAUSDT",
+    "message": "ELSAUSDT up +5.18% in 24h",
+    "value": 5.179,
+    "threshold": 5.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373319_MYXUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "MYXUSDT",
+    "message": "MYXUSDT up +6.66% in 24h",
+    "value": 6.658,
+    "threshold": 5.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373319_BOMEUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "BOMEUSDT",
+    "message": "BOMEUSDT up +6.72% in 24h",
+    "value": 6.716,
+    "threshold": 5.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373319_ALPHAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "ALPHAUSDT",
+    "message": "ALPHAUSDT pumped +36.41% in 24h",
+    "value": 36.406,
+    "threshold": 10.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.02027,
+      "volume": 370575971.69449
+    }
+  },
+  {
+    "id": "1773373319_STRAXUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "STRAXUSDT",
+    "message": "STRAXUSDT down -9.66% in 24h",
+    "value": -9.662,
+    "threshold": -5.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373319_USUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "USUSDT",
+    "message": "USUSDT dumped -10.19% in 24h",
+    "value": -10.194,
+    "threshold": -10.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.003788,
+      "volume": 3105726.081172
+    }
+  },
+  {
+    "id": "1773373319_BNXUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "BNXUSDT",
+    "message": "BNXUSDT pumped +66.38% in 24h",
+    "value": 66.376,
+    "threshold": 10.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false,
+    "extra": {
+      "price": 2.0,
+      "volume": 492004952.04499
+    }
+  },
+  {
+    "id": "1773373319_GPSUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "GPSUSDT",
+    "message": "GPSUSDT up +6.01% in 24h",
+    "value": 6.009,
+    "threshold": 5.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373319_TIAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "TIAUSDT",
+    "message": "TIAUSDT up +5.07% in 24h",
+    "value": 5.066,
+    "threshold": 5.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373319_UNFIUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "UNFIUSDT",
+    "message": "UNFIUSDT down -5.46% in 24h",
+    "value": -5.464,
+    "threshold": -5.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373319_NEARUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "NEARUSDT",
+    "message": "NEARUSDT up +6.65% in 24h",
+    "value": 6.651,
+    "threshold": 5.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373319_PIEVERSEUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "PIEVERSEUSDT",
+    "message": "PIEVERSEUSDT up +7.37% in 24h",
+    "value": 7.373,
+    "threshold": 5.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373319_VVVUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "VVVUSDT",
+    "message": "VVVUSDT pumped +12.31% in 24h",
+    "value": 12.315,
+    "threshold": 10.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false,
+    "extra": {
+      "price": 6.439,
+      "volume": 38043817.83835
+    }
+  },
+  {
+    "id": "1773373319_AKEUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "AKEUSDT",
+    "message": "AKEUSDT down -6.58% in 24h",
+    "value": -6.575,
+    "threshold": -5.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373319_LYNUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "LYNUSDT",
+    "message": "LYNUSDT pumped +69.28% in 24h",
+    "value": 69.285,
+    "threshold": 10.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.278,
+      "volume": 328473557.67993
+    }
+  },
+  {
+    "id": "1773373319_TROYUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "TROYUSDT",
+    "message": "TROYUSDT dumped -41.20% in 24h",
+    "value": -41.195,
+    "threshold": -10.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.000187,
+      "volume": 44261336.491637
+    }
+  },
+  {
+    "id": "1773373319_VIRTUALUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "VIRTUALUSDT",
+    "message": "VIRTUALUSDT up +8.02% in 24h",
+    "value": 8.019,
+    "threshold": 5.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373319_HIFIUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "HIFIUSDT",
+    "message": "HIFIUSDT dumped -19.12% in 24h",
+    "value": -19.121,
+    "threshold": -10.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0939,
+      "volume": 37328390.6661
+    }
+  },
+  {
+    "id": "1773373319_VINEUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "VINEUSDT",
+    "message": "VINEUSDT up +8.99% in 24h",
+    "value": 8.995,
+    "threshold": 5.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373319_SXPUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "SXPUSDT",
+    "message": "SXPUSDT down -9.27% in 24h",
+    "value": -9.267,
+    "threshold": -5.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373319_GTCUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "GTCUSDT",
+    "message": "GTCUSDT dumped -17.74% in 24h",
+    "value": -17.742,
+    "threshold": -10.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.102,
+      "volume": 27575268.322
+    }
+  },
+  {
+    "id": "1773373319_CUDISUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "CUDISUSDT",
+    "message": "CUDISUSDT up +5.73% in 24h",
+    "value": 5.728,
+    "threshold": 5.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373319_SYRUPUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "SYRUPUSDT",
+    "message": "SYRUPUSDT up +8.59% in 24h",
+    "value": 8.589,
+    "threshold": 5.0,
+    "timestamp": 1773373319,
+    "datetime": "2026-03-13 10:41:59",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373320_BSWUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "BSWUSDT",
+    "message": "BSWUSDT dumped -55.16% in 24h",
+    "value": -55.164,
+    "threshold": -10.0,
+    "timestamp": 1773373320,
+    "datetime": "2026-03-13 10:42:00",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0122,
+      "volume": 65917286.29962
+    }
+  },
+  {
+    "id": "1773373320_REEFUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "REEFUSDT",
+    "message": "REEFUSDT down -5.78% in 24h",
+    "value": -5.782,
+    "threshold": -5.0,
+    "timestamp": 1773373320,
+    "datetime": "2026-03-13 10:42:00",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373320_PIXELUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "PIXELUSDT",
+    "message": "PIXELUSDT up +6.92% in 24h",
+    "value": 6.917,
+    "threshold": 5.0,
+    "timestamp": 1773373320,
+    "datetime": "2026-03-13 10:42:00",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373320_1000BONKUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "1000BONKUSDT",
+    "message": "1000BONKUSDT up +5.29% in 24h",
+    "value": 5.293,
+    "threshold": 5.0,
+    "timestamp": 1773373320,
+    "datetime": "2026-03-13 10:42:00",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373320_ALLOUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "ALLOUSDT",
+    "message": "ALLOUSDT up +6.66% in 24h",
+    "value": 6.655,
+    "threshold": 5.0,
+    "timestamp": 1773373320,
+    "datetime": "2026-03-13 10:42:00",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373320_GRIFFAINUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "GRIFFAINUSDT",
+    "message": "GRIFFAINUSDT pumped +13.82% in 24h",
+    "value": 13.819,
+    "threshold": 10.0,
+    "timestamp": 1773373320,
+    "datetime": "2026-03-13 10:42:00",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.010139,
+      "volume": 2207749.86873
+    }
+  },
+  {
+    "id": "1773373320_EPTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "EPTUSDT",
+    "message": "EPTUSDT pumped +34.54% in 24h",
+    "value": 34.542,
+    "threshold": 10.0,
+    "timestamp": 1773373320,
+    "datetime": "2026-03-13 10:42:00",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.0016024,
+      "volume": 30649553.1927408
+    }
+  },
+  {
+    "id": "1773373320_MUBARAKUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "MUBARAKUSDT",
+    "message": "MUBARAKUSDT up +5.64% in 24h",
+    "value": 5.645,
+    "threshold": 5.0,
+    "timestamp": 1773373320,
+    "datetime": "2026-03-13 10:42:00",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373320_MOODENGUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "MOODENGUSDT",
+    "message": "MOODENGUSDT up +6.50% in 24h",
+    "value": 6.5,
+    "threshold": 5.0,
+    "timestamp": 1773373320,
+    "datetime": "2026-03-13 10:42:00",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373320_ICNTUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "critical",
+    "symbol": "ICNTUSDT",
+    "message": "ICNTUSDT pumped +11.08% in 24h",
+    "value": 11.077,
+    "threshold": 10.0,
+    "timestamp": 1773373320,
+    "datetime": "2026-03-13 10:42:00",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.367,
+      "volume": 3964394.3881
+    }
+  },
+  {
+    "id": "1773373320_ACXUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "critical",
+    "symbol": "ACXUSDT",
+    "message": "ACXUSDT dumped -18.02% in 24h",
+    "value": -18.018,
+    "threshold": -10.0,
+    "timestamp": 1773373320,
+    "datetime": "2026-03-13 10:42:00",
+    "acknowledged": false,
+    "extra": {
+      "price": 0.05087,
+      "volume": 237347743.506887
+    }
+  },
+  {
+    "id": "1773373320_EVAAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "EVAAUSDT",
+    "message": "EVAAUSDT up +8.80% in 24h",
+    "value": 8.802,
+    "threshold": 5.0,
+    "timestamp": 1773373320,
+    "datetime": "2026-03-13 10:42:00",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373320_BNXUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "BNXUSDT",
+    "message": "BNXUSDT volume 6.2x above average ($492,004,952)",
+    "value": 492004952.045,
+    "threshold": 198382905.3597,
+    "timestamp": 1773373320,
+    "datetime": "2026-03-13 10:42:00",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 6.2
+    }
+  },
+  {
+    "id": "1773373320_BTCUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "BTCUSDT",
+    "message": "BTCUSDT volume 185.9x above average ($14,748,262,823)",
+    "value": 14748262822.87,
+    "threshold": 198382905.3597,
+    "timestamp": 1773373320,
+    "datetime": "2026-03-13 10:42:00",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 185.86
+    }
+  },
+  {
+    "id": "1773373320_ZECUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "ZECUSDT",
+    "message": "ZECUSDT volume 4.4x above average ($345,725,530)",
+    "value": 345725530.14,
+    "threshold": 198382905.3597,
+    "timestamp": 1773373320,
+    "datetime": "2026-03-13 10:42:00",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 4.36
+    }
+  },
+  {
+    "id": "1773373320_LYNUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "LYNUSDT",
+    "message": "LYNUSDT volume 4.1x above average ($328,536,489)",
+    "value": 328536489.2715,
+    "threshold": 198382905.3597,
+    "timestamp": 1773373320,
+    "datetime": "2026-03-13 10:42:00",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 4.14
+    }
+  },
+  {
+    "id": "1773373320_SOLUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "SOLUSDT",
+    "message": "SOLUSDT volume 32.4x above average ($2,568,105,296)",
+    "value": 2568105295.9241,
+    "threshold": 198382905.3597,
+    "timestamp": 1773373320,
+    "datetime": "2026-03-13 10:42:00",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 32.36
+    }
+  },
+  {
+    "id": "1773373320_TURBOUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "TURBOUSDT",
+    "message": "TURBOUSDT volume 3.1x above average ($244,743,800)",
+    "value": 244743799.6127,
+    "threshold": 198382905.3597,
+    "timestamp": 1773373320,
+    "datetime": "2026-03-13 10:42:00",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 3.08
+    }
+  },
+  {
+    "id": "1773373320_SUIUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "SUIUSDT",
+    "message": "SUIUSDT volume 2.8x above average ($221,791,068)",
+    "value": 221791067.7733,
+    "threshold": 198382905.3597,
+    "timestamp": 1773373320,
+    "datetime": "2026-03-13 10:42:00",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 2.79
+    }
+  },
+  {
+    "id": "1773373320_DEGOUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "DEGOUSDT",
+    "message": "DEGOUSDT volume 3.1x above average ($243,876,020)",
+    "value": 243876020.3459,
+    "threshold": 198382905.3597,
+    "timestamp": 1773373320,
+    "datetime": "2026-03-13 10:42:00",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 3.07
+    }
+  },
+  {
+    "id": "1773373321_BNBUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "BNBUSDT",
+    "message": "BNBUSDT volume 4.6x above average ($365,923,908)",
+    "value": 365923907.73,
+    "threshold": 198382905.3597,
+    "timestamp": 1773373321,
+    "datetime": "2026-03-13 10:42:01",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 4.61
+    }
+  },
+  {
+    "id": "1773373321_RIVERUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "RIVERUSDT",
+    "message": "RIVERUSDT volume 5.7x above average ($449,083,933)",
+    "value": 449083932.5073,
+    "threshold": 198382905.3597,
+    "timestamp": 1773373321,
+    "datetime": "2026-03-13 10:42:01",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 5.66
+    }
+  },
+  {
+    "id": "1773373321_XAUUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "XAUUSDT",
+    "message": "XAUUSDT volume 12.1x above average ($961,128,978)",
+    "value": 961128977.88,
+    "threshold": 198382905.3597,
+    "timestamp": 1773373321,
+    "datetime": "2026-03-13 10:42:01",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 12.11
+    }
+  },
+  {
+    "id": "1773373321_ALPACAUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "ALPACAUSDT",
+    "message": "ALPACAUSDT volume 36.7x above average ($2,911,352,254)",
+    "value": 2911352253.7451,
+    "threshold": 198382905.3597,
+    "timestamp": 1773373321,
+    "datetime": "2026-03-13 10:42:01",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 36.69
+    }
+  },
+  {
+    "id": "1773373321_1000PEPEUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "1000PEPEUSDT",
+    "message": "1000PEPEUSDT volume 3.5x above average ($279,283,619)",
+    "value": 279283618.5447,
+    "threshold": 198382905.3597,
+    "timestamp": 1773373321,
+    "datetime": "2026-03-13 10:42:01",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 3.52
+    }
+  },
+  {
+    "id": "1773373321_ETHUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "ETHUSDT",
+    "message": "ETHUSDT volume 161.5x above average ($12,815,709,058)",
+    "value": 12815709058.22,
+    "threshold": 198382905.3597,
+    "timestamp": 1773373321,
+    "datetime": "2026-03-13 10:42:01",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 161.5
+    }
+  },
+  {
+    "id": "1773373321_ALPHAUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "ALPHAUSDT",
+    "message": "ALPHAUSDT volume 4.7x above average ($370,575,972)",
+    "value": 370575971.6945,
+    "threshold": 198382905.3597,
+    "timestamp": 1773373321,
+    "datetime": "2026-03-13 10:42:01",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 4.67
+    }
+  },
+  {
+    "id": "1773373321_ACXUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "ACXUSDT",
+    "message": "ACXUSDT volume 3.0x above average ($237,354,334)",
+    "value": 237354334.0641,
+    "threshold": 198382905.3597,
+    "timestamp": 1773373321,
+    "datetime": "2026-03-13 10:42:01",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 2.99
+    }
+  },
+  {
+    "id": "1773373321_XRPUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "XRPUSDT",
+    "message": "XRPUSDT volume 10.1x above average ($798,848,022)",
+    "value": 798848022.1082,
+    "threshold": 198382905.3597,
+    "timestamp": 1773373321,
+    "datetime": "2026-03-13 10:42:01",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 10.07
+    }
+  },
+  {
+    "id": "1773373321_TAOUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "TAOUSDT",
+    "message": "TAOUSDT volume 2.6x above average ($203,488,958)",
+    "value": 203488958.26,
+    "threshold": 198382905.3597,
+    "timestamp": 1773373321,
+    "datetime": "2026-03-13 10:42:01",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 2.56
+    }
+  },
+  {
+    "id": "1773373321_PIXELUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "PIXELUSDT",
+    "message": "PIXELUSDT volume 6.0x above average ($472,320,195)",
+    "value": 472320195.4127,
+    "threshold": 198382905.3597,
+    "timestamp": 1773373321,
+    "datetime": "2026-03-13 10:42:01",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 5.95
+    }
+  },
+  {
+    "id": "1773373321_PORT3USDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "PORT3USDT",
+    "message": "PORT3USDT volume 2.5x above average ($200,374,788)",
+    "value": 200374788.2137,
+    "threshold": 198382905.3597,
+    "timestamp": 1773373321,
+    "datetime": "2026-03-13 10:42:01",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 2.53
+    }
+  },
+  {
+    "id": "1773373321_DOGEUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "DOGEUSDT",
+    "message": "DOGEUSDT volume 9.0x above average ($715,991,560)",
+    "value": 715991560.3047,
+    "threshold": 198382905.3597,
+    "timestamp": 1773373321,
+    "datetime": "2026-03-13 10:42:01",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 9.02
+    }
+  },
+  {
+    "id": "1773373321_XAGUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "XAGUSDT",
+    "message": "XAGUSDT volume 17.1x above average ($1,355,879,697)",
+    "value": 1355879696.935,
+    "threshold": 198382905.3597,
+    "timestamp": 1773373321,
+    "datetime": "2026-03-13 10:42:01",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 17.09
+    }
+  },
+  {
+    "id": "1773373321_HYPEUSDT_volume_anomaly",
+    "type": "volume_anomaly",
+    "severity": "warning",
+    "symbol": "HYPEUSDT",
+    "message": "HYPEUSDT volume 6.0x above average ($473,461,982)",
+    "value": 473461982.0048,
+    "threshold": 198382905.3597,
+    "timestamp": 1773373321,
+    "datetime": "2026-03-13 10:42:01",
+    "acknowledged": false,
+    "extra": {
+      "multiplier": 5.97
+    }
+  },
+  {
+    "id": "1773373529_ATAUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "ATAUSDT",
+    "message": "ATAUSDT up +5.13% in 24h",
+    "value": 5.128,
+    "threshold": 5.0,
+    "timestamp": 1773373529,
+    "datetime": "2026-03-13 10:45:29",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373532_PYTHUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "PYTHUSDT",
+    "message": "PYTHUSDT up +5.01% in 24h",
+    "value": 5.006,
+    "threshold": 5.0,
+    "timestamp": 1773373532,
+    "datetime": "2026-03-13 10:45:32",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373534_RSRUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "RSRUSDT",
+    "message": "RSRUSDT up +5.43% in 24h",
+    "value": 5.427,
+    "threshold": 5.0,
+    "timestamp": 1773373534,
+    "datetime": "2026-03-13 10:45:34",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373535_CATIUSDT_price_dump",
+    "type": "price_dump",
+    "severity": "warning",
+    "symbol": "CATIUSDT",
+    "message": "CATIUSDT down -5.27% in 24h",
+    "value": -5.268,
+    "threshold": -5.0,
+    "timestamp": 1773373535,
+    "datetime": "2026-03-13 10:45:35",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373537_SUIUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "SUIUSDT",
+    "message": "SUIUSDT up +5.03% in 24h",
+    "value": 5.026,
+    "threshold": 5.0,
+    "timestamp": 1773373537,
+    "datetime": "2026-03-13 10:45:37",
+    "acknowledged": false
+  },
+  {
+    "id": "1773373539_ICPUSDT_price_pump",
+    "type": "price_pump",
+    "severity": "warning",
+    "symbol": "ICPUSDT",
+    "message": "ICPUSDT up +5.26% in 24h",
+    "value": 5.257,
+    "threshold": 5.0,
+    "timestamp": 1773373539,
+    "datetime": "2026-03-13 10:45:39",
+    "acknowledged": false
+  }
+]

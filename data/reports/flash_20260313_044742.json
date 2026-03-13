@@ -1,0 +1,114 @@
+{
+  "report_type": "flash",
+  "snapshot": {
+    "timestamp": 1773351974,
+    "datetime": "2026-03-13 04:46",
+    "top_sectors": [
+      {
+        "name": "AI / Compute",
+        "change": 6.005,
+        "trend": "bullish"
+      },
+      {
+        "name": "Meme",
+        "change": 5.457,
+        "trend": "bullish"
+      },
+      {
+        "name": "Liquid Staking",
+        "change": 1.337,
+        "trend": "neutral"
+      },
+      {
+        "name": "Gaming / GameFi",
+        "change": 0.762,
+        "trend": "neutral"
+      },
+      {
+        "name": "Layer 2 / Scaling",
+        "change": 0.36,
+        "trend": "neutral"
+      }
+    ],
+    "bottom_sectors": [
+      {
+        "name": "Store of Value",
+        "change": -0.832,
+        "trend": "neutral"
+      },
+      {
+        "name": "SocialFi",
+        "change": -2.19,
+        "trend": "bearish"
+      },
+      {
+        "name": "RWA",
+        "change": -3.759,
+        "trend": "bearish"
+      }
+    ],
+    "fear_greed_score": 50,
+    "fear_greed_level": "Neutral",
+    "green_ratio": 50,
+    "alerts_24h": 799,
+    "critical_alerts": 316,
+    "top_alerts": [
+      {
+        "message": "FLOWUSDT down -5.48% in 24h",
+        "severity": "warning"
+      },
+      {
+        "message": "ELSAUSDT up +5.29% in 24h",
+        "severity": "warning"
+      },
+      {
+        "message": "OBOLUSDT dumped -15.76% in 24h",
+        "severity": "critical"
+      },
+      {
+        "message": "REEFUSDT down -5.78% in 24h",
+        "severity": "warning"
+      },
+      {
+        "message": "SKATEUSDT dumped -52.59% in 24h",
+        "severity": "critical"
+      }
+    ],
+    "whale_signals": 0,
+    "exchange_flow": "neutral",
+    "inflow_count": 0,
+    "outflow_count": 0,
+    "momentum_kings": [
+      {
+        "symbol": "ALPACA",
+        "change": 391.228
+      },
+      {
+        "symbol": "BNX",
+        "change": 66.376
+      },
+      {
+        "symbol": "UAI",
+        "change": 52.129
+      }
+    ],
+    "dip_buys": [
+      {
+        "symbol": "PORT3",
+        "change": -68.311
+      },
+      {
+        "symbol": "BSW",
+        "change": -55.164
+      },
+      {
+        "symbol": "NEIROETH",
+        "change": -47.282
+      }
+    ]
+  },
+  "timestamp": 1773351999,
+  "datetime": "2026-03-13 04:46:39",
+  "content": "[FLASH 2026-03-13 04:46] Market sentiment: Neutral (50/100). Green ratio: 50%. Exchange flow: neutral. Whale signals: 0. Critical alerts: 316.",
+  "generated_by": "fallback_template"
+}

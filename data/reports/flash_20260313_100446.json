@@ -1,0 +1,265 @@
+{
+  "report_type": "flash",
+  "snapshot": {
+    "timestamp": 1773370935,
+    "data_sources": [
+      "sentiment",
+      "alerts",
+      "whale_activity",
+      "exchange_flow",
+      "screener",
+      "derivatives",
+      "correlation"
+    ],
+    "sector_rotation": {
+      "rotating_in": [],
+      "rotating_out": []
+    },
+    "sentiment": {
+      "score": 50,
+      "level": null,
+      "components": {},
+      "market_breadth": {
+        "total": null,
+        "green": null,
+        "red": null,
+        "green_ratio": null,
+        "avg_change": null
+      }
+    },
+    "alerts": {
+      "stats": {
+        "total_alerts": 1641,
+        "last_hour": 1141,
+        "last_24h": 1641,
+        "critical_24h": 573,
+        "warning_24h": 1068,
+        "active_cooldowns": 232
+      },
+      "recent": [
+        {
+          "type": "price_pump",
+          "severity": "warning",
+          "symbol": "SEIUSDT",
+          "message": "SEIUSDT up +5.22% in 24h"
+        },
+        {
+          "type": "price_pump",
+          "severity": "warning",
+          "symbol": "DEGENUSDT",
+          "message": "DEGENUSDT up +5.05% in 24h"
+        },
+        {
+          "type": "price_pump",
+          "severity": "warning",
+          "symbol": "BRETTUSDT",
+          "message": "BRETTUSDT up +8.26% in 24h"
+        },
+        {
+          "type": "price_dump",
+          "severity": "critical",
+          "symbol": "ACXUSDT",
+          "message": "ACXUSDT dumped -20.45% in 24h"
+        },
+        {
+          "type": "price_pump",
+          "severity": "warning",
+          "symbol": "PROMUSDT",
+          "message": "PROMUSDT up +6.88% in 24h"
+        },
+        {
+          "type": "price_pump",
+          "severity": "critical",
+          "symbol": "YALAUSDT",
+          "message": "YALAUSDT pumped +50.72% in 24h"
+        },
+        {
+          "type": "price_pump",
+          "severity": "critical",
+          "symbol": "42USDT",
+          "message": "42USDT pumped +20.71% in 24h"
+        },
+        {
+          "type": "price_pump",
+          "severity": "warning",
+          "symbol": "EDENUSDT",
+          "message": "EDENUSDT up +7.12% in 24h"
+        },
+        {
+          "type": "price_pump",
+          "severity": "warning",
+          "symbol": "ILVUSDT",
+          "message": "ILVUSDT up +6.95% in 24h"
+        },
+        {
+          "type": "price_dump",
+          "severity": "critical",
+          "symbol": "XEMUSDT",
+          "message": "XEMUSDT dumped -10.11% in 24h"
+        }
+      ]
+    },
+    "whale_activity": {
+      "total_signals": 0,
+      "total_volume": 0,
+      "top_whales": []
+    },
+    "exchange_flow": {
+      "net_sentiment": "neutral",
+      "inflow": null,
+      "outflow": null,
+      "top_flows": []
+    },
+    "stablecoin": {
+      "deployment_signal": null,
+      "total_volume": 0
+    },
+    "opportunities": {
+      "momentum_kings": [
+        {
+          "symbol": "ALPACA",
+          "change": 391.228,
+          "volume": 2911352253.75,
+          "vol_ratio": 36.62
+        },
+        {
+          "symbol": "LYN",
+          "change": 70.305,
+          "volume": 321267928.39,
+          "vol_ratio": 4.04
+        },
+        {
+          "symbol": "BNX",
+          "change": 66.376,
+          "volume": 492004952.04,
+          "vol_ratio": 6.19
+        },
+        {
+          "symbol": "UAI",
+          "change": 56.163,
+          "volume": 152169557.2,
+          "vol_ratio": 1.91
+        },
+        {
+          "symbol": "YALA",
+          "change": 50.718,
+          "volume": 66841744.36,
+          "vol_ratio": 0.84
+        }
+      ],
+      "dip_buys": [
+        {
+          "symbol": "PORT3",
+          "change": -68.311,
+          "volume": 200374788.21
+        },
+        {
+          "symbol": "BSW",
+          "change": -55.164,
+          "volume": 65917286.3
+        },
+        {
+          "symbol": "NEIROETH",
+          "change": -47.282,
+          "volume": 83925618.84
+        },
+        {
+          "symbol": "VIDT",
+          "change": -42.436,
+          "volume": 116094468.4
+        },
+        {
+          "symbol": "TROY",
+          "change": -41.195,
+          "volume": 44261336.49
+        }
+      ],
+      "breakout_candidates": [
+        {
+          "symbol": "XAG",
+          "change": -0.154,
+          "vol_ratio": 16.95,
+          "range": 5.39
+        },
+        {
+          "symbol": "XAU",
+          "change": -0.755,
+          "vol_ratio": 12.11,
+          "range": 2.57
+        },
+        {
+          "symbol": "ZEC",
+          "change": 0.668,
+          "vol_ratio": 4.34,
+          "range": 6.71
+        },
+        {
+          "symbol": "PAXG",
+          "change": -0.66,
+          "vol_ratio": 1.75,
+          "range": 2.39
+        }
+      ]
+    },
+    "derivatives": {
+      "funding": {
+        "avg_rate": null,
+        "sentiment": null,
+        "long_count": null,
+        "short_count": null,
+        "extreme_positive": [],
+        "extreme_negative": []
+      },
+      "open_interest": {
+        "spikes": 0,
+        "dumps": 0
+      },
+      "cascade_alert": {
+        "cascade": false,
+        "total_1h_usd": 0,
+        "threshold_usd": 10000000
+      }
+    },
+    "correlation": {
+      "strongest_pairs": [
+        {
+          "pair": "ARB/OP",
+          "correlation": 0.9089
+        },
+        {
+          "pair": "ADA/LINK",
+          "correlation": 0.8903
+        },
+        {
+          "pair": "ARB/TIA",
+          "correlation": 0.8885
+        },
+        {
+          "pair": "ADA/DOGE",
+          "correlation": 0.8767
+        },
+        {
+          "pair": "OP/TIA",
+          "correlation": 0.8725
+        }
+      ],
+      "high_beta": [
+        {
+          "symbol": "RENDER",
+          "beta": 1.217
+        }
+      ],
+      "low_beta": [
+        {
+          "symbol": "TON",
+          "beta": 0.379
+        }
+      ]
+    },
+    "total_data_sources": 7
+  },
+  "timestamp": 1773371024,
+  "datetime": "2026-03-13 10:03:44",
+  "content": "[FLASH N/A] Market sentiment: Neutral (50/100). Green ratio: 50%. Exchange flow: {'net_sentiment': 'neutral', 'inflow': None, 'outflow': None, 'top_flows': []}. Whale signals: 0. Critical alerts: 0.",
+  "generated_by": "fallback_template"
+}
