@@ -1,9 +1,9 @@
-!\[Python](https://img.shields.io/badge/Python-3.14-blue)
-!\[LLM](https://img.shields.io/badge/LLM-llama.cpp-orange)
-!\[Dataset](https://img.shields.io/badge/Dataset-Shelby\_Protocol-green)
-!\[Status](https://img.shields.io/badge/status-active-success)
-!\[License](https://img.shields.io/badge/license-proprietary-red)
-!\[Modules](https://img.shields.io/badge/modules-8\_intelligence-purple)
+![Python](https://img.shields.io/badge/Python-3.14-blue)
+![LLM](https://img.shields.io/badge/LLM-llama.cpp-orange)
+![Dataset](https://img.shields.io/badge/Dataset-Shelby_Protocol-green)
+![Status](https://img.shields.io/badge/status-active-success)
+![License](https://img.shields.io/badge/license-proprietary-red)
+![Modules](https://img.shields.io/badge/modules-8_intelligence-purple)
 
 # Hansen AI Research Engine
 
