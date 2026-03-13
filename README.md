@@ -9,6 +9,7 @@
 
 > Sovereign market intelligence infrastructure for AI-driven crypto research.
 
+
 Hansen AI is a sovereign, locally-operated market intelligence system designed to collect, analyze, and store crypto market data for AI-driven research and trading. The engine combines continuous market data collection, autonomous AI analysis, enriched dataset generation, and decentralized storage via Shelby Protocol.
 
 **100% local. Zero cloud. Zero third-party AI APIs.** Only Binance Futures public data and Shelby Protocol for on-chain dataset storage.
