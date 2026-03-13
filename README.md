@@ -13,7 +13,7 @@ Hansen AI is a sovereign, locally-operated market intelligence system designed t
 
 ## Demo
 
-https://github.com/user-attachments/assets/YOUR\_VIDEO\_ID
+h
 
 > Replace the link above with your uploaded demo video URL from GitHub.
 
