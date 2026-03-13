@@ -13,7 +13,7 @@ Hansen AI is a sovereign, locally-operated market intelligence system designed t
 
 ## Demo
 
-Soon
+https://www.loom.com/share/00aaed5d8321454ca4f44f6c67973bf2
 
 
 \---
