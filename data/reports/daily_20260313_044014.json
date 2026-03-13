@@ -1,0 +1,114 @@
+{
+  "report_type": "daily",
+  "snapshot": {
+    "timestamp": 1773351461,
+    "datetime": "2026-03-13 04:37",
+    "top_sectors": [
+      {
+        "name": "Infrastructure",
+        "change": 4.963,
+        "trend": "bullish"
+      },
+      {
+        "name": "Liquid Staking",
+        "change": 1.537,
+        "trend": "neutral"
+      },
+      {
+        "name": "Meme",
+        "change": 1.379,
+        "trend": "neutral"
+      },
+      {
+        "name": "AI / Compute",
+        "change": 0.225,
+        "trend": "neutral"
+      },
+      {
+        "name": "Layer 2 / Scaling",
+        "change": -0.402,
+        "trend": "neutral"
+      }
+    ],
+    "bottom_sectors": [
+      {
+        "name": "Oracle",
+        "change": -1.222,
+        "trend": "neutral"
+      },
+      {
+        "name": "Gaming / GameFi",
+        "change": -2.199,
+        "trend": "bearish"
+      },
+      {
+        "name": "SocialFi",
+        "change": -2.624,
+        "trend": "bearish"
+      }
+    ],
+    "fear_greed_score": 50,
+    "fear_greed_level": "Neutral",
+    "green_ratio": 50,
+    "alerts_24h": 659,
+    "critical_alerts": 252,
+    "top_alerts": [
+      {
+        "message": "BTCUSDT volume 182.2x above average ($13,004,038,408)",
+        "severity": "warning"
+      },
+      {
+        "message": "DEGOUSDT volume 3.8x above average ($267,693,302)",
+        "severity": "warning"
+      },
+      {
+        "message": "XRPUSDT volume 8.9x above average ($632,775,666)",
+        "severity": "warning"
+      },
+      {
+        "message": "XAGUSDT volume 19.3x above average ($1,377,615,102)",
+        "severity": "warning"
+      },
+      {
+        "message": "ALPACAUSDT volume 40.8x above average ($2,911,352,254)",
+        "severity": "warning"
+      }
+    ],
+    "whale_signals": 0,
+    "exchange_flow": "bearish",
+    "inflow_count": 2,
+    "outflow_count": 8,
+    "momentum_kings": [
+      {
+        "symbol": "ALPACA",
+        "change": 391.228
+      },
+      {
+        "symbol": "BNX",
+        "change": 66.376
+      },
+      {
+        "symbol": "UAI",
+        "change": 53.554
+      }
+    ],
+    "dip_buys": [
+      {
+        "symbol": "PORT3",
+        "change": -68.311
+      },
+      {
+        "symbol": "BSW",
+        "change": -55.164
+      },
+      {
+        "symbol": "NEIROETH",
+        "change": -47.282
+      }
+    ]
+  },
+  "timestamp": 1773351552,
+  "datetime": "2026-03-13 04:39:12",
+  "content": "\u2550\u2550\u2550 HANSEN AI \u2014 DAILY REPORT (2026-03-13 04:37) \u2550\u2550\u2550\n\nMARKET OVERVIEW\nFear & Greed: 50/100 (Neutral)\nMarket breadth: 50% green\n\nTOP SECTORS\n  Infrastructure: +4.96% [bullish]\n  Liquid Staking: +1.54% [neutral]\n  Meme: +1.38% [neutral]\n  AI / Compute: +0.23% [neutral]\n  Layer 2 / Scaling: -0.40% [neutral]\n\nWEAKEST SECTORS\n  Oracle: -1.22% [neutral]\n  Gaming / GameFi: -2.20% [bearish]\n  SocialFi: -2.62% [bearish]\n\nKEY SIGNALS\n  Exchange flow: bearish\n  Whale signals: 0\n  Inflow/Outflow: 2/8\n  Alerts 24h: 659 (critical: 252)\n\nMOMENTUM KINGS\n  ALPACA: +391.23%\n  BNX: +66.38%\n  UAI: +53.55%\n\nDIP BUY CANDIDATES\n  PORT3: -68.31%\n  BSW: -55.16%\n  NEIROETH: -47.28%",
+  "generated_by": "fallback_template"
+}

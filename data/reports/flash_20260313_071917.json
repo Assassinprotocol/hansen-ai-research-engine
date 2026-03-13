@@ -1,0 +1,448 @@
+{
+  "report_type": "flash",
+  "snapshot": {
+    "timestamp": 1773361001,
+    "data_sources": [
+      "sector_performance",
+      "sentiment",
+      "alerts",
+      "whale_activity",
+      "exchange_flow",
+      "screener",
+      "derivatives",
+      "correlation"
+    ],
+    "sectors": {
+      "ranking": [
+        {
+          "name": "AI / Compute",
+          "change": 8.321,
+          "trend": "bullish",
+          "strength": 83.2,
+          "coins_up": 10,
+          "coins_down": 0
+        },
+        {
+          "name": "Meme",
+          "change": 3.743,
+          "trend": "bullish",
+          "strength": 32.1,
+          "coins_up": 6,
+          "coins_down": 1
+        },
+        {
+          "name": "Infrastructure",
+          "change": 3.446,
+          "trend": "bullish",
+          "strength": 28.7,
+          "coins_up": 5,
+          "coins_down": 1
+        },
+        {
+          "name": "DEX",
+          "change": 1.899,
+          "trend": "neutral",
+          "strength": 19.0,
+          "coins_up": 4,
+          "coins_down": 0
+        },
+        {
+          "name": "Layer 1",
+          "change": 1.548,
+          "trend": "neutral",
+          "strength": 12.7,
+          "coins_up": 18,
+          "coins_down": 4
+        },
+        {
+          "name": "Layer 2 / Scaling",
+          "change": 1.45,
+          "trend": "neutral",
+          "strength": 12.4,
+          "coins_up": 6,
+          "coins_down": 1
+        },
+        {
+          "name": "Oracle",
+          "change": 1.24,
+          "trend": "neutral",
+          "strength": 6.2,
+          "coins_up": 2,
+          "coins_down": 2
+        },
+        {
+          "name": "Exchange Tokens",
+          "change": 1.239,
+          "trend": "neutral",
+          "strength": 12.4,
+          "coins_up": 1,
+          "coins_down": 0
+        },
+        {
+          "name": "Liquid Staking",
+          "change": 1.234,
+          "trend": "neutral",
+          "strength": 12.3,
+          "coins_up": 3,
+          "coins_down": 0
+        },
+        {
+          "name": "DeFi",
+          "change": 1.083,
+          "trend": "neutral",
+          "strength": 6.9,
+          "coins_up": 7,
+          "coins_down": 4
+        }
+      ],
+      "top_3": [
+        "AI / Compute",
+        "Meme",
+        "Infrastructure"
+      ],
+      "bottom_3": [
+        "SocialFi",
+        "Privacy",
+        "Gaming / GameFi"
+      ]
+    },
+    "sector_rotation": {
+      "rotating_in": [],
+      "rotating_out": []
+    },
+    "sentiment": {
+      "score": 52.5,
+      "level": "Neutral",
+      "components": {
+        "momentum": {
+          "score": 62.6,
+          "detail": "410/641 green, avg +1.05%"
+        },
+        "volatility": {
+          "score": 13.0,
+          "detail": "Avg range 17.39%"
+        },
+        "volume": {
+          "score": 55.2,
+          "detail": "39 above avg volume"
+        },
+        "breadth": {
+          "score": 69.3,
+          "detail": "159 strong green, 97 strong red"
+        }
+      },
+      "market_breadth": {
+        "total": 641,
+        "green": 410,
+        "red": 231,
+        "green_ratio": 64.0,
+        "avg_change": 1.055
+      }
+    },
+    "active_narratives": [
+      {
+        "label": "AI Narrative Hot",
+        "description": "AI/Compute tokens leading \u2014 narrative-driven momentum",
+        "strength": 8.32,
+        "sentiment": "greedy"
+      }
+    ],
+    "alerts": {
+      "stats": {
+        "total_alerts": 670,
+        "last_hour": 170,
+        "last_24h": 670,
+        "critical_24h": 256,
+        "warning_24h": 414,
+        "active_cooldowns": 170
+      },
+      "recent": [
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "DOGEUSDT",
+          "message": "DOGEUSDT volume 8.4x above average ($618,767,677)"
+        },
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "DEGOUSDT",
+          "message": "DEGOUSDT volume 3.5x above average ($257,679,165)"
+        },
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "XAUUSDT",
+          "message": "XAUUSDT volume 13.1x above average ($967,476,976)"
+        },
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "ALPHAUSDT",
+          "message": "ALPHAUSDT volume 5.0x above average ($370,575,972)"
+        },
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "SUIUSDT",
+          "message": "SUIUSDT volume 2.7x above average ($197,626,807)"
+        },
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "TURBOUSDT",
+          "message": "TURBOUSDT volume 2.8x above average ($207,872,041)"
+        },
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "RIVERUSDT",
+          "message": "RIVERUSDT volume 6.2x above average ($455,818,341)"
+        },
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "HYPEUSDT",
+          "message": "HYPEUSDT volume 6.5x above average ($484,327,423)"
+        },
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "SOLUSDT",
+          "message": "SOLUSDT volume 29.0x above average ($2,146,802,895)"
+        },
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "BNXUSDT",
+          "message": "BNXUSDT volume 6.6x above average ($492,004,952)"
+        }
+      ]
+    },
+    "whale_activity": {
+      "total_signals": 6,
+      "total_volume": 29251993587.66,
+      "top_whales": [
+        {
+          "symbol": "BTC",
+          "direction": "accumulation",
+          "score": 100,
+          "volume": 13853416990.47
+        },
+        {
+          "symbol": "ETH",
+          "direction": "accumulation",
+          "score": 100,
+          "volume": 11574682379.73
+        },
+        {
+          "symbol": "SOL",
+          "direction": "accumulation",
+          "score": 100,
+          "volume": 2168583175.05
+        },
+        {
+          "symbol": "XRP",
+          "direction": "accumulation",
+          "score": 100,
+          "volume": 687722997.99
+        },
+        {
+          "symbol": "DOGE",
+          "direction": "accumulation",
+          "score": 100,
+          "volume": 623636790.54
+        }
+      ]
+    },
+    "exchange_flow": {
+      "net_sentiment": "bullish",
+      "inflow": 12,
+      "outflow": 0,
+      "top_flows": [
+        {
+          "symbol": "BTC",
+          "type": "inflow",
+          "buy_pressure": 88.5
+        },
+        {
+          "symbol": "ETH",
+          "type": "inflow",
+          "buy_pressure": 90.0
+        },
+        {
+          "symbol": "SOL",
+          "type": "inflow",
+          "buy_pressure": 86.5
+        },
+        {
+          "symbol": "XRP",
+          "type": "inflow",
+          "buy_pressure": 90.2
+        },
+        {
+          "symbol": "DOGE",
+          "type": "inflow",
+          "buy_pressure": 91.3
+        }
+      ]
+    },
+    "stablecoin": {
+      "deployment_signal": "low",
+      "total_volume": 4227205.55
+    },
+    "opportunities": {
+      "momentum_kings": [
+        {
+          "symbol": "ALPACA",
+          "change": 391.228,
+          "volume": 2911352253.75,
+          "vol_ratio": 39.09
+        },
+        {
+          "symbol": "BNX",
+          "change": 66.376,
+          "volume": 492004952.04,
+          "vol_ratio": 6.61
+        },
+        {
+          "symbol": "UAI",
+          "change": 55.449,
+          "volume": 132954997.16,
+          "vol_ratio": 1.78
+        },
+        {
+          "symbol": "LYN",
+          "change": 52.829,
+          "volume": 306691677.95,
+          "vol_ratio": 4.12
+        },
+        {
+          "symbol": "YALA",
+          "change": 50.718,
+          "volume": 66841744.36,
+          "vol_ratio": 0.9
+        }
+      ],
+      "dip_buys": [
+        {
+          "symbol": "PORT3",
+          "change": -68.311,
+          "volume": 200374788.21
+        },
+        {
+          "symbol": "BSW",
+          "change": -55.164,
+          "volume": 65917286.3
+        },
+        {
+          "symbol": "NEIROETH",
+          "change": -47.282,
+          "volume": 83925618.84
+        },
+        {
+          "symbol": "VIDT",
+          "change": -42.436,
+          "volume": 116094468.4
+        },
+        {
+          "symbol": "TROY",
+          "change": -41.195,
+          "volume": 44261336.49
+        }
+      ],
+      "breakout_candidates": [
+        {
+          "symbol": "BTC",
+          "change": 1.583,
+          "vol_ratio": 185.99,
+          "range": 3.61
+        },
+        {
+          "symbol": "XAG",
+          "change": -0.353,
+          "vol_ratio": 17.77,
+          "range": 5.39
+        },
+        {
+          "symbol": "XAU",
+          "change": -0.646,
+          "vol_ratio": 12.99,
+          "range": 2.57
+        },
+        {
+          "symbol": "XRP",
+          "change": 1.467,
+          "vol_ratio": 9.23,
+          "range": 3.29
+        },
+        {
+          "symbol": "BNB",
+          "change": 1.008,
+          "vol_ratio": 4.62,
+          "range": 2.91
+        }
+      ]
+    },
+    "derivatives": {
+      "funding": {
+        "avg_rate": null,
+        "sentiment": null,
+        "long_count": null,
+        "short_count": null,
+        "extreme_positive": [],
+        "extreme_negative": []
+      },
+      "open_interest": {
+        "spikes": 0,
+        "dumps": 0
+      },
+      "cascade_alert": {
+        "cascade": false,
+        "total_1h_usd": 0,
+        "threshold_usd": 10000000
+      }
+    },
+    "correlation": {
+      "strongest_pairs": [
+        {
+          "pair": "ETH/LINK",
+          "correlation": 0.9325
+        },
+        {
+          "pair": "ARB/OP",
+          "correlation": 0.9094
+        },
+        {
+          "pair": "BTC/LINK",
+          "correlation": 0.9029
+        },
+        {
+          "pair": "BTC/ETH",
+          "correlation": 0.9018
+        },
+        {
+          "pair": "SOL/LINK",
+          "correlation": 0.898
+        }
+      ],
+      "high_beta": [
+        {
+          "symbol": "RENDER",
+          "beta": 1.248
+        }
+      ],
+      "low_beta": [
+        {
+          "symbol": "TON",
+          "beta": 0.387
+        }
+      ]
+    },
+    "total_data_sources": 8
+  },
+  "timestamp": 1773361092,
+  "datetime": "2026-03-13 07:18:12",
+  "content": "[FLASH N/A] Market sentiment: Neutral (50/100). Green ratio: 50%. Exchange flow: {'net_sentiment': 'bullish', 'inflow': 12, 'outflow': 0, 'top_flows': [{'symbol': 'BTC', 'type': 'inflow', 'buy_pressure': 88.5}, {'symbol': 'ETH', 'type': 'inflow', 'buy_pressure': 90.0}, {'symbol': 'SOL', 'type': 'inflow', 'buy_pressure': 86.5}, {'symbol': 'XRP', 'type': 'inflow', 'buy_pressure': 90.2}, {'symbol': 'DOGE', 'type': 'inflow', 'buy_pressure': 91.3}]}. Whale signals: 0. Critical alerts: 0.",
+  "generated_by": "fallback_template"
+}

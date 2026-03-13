@@ -1,0 +1,118 @@
+<svg width="100%" viewBox="0 0 680 720">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<!-- Title -->
+<text class="th" x="340" y="30" text-anchor="middle">Hansen AI — system architecture</text>
+
+<!-- Binance API -->
+<g class="c-blue">
+<rect x="250" y="50" width="180" height="40" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="74" text-anchor="middle" dominant-baseline="central">Binance Futures API</text>
+</g>
+<line x1="340" y1="90" x2="340" y2="115" class="arr" marker-end="url(#arrow)"/>
+
+<!-- Market Logger -->
+<g class="c-gray">
+<rect x="220" y="115" width="240" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="131" text-anchor="middle" dominant-baseline="central">Market logger</text>
+<text class="ts" x="340" y="149" text-anchor="middle" dominant-baseline="central">5-min sampling, 641+ pairs</text>
+</g>
+<line x1="340" y1="159" x2="340" y2="184" class="arr" marker-end="url(#arrow)"/>
+
+<!-- History -->
+<g class="c-gray">
+<rect x="210" y="184" width="260" height="40" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="208" text-anchor="middle" dominant-baseline="central">90-day history (1M+ records)</text>
+</g>
+<line x1="340" y1="224" x2="340" y2="252" class="arr" marker-end="url(#arrow)"/>
+
+<!-- Intelligence Engine Container -->
+<g class="c-teal">
+<rect x="40" y="252" width="600" height="200" rx="16" stroke-width="0.5"/>
+<text class="th" x="340" y="274" text-anchor="middle" dominant-baseline="central">Intelligence engine — 8 modules</text>
+</g>
+
+<!-- Module boxes inside container -->
+<g class="c-purple">
+<rect x="60" y="290" width="130" height="44" rx="6" stroke-width="0.5"/>
+<text class="ts" x="125" y="306" text-anchor="middle" dominant-baseline="central">P1 Data depth</text>
+<text class="ts" x="125" y="324" text-anchor="middle" dominant-baseline="central">funding/OI/liq</text>
+</g>
+
+<g class="c-purple">
+<rect x="200" y="290" width="130" height="44" rx="6" stroke-width="0.5"/>
+<text class="ts" x="265" y="306" text-anchor="middle" dominant-baseline="central">P2 Analytics</text>
+<text class="ts" x="265" y="324" text-anchor="middle" dominant-baseline="central">sector/corr/beta</text>
+</g>
+
+<g class="c-purple">
+<rect x="340" y="290" width="130" height="44" rx="6" stroke-width="0.5"/>
+<text class="ts" x="405" y="306" text-anchor="middle" dominant-baseline="central">P3 Alerts</text>
+<text class="ts" x="405" y="324" text-anchor="middle" dominant-baseline="central">heatmap</text>
+</g>
+
+<g class="c-purple">
+<rect x="480" y="290" width="140" height="44" rx="6" stroke-width="0.5"/>
+<text class="ts" x="550" y="306" text-anchor="middle" dominant-baseline="central">P4 Screener</text>
+<text class="ts" x="550" y="324" text-anchor="middle" dominant-baseline="central">6 presets</text>
+</g>
+
+<g class="c-coral">
+<rect x="60" y="348" width="130" height="44" rx="6" stroke-width="0.5"/>
+<text class="ts" x="125" y="364" text-anchor="middle" dominant-baseline="central">P5 Sentiment</text>
+<text class="ts" x="125" y="382" text-anchor="middle" dominant-baseline="central">fear/greed</text>
+</g>
+
+<g class="c-coral">
+<rect x="200" y="348" width="130" height="44" rx="6" stroke-width="0.5"/>
+<text class="ts" x="265" y="364" text-anchor="middle" dominant-baseline="central">P6 Onchain</text>
+<text class="ts" x="265" y="382" text-anchor="middle" dominant-baseline="central">whale/flow</text>
+</g>
+
+<g class="c-coral">
+<rect x="340" y="348" width="130" height="44" rx="6" stroke-width="0.5"/>
+<text class="ts" x="405" y="364" text-anchor="middle" dominant-baseline="central">P7 AI reports</text>
+<text class="ts" x="405" y="382" text-anchor="middle" dominant-baseline="central">flash/daily/weekly</text>
+</g>
+
+<g class="c-gray">
+<rect x="480" y="348" width="140" height="44" rx="6" stroke-width="0.5"/>
+<text class="ts" x="550" y="364" text-anchor="middle" dominant-baseline="central">Core modules</text>
+<text class="ts" x="550" y="382" text-anchor="middle" dominant-baseline="central">regime/vol/mom</text>
+</g>
+
+<!-- Arrow to Brain -->
+<line x1="340" y1="452" x2="340" y2="480" class="arr" marker-end="url(#arrow)"/>
+
+<!-- Market Brain -->
+<g class="c-amber">
+<rect x="190" y="480" width="300" height="48" rx="10" stroke-width="0.5"/>
+<text class="th" x="340" y="498" text-anchor="middle" dominant-baseline="central">Market Brain</text>
+<text class="ts" x="340" y="518" text-anchor="middle" dominant-baseline="central">Central intelligence hub — unified context</text>
+</g>
+<line x1="340" y1="528" x2="340" y2="556" class="arr" marker-end="url(#arrow)"/>
+
+<!-- LLM -->
+<g class="c-green">
+<rect x="220" y="556" width="240" height="40" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="580" text-anchor="middle" dominant-baseline="central">Local LLM (llama.cpp 8B)</text>
+</g>
+
+<!-- Split arrows -->
+<line x1="280" y1="596" x2="160" y2="636" class="arr" marker-end="url(#arrow)"/>
+<line x1="400" y1="596" x2="520" y2="636" class="arr" marker-end="url(#arrow)"/>
+
+<!-- Enriched Snapshots -->
+<g class="c-teal">
+<rect x="60" y="636" width="200" height="48" rx="8" stroke-width="0.5"/>
+<text class="th" x="160" y="654" text-anchor="middle" dominant-baseline="central">Enriched snapshots</text>
+<text class="ts" x="160" y="674" text-anchor="middle" dominant-baseline="central">Shelby Protocol (Aptos)</text>
+</g>
+
+<!-- Web Dashboard -->
+<g class="c-blue">
+<rect x="420" y="636" width="200" height="48" rx="8" stroke-width="0.5"/>
+<text class="th" x="520" y="654" text-anchor="middle" dominant-baseline="central">Web dashboard</text>
+<text class="ts" x="520" y="674" text-anchor="middle" dominant-baseline="central">15+ panels, localhost:5000</text>
+</g>
+</svg>

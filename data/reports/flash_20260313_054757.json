@@ -1,0 +1,288 @@
+{
+  "report_type": "flash",
+  "snapshot": {
+    "timestamp": 1773355535,
+    "data_sources": [
+      "sector_performance",
+      "sentiment",
+      "alerts",
+      "whale_activity",
+      "exchange_flow",
+      "screener",
+      "derivatives",
+      "correlation"
+    ],
+    "sectors": {
+      "ranking": [
+        {
+          "name": "Layer 1",
+          "change": -0.302,
+          "trend": "neutral",
+          "strength": 1.2,
+          "coins_up": 6,
+          "coins_down": 9
+        },
+        {
+          "name": "Store of Value",
+          "change": -0.497,
+          "trend": "neutral",
+          "strength": 0,
+          "coins_up": 0,
+          "coins_down": 4
+        }
+      ],
+      "top_3": [
+        "Layer 1",
+        "Store of Value"
+      ],
+      "bottom_3": [
+        "Layer 1",
+        "Store of Value"
+      ]
+    },
+    "sector_rotation": {
+      "rotating_in": [],
+      "rotating_out": []
+    },
+    "sentiment": {
+      "score": 50,
+      "level": null,
+      "components": {},
+      "market_breadth": {
+        "total": null,
+        "green": null,
+        "red": null,
+        "green_ratio": null,
+        "avg_change": null
+      }
+    },
+    "alerts": {
+      "stats": {
+        "total_alerts": 659,
+        "last_hour": 659,
+        "last_24h": 659,
+        "critical_24h": 251,
+        "warning_24h": 408,
+        "active_cooldowns": 159
+      },
+      "recent": [
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "SUIUSDT",
+          "message": "SUIUSDT volume 2.6x above average ($184,310,400)"
+        },
+        {
+          "type": "price_dump",
+          "severity": "warning",
+          "symbol": "BRUSDT",
+          "message": "BRUSDT down -8.85% in 24h"
+        },
+        {
+          "type": "price_pump",
+          "severity": "warning",
+          "symbol": "LITUSDT",
+          "message": "LITUSDT up +8.75% in 24h"
+        },
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "XAUUSDT",
+          "message": "XAUUSDT volume 14.2x above average ($1,010,564,483)"
+        },
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "TURBOUSDT",
+          "message": "TURBOUSDT volume 2.5x above average ($178,376,692)"
+        },
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "ALPHAUSDT",
+          "message": "ALPHAUSDT volume 5.2x above average ($370,575,972)"
+        },
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "HYPEUSDT",
+          "message": "HYPEUSDT volume 6.8x above average ($482,889,981)"
+        },
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "BNBUSDT",
+          "message": "BNBUSDT volume 4.6x above average ($328,271,566)"
+        },
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "XRPUSDT",
+          "message": "XRPUSDT volume 8.8x above average ($627,507,027)"
+        },
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "PORT3USDT",
+          "message": "PORT3USDT volume 2.8x above average ($200,374,788)"
+        }
+      ]
+    },
+    "whale_activity": {
+      "total_signals": 0,
+      "total_volume": 0,
+      "top_whales": []
+    },
+    "exchange_flow": {
+      "net_sentiment": "neutral",
+      "inflow": null,
+      "outflow": null,
+      "top_flows": []
+    },
+    "stablecoin": {
+      "deployment_signal": null,
+      "total_volume": 0
+    },
+    "opportunities": {
+      "momentum_kings": [
+        {
+          "symbol": "ALPACA",
+          "change": 391.228,
+          "volume": 2911352253.75,
+          "vol_ratio": 41.04
+        },
+        {
+          "symbol": "BNX",
+          "change": 66.376,
+          "volume": 492004952.04,
+          "vol_ratio": 6.94
+        },
+        {
+          "symbol": "UAI",
+          "change": 52.19,
+          "volume": 123242319.48,
+          "vol_ratio": 1.74
+        },
+        {
+          "symbol": "YALA",
+          "change": 50.718,
+          "volume": 66841744.36,
+          "vol_ratio": 0.94
+        },
+        {
+          "symbol": "LYN",
+          "change": 36.474,
+          "volume": 293948509.4,
+          "vol_ratio": 4.14
+        }
+      ],
+      "dip_buys": [
+        {
+          "symbol": "PORT3",
+          "change": -68.311,
+          "volume": 200374788.21
+        },
+        {
+          "symbol": "BSW",
+          "change": -55.164,
+          "volume": 65917286.3
+        },
+        {
+          "symbol": "NEIROETH",
+          "change": -47.282,
+          "volume": 83925618.84
+        },
+        {
+          "symbol": "VIDT",
+          "change": -42.436,
+          "volume": 116094468.4
+        },
+        {
+          "symbol": "TROY",
+          "change": -41.195,
+          "volume": 44261336.49
+        }
+      ],
+      "breakout_candidates": [
+        {
+          "symbol": "BTC",
+          "change": -0.445,
+          "vol_ratio": 181.27,
+          "range": 2.32
+        },
+        {
+          "symbol": "ETH",
+          "change": -0.211,
+          "vol_ratio": 148.87,
+          "range": 3.89
+        },
+        {
+          "symbol": "SOL",
+          "change": -1.114,
+          "vol_ratio": 28.71,
+          "range": 3.58
+        },
+        {
+          "symbol": "XAG",
+          "change": -1.199,
+          "vol_ratio": 19.52,
+          "range": 5.39
+        },
+        {
+          "symbol": "XAU",
+          "change": -1.289,
+          "vol_ratio": 14.25,
+          "range": 2.57
+        }
+      ]
+    },
+    "derivatives": {
+      "funding": {
+        "avg_rate": null,
+        "sentiment": null,
+        "long_count": null,
+        "short_count": null,
+        "extreme_positive": [],
+        "extreme_negative": []
+      },
+      "open_interest": {
+        "spikes": 0,
+        "dumps": 0
+      },
+      "cascade_alert": {
+        "cascade": false,
+        "total_1h_usd": 0,
+        "threshold_usd": 10000000
+      }
+    },
+    "correlation": {
+      "strongest_pairs": [
+        {
+          "pair": "AVAX/LINK",
+          "correlation": 0.8918
+        },
+        {
+          "pair": "OP/TIA",
+          "correlation": 0.8683
+        },
+        {
+          "pair": "APT/INJ",
+          "correlation": 0.8619
+        },
+        {
+          "pair": "OP/INJ",
+          "correlation": 0.8604
+        },
+        {
+          "pair": "OP/APT",
+          "correlation": 0.8598
+        }
+      ]
+    },
+    "total_data_sources": 8
+  },
+  "timestamp": 1773355615,
+  "datetime": "2026-03-13 05:46:55",
+  "content": "[FLASH N/A] Market sentiment: Neutral (50/100). Green ratio: 50%. Exchange flow: {'net_sentiment': 'neutral', 'inflow': None, 'outflow': None, 'top_flows': []}. Whale signals: 0. Critical alerts: 0.",
+  "generated_by": "fallback_template"
+}

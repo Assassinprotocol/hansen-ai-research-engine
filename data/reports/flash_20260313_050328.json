@@ -1,0 +1,383 @@
+{
+  "report_type": "flash",
+  "snapshot": {
+    "timestamp": 1773352868,
+    "data_sources": [
+      "sector_performance",
+      "sentiment",
+      "alerts",
+      "whale_activity",
+      "exchange_flow",
+      "screener",
+      "correlation"
+    ],
+    "sectors": {
+      "ranking": [
+        {
+          "name": "AI / Compute",
+          "change": 3.774,
+          "trend": "bullish",
+          "strength": 37.7,
+          "coins_up": 3,
+          "coins_down": 0
+        },
+        {
+          "name": "Infrastructure",
+          "change": 3.05,
+          "trend": "bullish",
+          "strength": 30.5,
+          "coins_up": 1,
+          "coins_down": 0
+        },
+        {
+          "name": "Meme",
+          "change": 2.093,
+          "trend": "bullish",
+          "strength": 20.9,
+          "coins_up": 1,
+          "coins_down": 0
+        },
+        {
+          "name": "DEX",
+          "change": 1.204,
+          "trend": "neutral",
+          "strength": 12.0,
+          "coins_up": 2,
+          "coins_down": 0
+        },
+        {
+          "name": "Gaming / GameFi",
+          "change": 0.433,
+          "trend": "neutral",
+          "strength": 2.2,
+          "coins_up": 1,
+          "coins_down": 1
+        },
+        {
+          "name": "RWA",
+          "change": 0.387,
+          "trend": "neutral",
+          "strength": 3.9,
+          "coins_up": 1,
+          "coins_down": 0
+        },
+        {
+          "name": "Layer 2 / Scaling",
+          "change": 0.214,
+          "trend": "neutral",
+          "strength": 1.4,
+          "coins_up": 2,
+          "coins_down": 1
+        },
+        {
+          "name": "Layer 1",
+          "change": -0.191,
+          "trend": "neutral",
+          "strength": 1.0,
+          "coins_up": 2,
+          "coins_down": 2
+        },
+        {
+          "name": "DeFi",
+          "change": -0.336,
+          "trend": "neutral",
+          "strength": 0.7,
+          "coins_up": 1,
+          "coins_down": 3
+        },
+        {
+          "name": "Oracle",
+          "change": -0.551,
+          "trend": "neutral",
+          "strength": 0,
+          "coins_up": 0,
+          "coins_down": 1
+        }
+      ],
+      "top_3": [
+        "AI / Compute",
+        "Infrastructure",
+        "Meme"
+      ],
+      "bottom_3": [
+        "DeFi",
+        "Oracle",
+        "Store of Value"
+      ]
+    },
+    "sector_rotation": {
+      "rotating_in": [],
+      "rotating_out": []
+    },
+    "sentiment": {
+      "score": 42.7,
+      "level": "Cautious",
+      "components": {
+        "momentum": {
+          "score": 48.6,
+          "detail": "301/641 green, avg +0.10%"
+        },
+        "volatility": {
+          "score": 13.9,
+          "detail": "Avg range 17.22%"
+        },
+        "volume": {
+          "score": 53.2,
+          "detail": "39 above avg volume"
+        },
+        "breadth": {
+          "score": 49.1,
+          "detail": "112 strong green, 115 strong red"
+        }
+      },
+      "market_breadth": {
+        "total": 641,
+        "green": 301,
+        "red": 340,
+        "green_ratio": 47.0,
+        "avg_change": 0.098
+      }
+    },
+    "active_narratives": [
+      {
+        "label": "Accumulation Phase",
+        "description": "Low volatility + rising volume \u2014 smart money loading",
+        "strength": 72.7,
+        "sentiment": "neutral"
+      },
+      {
+        "label": "AI Narrative Hot",
+        "description": "AI/Compute tokens leading \u2014 narrative-driven momentum",
+        "strength": 3.77,
+        "sentiment": "greedy"
+      },
+      {
+        "label": "Alt Season Signal",
+        "description": "Altcoins outperforming BTC \u2014 risk-on mode",
+        "strength": 1.91,
+        "sentiment": "greedy"
+      }
+    ],
+    "alerts": {
+      "stats": {
+        "total_alerts": 665,
+        "last_hour": 665,
+        "last_24h": 665,
+        "critical_24h": 263,
+        "warning_24h": 402,
+        "active_cooldowns": 165
+      },
+      "recent": [
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "DEGOUSDT",
+          "message": "DEGOUSDT volume 3.7x above average ($267,638,195)"
+        },
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "DOGEUSDT",
+          "message": "DOGEUSDT volume 8.3x above average ($595,445,283)"
+        },
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "BTCUSDT",
+          "message": "BTCUSDT volume 182.0x above average ($12,988,175,265)"
+        },
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "BNBUSDT",
+          "message": "BNBUSDT volume 4.7x above average ($334,244,700)"
+        },
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "ALPACAUSDT",
+          "message": "ALPACAUSDT volume 40.8x above average ($2,911,352,254)"
+        },
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "BNXUSDT",
+          "message": "BNXUSDT volume 6.9x above average ($492,004,952)"
+        },
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "HYPEUSDT",
+          "message": "HYPEUSDT volume 6.8x above average ($486,525,597)"
+        },
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "PIXELUSDT",
+          "message": "PIXELUSDT volume 8.2x above average ($583,730,423)"
+        },
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "LYNUSDT",
+          "message": "LYNUSDT volume 4.1x above average ($292,202,846)"
+        },
+        {
+          "type": "volume_anomaly",
+          "severity": "warning",
+          "symbol": "SUIUSDT",
+          "message": "SUIUSDT volume 2.6x above average ($186,846,342)"
+        }
+      ]
+    },
+    "whale_activity": {
+      "total_signals": 0,
+      "total_volume": 0,
+      "top_whales": []
+    },
+    "exchange_flow": {
+      "net_sentiment": "neutral",
+      "inflow": null,
+      "outflow": null,
+      "top_flows": []
+    },
+    "stablecoin": {
+      "deployment_signal": null,
+      "total_volume": 0
+    },
+    "opportunities": {
+      "momentum_kings": [
+        {
+          "symbol": "ALPACA",
+          "change": 391.228,
+          "volume": 2911352253.75,
+          "vol_ratio": 40.75
+        },
+        {
+          "symbol": "BNX",
+          "change": 66.376,
+          "volume": 492004952.04,
+          "vol_ratio": 6.89
+        },
+        {
+          "symbol": "UAI",
+          "change": 56.135,
+          "volume": 118802236.5,
+          "vol_ratio": 1.66
+        },
+        {
+          "symbol": "YALA",
+          "change": 50.718,
+          "volume": 66841744.36,
+          "vol_ratio": 0.94
+        },
+        {
+          "symbol": "LYN",
+          "change": 40.781,
+          "volume": 291396029.22,
+          "vol_ratio": 4.08
+        }
+      ],
+      "dip_buys": [
+        {
+          "symbol": "PORT3",
+          "change": -68.311,
+          "volume": 200374788.21
+        },
+        {
+          "symbol": "BSW",
+          "change": -55.164,
+          "volume": 65917286.3
+        },
+        {
+          "symbol": "NEIROETH",
+          "change": -47.282,
+          "volume": 83925618.84
+        },
+        {
+          "symbol": "VIDT",
+          "change": -42.436,
+          "volume": 116094468.4
+        },
+        {
+          "symbol": "TROY",
+          "change": -41.195,
+          "volume": 44261336.49
+        }
+      ],
+      "breakout_candidates": [
+        {
+          "symbol": "BTC",
+          "change": -0.699,
+          "vol_ratio": 182.03,
+          "range": 2.58
+        },
+        {
+          "symbol": "ETH",
+          "change": -0.453,
+          "vol_ratio": 149.77,
+          "range": 3.89
+        },
+        {
+          "symbol": "SOL",
+          "change": -1.2,
+          "vol_ratio": 28.7,
+          "range": 3.86
+        },
+        {
+          "symbol": "XAU",
+          "change": -1.888,
+          "vol_ratio": 14.12,
+          "range": 2.57
+        },
+        {
+          "symbol": "XRP",
+          "change": -1.272,
+          "vol_ratio": 8.86,
+          "range": 2.46
+        }
+      ]
+    },
+    "correlation": {
+      "strongest_pairs": [
+        {
+          "pair": "OP/TIA",
+          "correlation": 0.8684
+        },
+        {
+          "pair": "APT/INJ",
+          "correlation": 0.8621
+        },
+        {
+          "pair": "OP/INJ",
+          "correlation": 0.8616
+        },
+        {
+          "pair": "ADA/AVAX",
+          "correlation": 0.861
+        },
+        {
+          "pair": "OP/APT",
+          "correlation": 0.8601
+        }
+      ],
+      "high_beta": [
+        {
+          "symbol": "RENDER",
+          "beta": 1.249
+        }
+      ],
+      "low_beta": [
+        {
+          "symbol": "TON",
+          "beta": 0.394
+        }
+      ]
+    },
+    "total_data_sources": 7
+  },
+  "timestamp": 1773352946,
+  "datetime": "2026-03-13 05:02:26",
+  "content": "[FLASH N/A] Market sentiment: Neutral (50/100). Green ratio: 50%. Exchange flow: {'net_sentiment': 'neutral', 'inflow': None, 'outflow': None, 'top_flows': []}. Whale signals: 0. Critical alerts: 0.",
+  "generated_by": "fallback_template"
+}

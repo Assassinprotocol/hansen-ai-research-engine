@@ -1,0 +1,114 @@
+{
+  "report_type": "daily",
+  "snapshot": {
+    "timestamp": 1773351371,
+    "datetime": "2026-03-13 04:36",
+    "top_sectors": [
+      {
+        "name": "AI / Compute",
+        "change": 3.631,
+        "trend": "bullish"
+      },
+      {
+        "name": "Meme",
+        "change": 2.913,
+        "trend": "bullish"
+      },
+      {
+        "name": "Liquid Staking",
+        "change": 1.489,
+        "trend": "neutral"
+      },
+      {
+        "name": "Layer 1",
+        "change": 1.439,
+        "trend": "neutral"
+      },
+      {
+        "name": "DeFi",
+        "change": 1.136,
+        "trend": "neutral"
+      }
+    ],
+    "bottom_sectors": [
+      {
+        "name": "Privacy",
+        "change": -1.912,
+        "trend": "neutral"
+      },
+      {
+        "name": "SocialFi",
+        "change": -1.977,
+        "trend": "neutral"
+      },
+      {
+        "name": "Gaming / GameFi",
+        "change": -22.717,
+        "trend": "bearish"
+      }
+    ],
+    "fear_greed_score": 50,
+    "fear_greed_level": "Neutral",
+    "green_ratio": 50,
+    "alerts_24h": 638,
+    "critical_alerts": 252,
+    "top_alerts": [
+      {
+        "message": "XPLUSDT up +6.63% in 24h",
+        "severity": "warning"
+      },
+      {
+        "message": "FLMUSDT dumped -30.51% in 24h",
+        "severity": "critical"
+      },
+      {
+        "message": "MEMEUSDT up +5.65% in 24h",
+        "severity": "warning"
+      },
+      {
+        "message": "CHESSUSDT dumped -30.75% in 24h",
+        "severity": "critical"
+      },
+      {
+        "message": "PORT3USDT dumped -68.31% in 24h",
+        "severity": "critical"
+      }
+    ],
+    "whale_signals": 0,
+    "exchange_flow": "neutral",
+    "inflow_count": 0,
+    "outflow_count": 0,
+    "momentum_kings": [
+      {
+        "symbol": "ALPACA",
+        "change": 391.228
+      },
+      {
+        "symbol": "BNX",
+        "change": 66.376
+      },
+      {
+        "symbol": "UAI",
+        "change": 51.809
+      }
+    ],
+    "dip_buys": [
+      {
+        "symbol": "PORT3",
+        "change": -68.311
+      },
+      {
+        "symbol": "BSW",
+        "change": -55.164
+      },
+      {
+        "symbol": "NEIROETH",
+        "change": -47.282
+      }
+    ]
+  },
+  "timestamp": 1773351385,
+  "datetime": "2026-03-13 04:36:25",
+  "content": "\u2550\u2550\u2550 HANSEN AI \u2014 DAILY REPORT (2026-03-13 04:36) \u2550\u2550\u2550\n\nMARKET OVERVIEW\nFear & Greed: 50/100 (Neutral)\nMarket breadth: 50% green\n\nTOP SECTORS\n  AI / Compute: +3.63% [bullish]\n  Meme: +2.91% [bullish]\n  Liquid Staking: +1.49% [neutral]\n  Layer 1: +1.44% [neutral]\n  DeFi: +1.14% [neutral]\n\nWEAKEST SECTORS\n  Privacy: -1.91% [neutral]\n  SocialFi: -1.98% [neutral]\n  Gaming / GameFi: -22.72% [bearish]\n\nKEY SIGNALS\n  Exchange flow: neutral\n  Whale signals: 0\n  Inflow/Outflow: 0/0\n  Alerts 24h: 638 (critical: 252)\n\nMOMENTUM KINGS\n  ALPACA: +391.23%\n  BNX: +66.38%\n  UAI: +51.81%\n\nDIP BUY CANDIDATES\n  PORT3: -68.31%\n  BSW: -55.16%\n  NEIROETH: -47.28%",
+  "generated_by": "fallback_template"
+}

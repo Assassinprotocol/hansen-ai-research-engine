@@ -1,0 +1,437 @@
+[
+    {
+        "symbol": "BTCUSDT",
+        "price": "71384.76000000",
+        "timestamp": 1772728784.9576192
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71344.21000000",
+        "timestamp": 1772729097.8581665
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71321.19000000",
+        "timestamp": 1772729905.1833882
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71321.19000000",
+        "timestamp": 1772729906.1138008
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71304.65000000",
+        "timestamp": 1772729940.337449
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70957.86000000",
+        "timestamp": 1772731843.6297317
+    },
+    {
+        "symbol": "ETHUSDT",
+        "price": "2068.89000000",
+        "timestamp": 1772731859.8982236
+    },
+    {
+        "symbol": "SOLUSDT",
+        "price": "88.27000000",
+        "timestamp": 1772731874.8975236
+    },
+    {
+        "symbol": "ETHUSDT",
+        "price": "2062.89000000",
+        "timestamp": 1772732104.523581
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70800.40000000",
+        "timestamp": 1772732128.3115046
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70914.24000000",
+        "timestamp": 1772736610.4493904
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70874.74000000",
+        "timestamp": 1772736671.0609276
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70838.11000000",
+        "timestamp": 1772736732.237201
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70840.16000000",
+        "timestamp": 1772736792.7904067
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70906.85000000",
+        "timestamp": 1772736853.467024
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70891.17000000",
+        "timestamp": 1772736914.0835097
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70958.00000000",
+        "timestamp": 1772736974.6735375
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70967.74000000",
+        "timestamp": 1772737035.3536801
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70986.07000000",
+        "timestamp": 1772737096.3860083
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70958.77000000",
+        "timestamp": 1772737157.3639853
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71010.30000000",
+        "timestamp": 1772737218.3774376
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71102.35000000",
+        "timestamp": 1772737279.0433452
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71137.17000000",
+        "timestamp": 1772737339.5841568
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71199.20000000",
+        "timestamp": 1772737400.4284654
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71138.70000000",
+        "timestamp": 1772737461.1711462
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71146.19000000",
+        "timestamp": 1772737521.853767
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71173.93000000",
+        "timestamp": 1772737582.5207386
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71167.85000000",
+        "timestamp": 1772737643.3360753
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71267.71000000",
+        "timestamp": 1772737704.022717
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71272.63000000",
+        "timestamp": 1772737764.7320487
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71251.48000000",
+        "timestamp": 1772737825.5563805
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71267.50000000",
+        "timestamp": 1772737886.264817
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71190.56000000",
+        "timestamp": 1772737946.9157114
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71288.21000000",
+        "timestamp": 1772738007.6026604
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71351.94000000",
+        "timestamp": 1772738068.2630267
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71322.11000000",
+        "timestamp": 1772738128.9966946
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71277.73000000",
+        "timestamp": 1772738189.6618416
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71210.01000000",
+        "timestamp": 1772738250.3584886
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71307.92000000",
+        "timestamp": 1772738311.0258226
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71269.43000000",
+        "timestamp": 1772738371.7258365
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71409.65000000",
+        "timestamp": 1772738432.6694753
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71307.46000000",
+        "timestamp": 1772738493.6597338
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71302.86000000",
+        "timestamp": 1772738554.3046231
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71279.20000000",
+        "timestamp": 1772738615.1299615
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71252.85000000",
+        "timestamp": 1772738675.8560133
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71158.69000000",
+        "timestamp": 1772738736.5653563
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71130.41000000",
+        "timestamp": 1772738797.2761474
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71143.92000000",
+        "timestamp": 1772738858.006502
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71107.17000000",
+        "timestamp": 1772738918.686494
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71098.28000000",
+        "timestamp": 1772738979.3563752
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71049.22000000",
+        "timestamp": 1772739040.1747813
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71059.70000000",
+        "timestamp": 1772739100.8756828
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70990.77000000",
+        "timestamp": 1772739161.6459732
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71022.51000000",
+        "timestamp": 1772739222.3579412
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71058.14000000",
+        "timestamp": 1772739283.0598683
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71011.51000000",
+        "timestamp": 1772739343.7366452
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70941.99000000",
+        "timestamp": 1772739404.423852
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70946.54000000",
+        "timestamp": 1772739465.1668794
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71007.33000000",
+        "timestamp": 1772739525.9078004
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70990.59000000",
+        "timestamp": 1772739586.6042006
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71062.05000000",
+        "timestamp": 1772739647.346128
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71075.37000000",
+        "timestamp": 1772739707.985279
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71123.20000000",
+        "timestamp": 1772739768.8208518
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71102.85000000",
+        "timestamp": 1772739829.5390575
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71033.93000000",
+        "timestamp": 1772739890.419867
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71050.83000000",
+        "timestamp": 1772739951.1568186
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71053.83000000",
+        "timestamp": 1772740011.9059494
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71074.26000000",
+        "timestamp": 1772740072.6415195
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71087.67000000",
+        "timestamp": 1772740133.3340168
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71061.76000000",
+        "timestamp": 1772740194.0513542
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71065.84000000",
+        "timestamp": 1772740254.7542262
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71010.91000000",
+        "timestamp": 1772740315.3920577
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71006.68000000",
+        "timestamp": 1772740376.164077
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70974.72000000",
+        "timestamp": 1772740436.820695
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70935.86000000",
+        "timestamp": 1772740497.5089126
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70934.41000000",
+        "timestamp": 1772740558.2287743
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70948.28000000",
+        "timestamp": 1772740618.925478
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70957.28000000",
+        "timestamp": 1772740679.6815236
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70954.32000000",
+        "timestamp": 1772740740.385981
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70928.92000000",
+        "timestamp": 1772740801.1362252
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70974.48000000",
+        "timestamp": 1772740861.9469984
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70964.68000000",
+        "timestamp": 1772740922.661262
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "70977.32000000",
+        "timestamp": 1772740983.3563886
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71208.40000000",
+        "timestamp": 1772741924.197746
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71219.19000000",
+        "timestamp": 1772741984.8529973
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71185.62000000",
+        "timestamp": 1772742045.7615657
+    },
+    {
+        "symbol": "BTCUSDT",
+        "price": "71193.02000000",
+        "timestamp": 1772742106.3524427
+    }
+]
