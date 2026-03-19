@@ -1,20 +1,36 @@
-![Python](https://img.shields.io/badge/Python-3.14-blue)
-![LLM](https://img.shields.io/badge/LLM-llama.cpp-orange)
-![Dataset](https://img.shields.io/badge/Dataset-Shelby_Protocol-green)
-![Status](https://img.shields.io/badge/status-active-success)
-![License](https://img.shields.io/badge/license-proprietary-red)
-![Modules](https://img.shields.io/badge/modules-8_intelligence-purple)
-
 # Hansen AI Research Engine
 
-> Sovereign market intelligence infrastructure for AI-driven crypto research.
+<p align="center">
+  <img src="assets/logo/hansen-ai-banner.png" alt="Hansen AI Banner" />
+</p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.14-blue" />
+  <img src="https://img.shields.io/badge/LLM-llama.cpp-orange" />
+  <img src="https://img.shields.io/badge/Dataset-Shelby_Protocol-green" />
+  <img src="https://img.shields.io/badge/status-active-success" />
+  <img src="https://img.shields.io/badge/license-proprietary-red" />
+  <img src="https://img.shields.io/badge/modules-8_intelligence-purple" />
+</p>
 
-Hansen AI is a sovereign, locally-operated market intelligence system designed to collect, analyze, and store crypto market data for AI-driven research and trading. The engine combines continuous market data collection, autonomous AI analysis, enriched dataset generation, and decentralized storage via Shelby Protocol.
+---
 
-**100% local. Zero cloud. Zero third-party AI APIs.** Only Binance Futures public data and Shelby Protocol for on-chain dataset storage.
+> **Sovereign market intelligence infrastructure for AI-driven crypto research.**
 
-## Demo
+Hansen AI is a sovereign, locally-operated market intelligence system designed to collect, analyze, and store crypto market data for AI-driven research and trading.
+
+The engine combines:
+- Continuous market data collection  
+- Autonomous AI analysis  
+- Enriched dataset generation  
+- Decentralized storage via Shelby Protocol  
+
+**100% local. Zero cloud. Zero third-party AI APIs.**  
+Only Binance Futures public data and Shelby Protocol for on-chain dataset storage.
+
+---
+
+## 🎥 Demo
 
 https://www.loom.com/share/00aaed5d8321454ca4f44f6c67973bf2
 
