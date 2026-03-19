@@ -1,7 +1,7 @@
 # Hansen AI Research Engine
 
 <p align="center">
-  <img src="assets/logo/hansen-ai-banner.png" alt="Hansen AI Banner" />
+  <img src="assets/logo/hansen-ai-banner.png" alt="hansen AI Banner" />
 </p>
 
 <p align="center">
