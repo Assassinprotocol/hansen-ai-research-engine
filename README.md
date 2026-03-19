@@ -1,7 +1,13 @@
 # Hansen AI Research Engine
 
 <p align="center">
-  <img src="assets/logo/hansen-ai-banner.png" alt="hansen AI Banner" />
+  <img src="assets/logo/hansen-ai-banner.png" alt="Hansen AI Banner" />
+</p>
+
+<p align="center">
+  <a href="https://x.com/MoneyHeistHunt">
+    <img src="https://img.shields.io/badge/X-%40MoneyHeistHunt-black?logo=x&logoColor=white" />
+  </a>
 </p>
 
 <p align="center">
