@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://x.com/MoneyHeistHunt">
+  <a href="https://x.com/M0neyHeistHunt">
     <img src="https://img.shields.io/badge/X-%40MoneyHeistHunt-black?logo=x&logoColor=white" />
   </a>
 </p>
