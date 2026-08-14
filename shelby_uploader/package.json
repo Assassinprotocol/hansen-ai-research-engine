@@ -1,0 +1,26 @@
+{
+  "name": "shelby_uploader",
+  "version": "3.0.0",
+  "description": "Watches for snapshot files and uploads to Shelby testnet",
+  "type": "module",
+  "main": "dist/uploader.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/uploader.js",
+    "dev": "tsx src/uploader.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@shelby-protocol/sdk": "^0.7.0",
+    "axios": "^1.15.0",
+    "chokidar": "^5.0.0",
+    "dotenv": "^17.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.17",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
