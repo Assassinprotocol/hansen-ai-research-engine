@@ -1,42 +1,17 @@
+!\[Python](https://img.shields.io/badge/Python-3.14-blue)
+!\[LLM](https://img.shields.io/badge/LLM-Qwen2.5_7B-orange)
+!\[Dataset](https://img.shields.io/badge/Dataset-Shelby\_Protocol-green)
+!\[Status](https://img.shields.io/badge/status-active-success)
+!\[License](https://img.shields.io/badge/license-proprietary-red)
+!\[Modules](https://img.shields.io/badge/modules-8\_intelligence-purple)
+
 # Hansen AI Research Engine
 
-<p align="center">
-  <img src="assets/logo/hansen-ai-banner.png" alt="Hansen AI Banner" />
-</p>
+Hansen AI is a sovereign, locally-operated market intelligence system designed to collect, analyze, and store crypto market data for AI-driven research and trading. The engine combines continuous market data collection, autonomous AI analysis, enriched dataset generation, and decentralized storage via Shelby Protocol.
 
-<p align="center">
-  <a href="https://x.com/MoneyHeistHunt">
-    <img src="https://img.shields.io/badge/X-%40MoneyHeistHunt-black?logo=x&logoColor=white" />
-  </a>
-</p>
+**Local-first sovereign architecture.** Qwen2.5 7B runs fully offline via llama.cpp. Groq llama-3.3-70b-versatile available as optional cloud fallback. Only Binance Futures public data and Shelby Protocol for on-chain dataset storage.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.14-blue" />
-  <img src="https://img.shields.io/badge/LLM-llama.cpp-orange" />
-  <img src="https://img.shields.io/badge/Dataset-Shelby_Protocol-green" />
-  <img src="https://img.shields.io/badge/status-active-success" />
-  <img src="https://img.shields.io/badge/license-proprietary-red" />
-  <img src="https://img.shields.io/badge/modules-8_intelligence-purple" />
-</p>
-
----
-
-> **Sovereign market intelligence infrastructure for AI-driven crypto research.**
-
-Hansen AI is a sovereign, locally-operated market intelligence system designed to collect, analyze, and store crypto market data for AI-driven research and trading.
-
-The engine combines:
-- Continuous market data collection  
-- Autonomous AI analysis  
-- Enriched dataset generation  
-- Decentralized storage via Shelby Protocol  
-
-**100% local. Zero cloud. Zero third-party AI APIs.**  
-Only Binance Futures public data and Shelby Protocol for on-chain dataset storage.
-
----
-
-## 🎥 Demo
+## Demo
 
 https://www.loom.com/share/00aaed5d8321454ca4f44f6c67973bf2
 
@@ -49,7 +24,7 @@ https://www.loom.com/share/00aaed5d8321454ca4f44f6c67973bf2
 * 641+ Binance Futures pairs monitored in real-time
 * 90-day rolling historical dataset (1M+ records)
 * 8 interconnected intelligence modules feeding central AI brain
-* Local LLM reasoning via llama.cpp (Llama 3.1 8B)
+* Local LLM reasoning via llama.cpp (Qwen2.5 7B — Coder+Math+Instruct merge)
 * Automated enriched dataset generation every \~4 hours
 * On-chain verifiable dataset storage via Shelby Protocol
 * Real-time web dashboard with 15+ panels
@@ -65,12 +40,14 @@ https://www.loom.com/share/00aaed5d8321454ca4f44f6c67973bf2
 |-|-|
 |Language|Python 3.14|
 |Web Framework|Flask|
-|LLM Inference|llama.cpp (localhost:8080)|
+|LLM Inference|llama.cpp · Qwen2.5 7B (localhost:8080) — Groq llama-3.3-70b-versatile fallback|
 |Database|SQLite|
-|Uploader|Node.js|
+|Market Collector|Go WebSocket collector (`~/AI/market_collector/`)|
+|Uploader|TypeScript / Node.js (`./shelby_uploader/`)|
 |Market Data|Binance Futures API (public)|
 |Dataset Storage|Shelby Protocol (Aptos testnet)|
-|Frontend|Vanilla HTML/CSS/JS, Font Awesome, Sora + JetBrains Mono|
+|Frontend|Next.js 14 + TanStack Query + Tailwind (localhost:3000)|
+|API Backend|Flask (localhost:5000)|
 
 \---
 
@@ -94,41 +71,43 @@ pip install -r requirements.txt
 **Run LLM server:**
 
 ```bash
-cd C:\\AI\\llama
-.\\llama-server.exe -m models/Meta-Llama-3.1-8B-Instruct-Q4\_K\_M.gguf --port 8080 --ctx-size 4096 --threads 8
+cd ~/AI/llama.cpp
+./build/bin/llama-server -m ~/AI/llama/models/qwen3-7b-instruct-q4_k_m.gguf --port 8080 --ctx-size 4096 --threads 6
 ```
 
-**Start engine:**
+**Start all services (recommended):**
 
 ```bash
-activate C:\\AI\\hansen\_ai\\venv
-cd C:\\AI\\hansen\_engine
-python engine.py run
+~/AI/start_engine.sh   # launches tmux session hansen-en (SUPER+H)
 ```
 
-**Start dashboard:**
+This opens 6 tmux windows: llama · shelby · engine · dashboard · collector · nextjs.
+
+**Or start individually:**
 
 ```bash
-python -m dashboard.web\_dashboard
+# Engine
+source ~/AI/hansen_engine/venv/bin/activate
+cd ~/AI/hansen_engine && python engine.py run
+
+# Flask dashboard
+python -m dashboard.web_dashboard
+
+# Go market collector
+cd ~/AI/market_collector && ./market-collector
+
+# Next.js frontend
+cd ~/AI/hansen-web && npm run dev
+
+# Shelby uploader
+cd ./shelby_uploader && node dist/uploader.js
 ```
 
 **Open browser:**
 
 ```
-http://localhost:5000
-```
-
-**Optional — Ngrok (public access):**
-
-```bash
-ngrok http 5000
-```
-
-**Optional — Shelby uploader (WSL):**
-
-```bash
-cd /mnt/c/AI/shelby\_uploader
-node uploader.js
+http://localhost:5000   # Flask API + legacy dashboard
+http://localhost:3000   # Next.js frontend
 ```
 
 \---
@@ -163,7 +142,7 @@ Binance Futures API
   │   8 data sources → unified AI context        │
   └─────────────────────────────────────────────┘
         ↓
-  Local LLM (llama.cpp, Llama 3.1 8B)
+  Local LLM (llama.cpp, Qwen2.5 7B) → Groq 70B fallback
         ↓
   ┌──────────────┬──────────────────────────┐
   │  Enriched    │  Web Dashboard           │
@@ -363,7 +342,15 @@ hansen\_engine/
 │
 ├── agents/                          # Autonomous agents
 ├── pipeline/                        # Training + research pipelines
-├── core/                            # Logger, profile, insight
+├── core/
+│   └── engine/                      # Decomposed engine subsystems
+│       ├── llm_manager.py           # Two-tier LLM (llama.cpp → Groq fallback)
+│       ├── market_logger.py         # 5-min market sampling loop
+│       ├── market_analysis.py       # Snapshot analysis + enrichment
+│       ├── command_handler.py       # CLI command dispatch
+│       ├── chat_handler.py          # Conversational AI interface
+│       ├── knowledge_handler.py     # Knowledge base queries
+│       └── pattern_trainer.py       # Pattern recognition + scoring
 ├── router/                          # Intent routing
 ├── rag/                             # Retrieval-augmented generation
 ├── data/                            # Runtime data + AI reports
@@ -412,7 +399,7 @@ research "topic"              # Research topic
 * \[ ] Reinforcement learning trading agent
 * \[ ] Public dataset explorer
 * \[ ] Shelby mainnet dataset publishing
-* \[ ] Discord bot + webhook alerts (P8)
+* \[ ] Telegram bot + webhook alerts (P8)
 * \[ ] API monetization layer
 
 \---
@@ -423,12 +410,27 @@ Hansen AI uses [Shelby Protocol](https://explorer.shelby.xyz) as the decentraliz
 
 \---
 
+## System Components
+
+|Component|Path|Description|
+|-|-|-|
+|Hansen Engine|`~/AI/hansen_engine/`|Python core — market logic, AI brain, Flask API|
+|Next.js Frontend|`~/AI/hansen-web/`|React dashboard at `localhost:3000`|
+|Go Market Collector|`~/AI/market_collector/`|High-performance WebSocket data collection|
+|Shelby Uploader|`./shelby_uploader/`|TypeScript on-chain dataset publisher (Aptos)|
+|LLM Server|`~/AI/llama.cpp/`|llama.cpp serving Qwen2.5 7B at `localhost:8080`|
+|tmux Session|`hansen-en`|All services launched via `~/AI/start_engine.sh`|
+
+\---
+
 ## System Requirements
 
+* CachyOS Linux (Arch-based) or any modern Linux
 * Python 3.14+
-* Node.js (Shelby uploader)
-* llama.cpp server at `http://127.0.0.1:8080`
-* WSL with Shelby CLI (dataset upload)
+* Go 1.22+ (market collector)
+* Node.js 20+ (Shelby uploader)
+* llama.cpp server at `http://127.0.0.1:8080` — Qwen2.5 7B Q4_K_M
+* Groq API key (optional cloud fallback — `GROQ_API_KEY_1`, `GROQ_API_KEY_2` in `.env`)
 * Binance Futures API access (public, no key required)
 
 \---
