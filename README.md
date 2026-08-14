@@ -124,10 +124,10 @@ http://localhost:5000
 ngrok http 5000
 ```
 
-**Optional — Shelby uploader (WSL):**
+**Optional — Shelby publisher:**
 
 ```bash
-cd /mnt/c/AI/shelby\_uploader
+cd ./shelby_uploader
 node uploader.js
 ```
 
