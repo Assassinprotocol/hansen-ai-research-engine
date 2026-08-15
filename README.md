@@ -38,7 +38,7 @@ Only Binance Futures public data and Shelby Protocol for on-chain dataset storag
 
 ## 🎥 Demo
 
-https://www.loom.com/share/00aaed5d8321454ca4f44f6c67973bf2
+https://youtu.be/YyaH22LkkEA
 
 
 \---
