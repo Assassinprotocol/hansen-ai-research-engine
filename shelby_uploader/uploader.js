@@ -108,7 +108,7 @@ async function fundSignerOnce() {
 }
 
 // ── Ensure directories ─────────────────────────────────────────
-for (const dir of [UPLOADED_DIR, FAILED_DIR]) {
+for (const dir of [WATCH_DIR, UPLOADED_DIR, FAILED_DIR]) {
     fs.mkdirSync(dir, { recursive: true });
 }
 
@@ -168,15 +168,12 @@ async function uploadFile(filePath) {
     try {
         const content = fs.readFileSync(filePath);
 
-        if (client && 'initializeAccount' in client) {
-            await client.initializeAccount({ signer });
-        }
-
         await client.upload({
             blobData: content,
             signer,
             blobName: `hansen_ai/market_pipeline/snapshots/${filename}`,
-            expirationMicros: Date.now() * 1000 + 86400000000,
+            // 90 Days = 90 * 24 * 60 * 60 * 1000 (ms) * 1000 (micros) = 7776000000000
+            expirationMicros: Date.now() * 1000 + 7776000000000,
             options: {
                 selectedLocation: SHELBY_LOCATION_HINT,
                 locationHint: SHELBY_LOCATION_HINT,
@@ -301,10 +298,20 @@ log("INFO", "Shelby uploader started", {
     scanInterval: `${SCAN_INTERVAL_MS / 1000}s`,
 });
 
-// Fund signer once (non-blocking; uploads can start immediately).
 // The scan runs after funding attempt so the first upload has gas if funding succeeded.
 (async () => {
     await fundSignerOnce();
+
+    // Initialize account safely once at startup
+    if (typeof client.initializeAccount === 'function') {
+        try {
+            await client.initializeAccount({ signer });
+            log("INFO", "Shelby account initialized successfully");
+        } catch (err) {
+            log("WARN", "Shelby account init skipped or failed", { error: err.message });
+        }
+    }
+
     scan();
 })();
 setInterval(scan, SCAN_INTERVAL_MS);
