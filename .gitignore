@@ -7,8 +7,13 @@ data/reports/
 
 # python
 __pycache__/
-*.pyc
+# *.pyc (Allowed temporarily to backup rescued bytecode)
 
 # env
 venv/
 .env
+# Proprietary Engine Files
+scripts/
+tests/
+skills/
+
