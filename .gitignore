@@ -1,6 +1,7 @@
 # runtime data
 data/*.json
 data/reports/
+dataset/
 
 # database
 *.db
@@ -18,3 +19,8 @@ tests/
 skills/
 
 *.asm.txt
+
+# Frontend & Assets (UI hiding)
+dashboard/static/
+assets/
+dashboard/D5_RENDER_HANDOFF.md
