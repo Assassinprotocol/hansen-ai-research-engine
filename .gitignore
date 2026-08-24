@@ -7,7 +7,7 @@ data/reports/
 
 # python
 __pycache__/
-# *.pyc (Allowed temporarily to backup rescued bytecode)
+ *.pyc (Allowed temporarily to backup rescued bytecode)
 
 # env
 venv/
@@ -17,3 +17,4 @@ scripts/
 tests/
 skills/
 
+*.asm.txt
