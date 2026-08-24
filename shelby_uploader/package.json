@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@shelby-protocol/sdk": "^0.7.0",
+    "@shelby-protocol/sdk": "^0.8.0",
     "axios": "^1.15.0",
     "chokidar": "^5.0.0",
     "dotenv": "^17.4.1"
