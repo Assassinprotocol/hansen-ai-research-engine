@@ -13,6 +13,7 @@ __pycache__/
 # env
 venv/
 .env
+
 # Proprietary Engine Files
 scripts/
 tests/
@@ -23,3 +24,14 @@ skills/
 # Frontend & Assets (UI hiding)
 dashboard/static/
 dashboard/D5_RENDER_HANDOFF.md
+
+# General Research Guardrails
+scratch*.py
+forensic*.py
+analyze*.py
+check*.py
+scan*.py
+test*.py
+*radar*.py
+*radar*.log
+*.txt
