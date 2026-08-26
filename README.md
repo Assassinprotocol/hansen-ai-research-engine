@@ -1,3 +1,5 @@
+> ⚠️ **Folder ini = [PUBLIC]. Isinya cuma STUBS/CANGKANG. Jangan edit di sini kalau bukan buat ngerapihin struktur GitHub publik.**
+
 # Hansen AI Research Engine
 
 <p align="center">
@@ -31,8 +33,8 @@ The engine combines:
 - Enriched dataset generation  
 - Decentralized storage via Shelby Protocol  
 
-**100% local. Zero cloud. Zero third-party AI APIs.**  
-Only Binance Futures public data and Shelby Protocol for on-chain dataset storage.
+**Local-first AI architecture. Zero mandatory cloud.**  
+Powered by local LLMs with optional Groq API fallback for high-availability. Only relies on Binance Futures public data and Shelby Protocol.
 
 ---
 
@@ -65,7 +67,7 @@ https://youtu.be/YyaH22LkkEA
 |-|-|
 |Language|Python 3.14|
 |Web Framework|Flask|
-|LLM Inference|llama.cpp (localhost:8080)|
+|LLM Inference|llama.cpp (localhost:8080) w/ Groq Fallback|
 |Database|SQLite|
 |Uploader|Node.js|
 |Market Data|Binance Futures API (public)|
@@ -79,8 +81,8 @@ https://youtu.be/YyaH22LkkEA
 **Clone repository:**
 
 ```bash
-git clone https://github.com/yourname/hansen-ai
-cd hansen-ai
+git clone https://github.com/Assassinprotocol/hansen-ai-research-engine.git
+cd hansen-ai-research-engine
 ```
 
 **Create virtual environment:**
@@ -94,15 +96,15 @@ pip install -r requirements.txt
 **Run LLM server:**
 
 ```bash
-cd C:\\AI\\llama
-.\\llama-server.exe -m models/Meta-Llama-3.1-8B-Instruct-Q4\_K\_M.gguf --port 8080 --ctx-size 4096 --threads 8
+cd ~/AI/llama.cpp
+./build/bin/llama-server -m models/Qwen2.5-7B-Instruct-Q4_K_M.gguf --port 8080 --ctx-size 4096 --threads 6
 ```
 
 **Start engine:**
 
 ```bash
-activate C:\\AI\\hansen\_ai\\venv
-cd C:\\AI\\hansen\_engine
+source ~/AI/hansen_engine/venv/bin/activate
+cd ~/AI/hansen_engine
 python engine.py run
 ```
 
@@ -112,16 +114,15 @@ python engine.py run
 python -m dashboard.web\_dashboard
 ```
 
-**Open browser:**
-
-```
-http://localhost:5000
-```
-
-**Optional — Ngrok (public access):**
+**Open Browser (Frontend & Backend):**
 
 ```bash
-ngrok http 5000
+# Next.js Frontend (UI in active development)
+cd ~/AI/hansen-web && npm run dev
+# Browser: http://localhost:3000
+
+# Flask Backend API
+# Browser: http://localhost:5000
 ```
 
 **Optional — Shelby publisher:**
