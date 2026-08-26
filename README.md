@@ -1,5 +1,3 @@
-> ⚠️ **Folder ini = [PUBLIC]. Isinya cuma STUBS/CANGKANG. Jangan edit di sini kalau bukan buat ngerapihin struktur GitHub publik.**
-
 # Hansen AI Research Engine
 
 <p align="center">
