@@ -136,8 +136,8 @@ node uploader.js
 
 ```mermaid
 graph TD
-    A["Binance Futures API<br/><small>689+ pairs · real-time</small>"] --> B
-    B["Market Logger<br/><small>5-min sampling · 90-day rolling</small>"] --> C
+    A["Binance Futures API<br/>689+ pairs · real-time"] --> B
+    B["Market Logger<br/>5-min sampling · 90-day rolling"] --> C
 
     subgraph C["Intelligence Engine"]
         direction LR
@@ -145,17 +145,17 @@ graph TD
         C3["Sentiment"] ~~~ C4["Screener"]
     end
 
-    A --> DC["Depth Collector<br/><small>5s orderbook microstructure</small>"]
+    A --> DC["Depth Collector<br/>5s orderbook microstructure"]
 
-    C --> D["Market Brain<br/><small>unified AI context</small>"]
-    D --> E["LLM Inference<br/><small>local + cloud failover</small>"]
+    C --> D["Market Brain<br/>unified AI context"]
+    D --> E["LLM Inference<br/>local + cloud failover"]
 
     E --> G["Web Dashboard"]
-    E --> H["Trade Engine<br/><small>AI-powered signals</small>"]
-    E --> S["Enriched Snapshots<br/><small>~30K records / ~5 MB each</small>"]
-    DC --> DCA["Depth Archives<br/><small>compressed · ~21 MB/day</small>"]
+    E --> H["Trade Engine<br/>AI-powered signals"]
+    E --> S["Enriched Snapshots<br/>~30K records / ~5 MB each"]
+    DC --> DCA["Depth Archives<br/>compressed · ~21 MB/day"]
 
-    S --> SH["Shelby Protocol<br/><small>decentralized data lake</small>"]
+    S --> SH["Shelby Protocol<br/>decentralized data lake"]
     DCA --> SH
 
     style A fill:#0d419d,stroke:#58a6ff,color:#fff
