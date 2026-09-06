@@ -16,7 +16,7 @@
   <img src="https://img.shields.io/badge/Dataset-Shelby_Protocol-green" />
   <img src="https://img.shields.io/badge/status-active-success" />
   <img src="https://img.shields.io/badge/license-proprietary-red" />
-  <img src="https://img.shields.io/badge/modules-8_intelligence-purple" />
+  <img src="https://img.shields.io/badge/modules-30+-purple" />
 </p>
 
 ---
@@ -65,7 +65,7 @@ https://youtu.be/YyaH22LkkEA
 |-|-|
 |Language|Python 3.14|
 |Web Framework|Flask|
-|LLM Inference|llama.cpp (localhost:8080) w/ Groq Fallback|
+|LLM Inference|llama.cpp (local) + Groq Cloud failover|
 |Database|SQLite|
 |Uploader|Node.js|
 |Market Data|Binance Futures API (public)|
@@ -134,43 +134,40 @@ node uploader.js
 
 ## Architecture Overview
 
-![Architecture](docs/architecture.png)
+```mermaid
+graph TD
+    A["Binance Futures API<br/><small>689+ pairs · real-time</small>"] --> B
+    B["Market Logger<br/><small>5-min sampling · 90-day rolling</small>"] --> C
 
-```
-Binance Futures API
-        ↓
-  Market Logger (5-min sampling, 641+ pairs)
-        ↓
-  Historical Dataset (90-day, 1M+ records)
-        ↓
-  ┌─────────────────────────────────────────────┐
-  │       8 Intelligence Modules                 │
-  │                                              │
-  │  P1  Data Depth (funding/OI/liquidation)     │
-  │  P2  Analytics (sectors/correlation/beta)    │
-  │  P3  Alerts + Heatmap                        │
-  │  P4  Smart Screener (6 presets)              │
-  │  P5  Sentiment + Narrative (fear/greed)      │
-  │  P6  Onchain Intel (whale/flow/stablecoin)   │
-  │  P7  AI Reports (flash/daily/weekly)         │
-  │  --  Core (regime/momentum/volatility)       │
-  └─────────────────────────────────────────────┘
-        ↓
-  ┌─────────────────────────────────────────────┐
-  │          Market Brain                        │
-  │   Central Intelligence Hub                   │
-  │   8 data sources → unified AI context        │
-  └─────────────────────────────────────────────┘
-        ↓
-  Local LLM (llama.cpp, Llama 3.1 8B)
-        ↓
-  ┌──────────────┬──────────────────────────┐
-  │  Enriched    │  Web Dashboard           │
-  │  Snapshots   │  15+ real-time panels    │
-  │      ↓       │  AI Insight panel        │
-  │  Shelby      │  Scrollytelling landing  │
-  │  Protocol    │  Admin panel             │
-  └──────────────┴──────────────────────────┘
+    subgraph C["Intelligence Engine"]
+        direction LR
+        C1["Data Depth"] ~~~ C2["Analytics"]
+        C3["Sentiment"] ~~~ C4["Screener"]
+    end
+
+    A --> DC["Depth Collector<br/><small>5s orderbook microstructure</small>"]
+
+    C --> D["Market Brain<br/><small>unified AI context</small>"]
+    D --> E["LLM Inference<br/><small>local + cloud failover</small>"]
+
+    E --> G["Web Dashboard"]
+    E --> H["Trade Engine<br/><small>AI-powered signals</small>"]
+    E --> S["Enriched Snapshots<br/><small>~30K records / ~5 MB each</small>"]
+    DC --> DCA["Depth Archives<br/><small>compressed · ~21 MB/day</small>"]
+
+    S --> SH["Shelby Protocol<br/><small>decentralized data lake</small>"]
+    DCA --> SH
+
+    style A fill:#0d419d,stroke:#58a6ff,color:#fff
+    style B fill:#1c2128,stroke:#8b949e,color:#c9d1d9
+    style DC fill:#1c2128,stroke:#39d2c0,color:#7ee8d4
+    style D fill:#4a3000,stroke:#d29922,color:#ffd33d
+    style E fill:#2d1b69,stroke:#bc8cff,color:#e2c5ff
+    style G fill:#3b1f65,stroke:#bc8cff,color:#e2c5ff
+    style H fill:#0b3d1a,stroke:#3fb950,color:#7ee787
+    style S fill:#0d419d,stroke:#58a6ff,color:#a5d6ff
+    style DCA fill:#1c2128,stroke:#39d2c0,color:#7ee8d4
+    style SH fill:#2d4a0b,stroke:#3fb950,color:#7ee787
 ```
 
 \---
@@ -405,10 +402,12 @@ research "topic"              # Research topic
 
 ## Roadmap
 
-* \[ ] AI Trade Signals — confluence scoring from all modules + structure detection
-* \[ ] Multi-exchange support (Bybit, OKX)
-* \[ ] Advanced regime detection with ML
-* \[ ] Reinforcement learning trading agent
+* \[x] AI Trade Signals
+* \[x] Advanced regime detection
+* \[x] Multi-timeframe analysis (15m / 1h / 4h)
+* \[x] High-frequency depth collection
+* \[/] Multi-exchange support (partial)
+* \[ ] Next.js dashboard frontend
 * \[ ] Public dataset explorer
 * \[ ] Shelby mainnet dataset publishing
 * \[ ] Discord bot + webhook alerts (P8)
@@ -416,9 +415,21 @@ research "topic"              # Research topic
 
 \---
 
-## Dataset Storage
+## Decentralized Data Lake (Shelby Protocol)
 
-Hansen AI uses [Shelby Protocol](https://explorer.shelby.xyz) as the decentralized storage layer for enriched market datasets. Shelby enables verifiable, permissionless dataset storage on Aptos — making Hansen AI datasets accessible for AI training pipelines with on-chain provenance.
+Hansen AI uses [Shelby Protocol](https://shelby.xyz) as its decentralized storage layer for verifiable market intelligence data.
+
+**Pipeline:**
+- Enriched market snapshots (~30,000 records, ~5 MB each) uploaded every ~4 hours
+- High-frequency depth archives (compressed orderbook microstructure, ~21 MB/day)
+- Total continuous workload: ~50 MB/day
+
+**Why Shelby:**
+- Tamper-proof market data history with cryptographic provenance
+- Globally accessible datasets for distributed AI agents
+- On-chain verifiable data lineage (Aptos)
+
+The background TypeScript uploader automatically publishes snapshots to the `hansen_ai/market_pipeline/snapshots/` namespace on the Shelby network.
 
 \---
 
