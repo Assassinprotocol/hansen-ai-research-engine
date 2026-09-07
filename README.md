@@ -79,6 +79,7 @@ https://youtu.be/YyaH22LkkEA
 **Clone repository:**
 
 ```bash
+# Clone the repository
 git clone https://github.com/Assassinprotocol/hansen-ai-research-engine.git
 cd hansen-ai-research-engine
 ```
