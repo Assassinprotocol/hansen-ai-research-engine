@@ -1,0 +1,12 @@
+[package]
+name = "HansenRegistry"
+version = "1.0.0"
+authors = ["Hansen Quantitative Systems"]
+
+[addresses]
+hansen = "0x797570358c2208ce0e225f07fe727174c9cc4500072967dd963e645c95c2a07d"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-framework.git"
+rev = "mainnet"
+subdir = "aptos-framework"

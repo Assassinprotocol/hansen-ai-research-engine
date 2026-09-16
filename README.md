@@ -46,10 +46,10 @@ https://youtu.be/YyaH22LkkEA
 ## Key Features
 
 * Fully local AI market intelligence engine — sovereign, no cloud
-* 641+ Binance Futures pairs monitored in real-time
+* 718 Binance Futures pairs monitored in real-time
 * 90-day rolling historical dataset (1M+ records)
 * 8 interconnected intelligence modules feeding central AI brain
-* Local LLM reasoning via llama.cpp (Llama 3.1 8B)
+* Local LLM reasoning via llama.cpp (Qwen 2.5 7B)
 * Automated enriched dataset generation every \~4 hours
 * On-chain verifiable dataset storage via Shelby Protocol
 * Real-time web dashboard with 15+ panels
@@ -137,38 +137,41 @@ node uploader.js
 
 ```mermaid
 graph TD
-    A["Binance Futures API<br/>689+ pairs · real-time"] --> B
-    B["Market Logger<br/>5-min sampling · 90-day rolling"] --> C
+    %% TIER 1: INGESTION
+    FEED["Binance Futures Market Feed<br/>718 active pairs · real-time L2 websocket"]
 
-    subgraph C["Intelligence Engine"]
-        direction LR
-        C1["Data Depth"] ~~~ C2["Analytics"]
-        C3["Sentiment"] ~~~ C4["Screener"]
-    end
+    %% TIER 2: PARALLEL AGGREGATION
+    FEED -->|5s tick stream| TICK["Market Collector<br/>tick aggregator"]
+    FEED -->|microstructure| DEPTH["Depth Collector<br/>orderbook sampler"]
 
-    A --> DC["Depth Collector<br/>5s orderbook microstructure"]
+    %% TIER 3: INTELLIGENCE CORE
+    TICK --> BRAIN["Market Brain<br/>multi-source state aggregator"]
+    BRAIN --> LLM["Local LLM Inference<br/>Qwen 2.5 7B · local runtime"]
 
-    C --> D["Market Brain<br/>unified AI context"]
-    D --> E["LLM Inference<br/>local + cloud failover"]
+    %% TIER 4: OUTPUT SPLIT
+    LLM --> DASH["Web Dashboard<br/>live telemetry"]
+    LLM --> EXEC["Trade Engine<br/>order router"]
+    LLM -->|public tier · 4h| SNAP["Market Snapshots<br/>~5.1 MB JSON"]
+    DEPTH -->|encrypted tier · daily| ARCH["Depth Archives<br/>AES-256-GCM · ~21 MB"]
 
-    E --> G["Web Dashboard"]
-    E --> H["Trade Engine<br/>AI-powered signals"]
-    E --> S["Enriched Snapshots<br/>~30K records / ~5 MB each"]
-    DC --> DCA["Depth Archives<br/>compressed · ~21 MB/day"]
+    %% TIER 5: DECENTRALIZED PERSISTENCE
+    SNAP --> SHELBY[("Shelby Protocol<br/>Decentralized Data Lake")]
+    ARCH --> SHELBY
 
-    S --> SH["Shelby Protocol<br/>decentralized data lake"]
-    DCA --> SH
+    %% TIER 6: CONSUMPTION & PROOF
+    SHELBY --> CLI["Reader CLI<br/>query & decrypt"]
+    SHELBY -.-> APTOS["Aptos Move Contract<br/>on-chain attestation"]
 
-    style A fill:#0d419d,stroke:#58a6ff,color:#fff
-    style B fill:#1c2128,stroke:#8b949e,color:#c9d1d9
-    style DC fill:#1c2128,stroke:#39d2c0,color:#7ee8d4
-    style D fill:#4a3000,stroke:#d29922,color:#ffd33d
-    style E fill:#2d1b69,stroke:#bc8cff,color:#e2c5ff
-    style G fill:#3b1f65,stroke:#bc8cff,color:#e2c5ff
-    style H fill:#0b3d1a,stroke:#3fb950,color:#7ee787
-    style S fill:#0d419d,stroke:#58a6ff,color:#a5d6ff
-    style DCA fill:#1c2128,stroke:#39d2c0,color:#7ee8d4
-    style SH fill:#2d4a0b,stroke:#3fb950,color:#7ee787
+    classDef default font-family:sans-serif,font-size:12px;
+    classDef nodeBase fill:#161b22,stroke:#30363d,color:#e6edf3,stroke-width:1px;
+    classDef nodeFeed fill:#0d1926,stroke:#1f6feb,color:#e6edf3,stroke-width:1.5px;
+    classDef nodeExec fill:#072214,stroke:#238636,color:#e6edf3,stroke-width:1px;
+    classDef nodeShelby fill:#21180a,stroke:#d29922,color:#f0e6d2,stroke-width:1.5px;
+
+    class FEED nodeFeed;
+    class TICK,DEPTH,BRAIN,LLM,DASH,SNAP,ARCH,CLI,APTOS nodeBase;
+    class EXEC nodeExec;
+    class SHELBY nodeShelby;
 ```
 
 \---
@@ -420,17 +423,13 @@ research "topic"              # Research topic
 
 Hansen AI uses [Shelby Protocol](https://shelby.xyz) as its decentralized storage layer for verifiable market intelligence data.
 
-**Pipeline:**
-- Enriched market snapshots (~30,000 records, ~5 MB each) uploaded every ~4 hours
-- High-frequency depth archives (compressed orderbook microstructure, ~21 MB/day)
-- Total continuous workload: ~50 MB/day
+**Dual-Stream Pipeline:**
+- **Public Tier:** Enriched market snapshots (~30,000 records, ~5.1 MB each) uploaded every ~4 hours.
+- **Encrypted Tier:** High-frequency depth archives (~21 MB/day) encrypted client-side using **AES-256-GCM** before upload.
+- **On-Chain Proof:** Attestation via Aptos Move smart contract (`contract/`).
+- **Downstream Tooling:** Reader CLI (`scripts/shelby_reader.py`) supporting inspection, byte-range queries, and authenticated decryption.
 
-**Why Shelby:**
-- Tamper-proof market data history with cryptographic provenance
-- Globally accessible datasets for distributed AI agents
-- On-chain verifiable data lineage (Aptos)
-
-The background TypeScript uploader automatically publishes snapshots to the `hansen_ai/market_pipeline/snapshots/` namespace on the Shelby network.
+The background TypeScript uploader automatically publishes datasets to the `hansen_ai/market_pipeline/` namespace on the Shelby network.
 
 \---
 

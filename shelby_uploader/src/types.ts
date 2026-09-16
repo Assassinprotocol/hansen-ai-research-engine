@@ -25,6 +25,9 @@ export interface UploaderConfig {
 export interface TrackerEntry {
   file: string;
   time: string;
+  dataType?: "snapshot" | "depth";
+  blobName?: string;
+  encryptionKey?: string;
   detail?: string;
 }
 

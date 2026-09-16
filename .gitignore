@@ -15,9 +15,12 @@ venv/
 .env
 
 # Proprietary Engine Files
-scripts/
-tests/
+scripts/*
+!scripts/shelby_reader.py
+!scripts/pre-commit
+/tests/
 skills/
+contract/build/
 
 *.asm.txt
 
