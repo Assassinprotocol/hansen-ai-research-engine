@@ -175,82 +175,100 @@ function enqueueVerification(task: VerificationTask): void {
   log("INFO", "Enqueued RAW verification task", { file: task.filename, delayMs: task.nextAttemptAt - Date.now() });
 }
 
+let isProcessingVerification = false;
+
 async function processVerificationQueue(): Promise<void> {
-  const now = Date.now();
-  const readyIndices: number[] = [];
+  if (isProcessingVerification) return;
+  isProcessingVerification = true;
 
-  for (let i = 0; i < verificationQueue.length; i++) {
-    if (now >= verificationQueue[i].nextAttemptAt) readyIndices.push(i);
-  }
+  try {
+    const now = Date.now();
+    const readyTasks: VerificationTask[] = [];
+    const remainingTasks: VerificationTask[] = [];
 
-  if (readyIndices.length === 0) return;
-
-  for (const idx of readyIndices.reverse()) {
-    const task = verificationQueue.splice(idx, 1)[0];
-    task.attempts += 1;
-
-    log("INFO", `Running RAW verification probe (attempt ${task.attempts}/${cfg.verifyMaxRetries})`, {
-      file: task.filename,
-    });
-
-    const res = await probeBlobAvailability(task);
-
-    if (res.success) {
-      log("INFO", "RAW Verification SUCCESS", {
-        file: task.filename,
-        status: res.status,
-        latencyMs: `${res.latencyMs}ms`,
-        remoteSize: res.remoteSize,
-      });
-
-      await mutateTracker((tracker) => {
-        const entry = tracker.uploads.find((u) => u.file === task.filename);
-        if (entry) {
-          entry.verified = true;
-          entry.verifiedAt = new Date().toISOString();
-          entry.verifyLatencyMs = res.latencyMs;
-          entry.verifyStatus = res.status;
-          entry.remoteSizeBytes = res.remoteSize;
-        }
-      });
-
-      const localUploadedPath = path.join(cfg.uploadedDir, task.filename);
-      if (task.isDepth && fs.existsSync(localUploadedPath)) {
-        fs.unlinkSync(localUploadedPath);
-        log("INFO", "Gated Cleanup: Unlinked verified depth archive from local disk", { file: task.filename });
-      }
-    } else {
-      if (task.attempts < cfg.verifyMaxRetries) {
-        const backoffMs = task.attempts === 1 ? 40_000 : 120_000;
-        task.nextAttemptAt = Date.now() + backoffMs;
-        verificationQueue.push(task);
-        log("WARN", `RAW probe unconfirmed, rescheduled in ${backoffMs / 1000}s`, {
-          file: task.filename,
-          error: res.error,
-        });
+    for (const t of verificationQueue) {
+      if (now >= t.nextAttemptAt) {
+        readyTasks.push(t);
       } else {
-        log("ERROR", "RAW verification FAILED after max retries", {
+        remainingTasks.push(t);
+      }
+    }
+
+    // Atomically replace queue with remaining pending tasks
+    verificationQueue.length = 0;
+    verificationQueue.push(...remainingTasks);
+
+    if (readyTasks.length === 0) return;
+
+    for (const task of readyTasks) {
+      if (!task) continue;
+      task.attempts += 1;
+
+      log("INFO", `Running RAW verification probe (attempt ${task.attempts}/${cfg.verifyMaxRetries})`, {
+        file: task.filename,
+      });
+
+      const res = await probeBlobAvailability(task);
+
+      if (res.success) {
+        log("INFO", "RAW Verification SUCCESS", {
           file: task.filename,
-          error: res.error,
+          status: res.status,
+          latencyMs: `${res.latencyMs}ms`,
+          remoteSize: res.remoteSize,
         });
 
         await mutateTracker((tracker) => {
           const entry = tracker.uploads.find((u) => u.file === task.filename);
           if (entry) {
-            entry.verified = false;
-            entry.verifyStatus = res.status || "unconfirmed";
-            entry.verifyError = res.error;
+            entry.verified = true;
+            entry.verifiedAt = new Date().toISOString();
+            entry.verifyLatencyMs = res.latencyMs;
+            entry.verifyStatus = res.status;
+            entry.remoteSizeBytes = res.remoteSize;
           }
         });
 
         const localUploadedPath = path.join(cfg.uploadedDir, task.filename);
-        const localFailedPath = path.join(cfg.failedDir, task.filename);
-        if (fs.existsSync(localUploadedPath)) {
-          fs.renameSync(localUploadedPath, localFailedPath);
-          log("WARN", "Moved unverified file to failed/ for auto-reclaim", { file: task.filename });
+        if (task.isDepth && fs.existsSync(localUploadedPath)) {
+          fs.unlinkSync(localUploadedPath);
+          log("INFO", "Gated Cleanup: Unlinked verified depth archive from local disk", { file: task.filename });
+        }
+      } else {
+        if (task.attempts < cfg.verifyMaxRetries) {
+          const backoffMs = task.attempts === 1 ? 40_000 : 120_000;
+          task.nextAttemptAt = Date.now() + backoffMs;
+          verificationQueue.push(task);
+          log("WARN", `RAW probe unconfirmed, rescheduled in ${backoffMs / 1000}s`, {
+            file: task.filename,
+            error: res.error,
+          });
+        } else {
+          log("ERROR", "RAW verification FAILED after max retries", {
+            file: task.filename,
+            error: res.error,
+          });
+
+          await mutateTracker((tracker) => {
+            const entry = tracker.uploads.find((u) => u.file === task.filename);
+            if (entry) {
+              entry.verified = false;
+              entry.verifyStatus = res.status || "unconfirmed";
+              entry.verifyError = res.error;
+            }
+          });
+
+          const localUploadedPath = path.join(cfg.uploadedDir, task.filename);
+          const localFailedPath = path.join(cfg.failedDir, task.filename);
+          if (fs.existsSync(localUploadedPath)) {
+            fs.renameSync(localUploadedPath, localFailedPath);
+            log("WARN", "Moved unverified file to failed/ for auto-reclaim", { file: task.filename });
+          }
         }
       }
     }
+  } finally {
+    isProcessingVerification = false;
   }
 }
 
