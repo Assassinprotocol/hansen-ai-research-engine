@@ -69,7 +69,7 @@ https://youtu.be/YyaH22LkkEA
 |Database|SQLite|
 |Uploader|Node.js|
 |Market Data|Binance Futures API (public)|
-|Dataset Storage|Shelby Protocol (Aptos testnet)|
+|Dataset Storage|Shelby Protocol (shelbynet)|
 |Frontend|Vanilla HTML/CSS/JS, Font Awesome, Sora + JetBrains Mono|
 
 \---
@@ -160,7 +160,7 @@ graph TD
 
     %% TIER 6: CONSUMPTION & PROOF
     SHELBY --> CLI["Reader CLI<br/>query & decrypt"]
-    SHELBY -.-> APTOS["Aptos Move Contract<br/>on-chain attestation"]
+    SHELBY --> APTOS["Aptos Move Contract<br/>on-chain attestation"]
 
     classDef default font-family:sans-serif,font-size:12px;
     classDef nodeBase fill:#161b22,stroke:#30363d,color:#e6edf3,stroke-width:1px;

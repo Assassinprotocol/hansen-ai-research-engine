@@ -20,6 +20,12 @@ export interface UploaderConfig {
   maxRetries: number;
   maxPending: number;
   scanIntervalMs: number;
+  rpcUrl: string;
+  streamThresholdBytes: number;
+  verifyInitialDelayMs: number;
+  verifyMaxRetries: number;
+  maxUploadedDepthKeep: number;
+  maxUploadedSnapshotsKeep: number;
 }
 
 export interface TrackerEntry {
@@ -29,9 +35,26 @@ export interface TrackerEntry {
   blobName?: string;
   encryptionKey?: string;
   detail?: string;
+  verified?: boolean;
+  verifiedAt?: string;
+  verifyLatencyMs?: number;
+  verifyStatus?: number | string;
+  verifyError?: string;
+  sizeBytes?: number;
+  remoteSizeBytes?: number;
+}
+
+export interface VerificationTask {
+  filename: string;
+  blobName: string;
+  isDepth: boolean;
+  localSize: number;
+  attempts: number;
+  nextAttemptAt: number;
 }
 
 export interface TrackerData {
   uploads: TrackerEntry[];
   failed: TrackerEntry[];
 }
+

@@ -15,6 +15,12 @@ export function loadConfig(): UploaderConfig {
     maxRetries: 3,
     maxPending: 20,
     scanIntervalMs: 60_000,
+    rpcUrl: process.env.SHELBY_RPC_URL || "https://shelby.shelbynet.shelby.xyz/shelby",
+    streamThresholdBytes: Number(process.env.SHELBY_STREAM_THRESHOLD_BYTES) || 20 * 1024 * 1024,
+    verifyInitialDelayMs: Number(process.env.SHELBY_VERIFY_DELAY_MS) || 20_000,
+    verifyMaxRetries: 3,
+    maxUploadedDepthKeep: 2,
+    maxUploadedSnapshotsKeep: 30,
   };
 }
 
