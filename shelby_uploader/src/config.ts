@@ -21,6 +21,7 @@ export function loadConfig(): UploaderConfig {
     verifyMaxRetries: 3,
     maxUploadedDepthKeep: 2,
     maxUploadedSnapshotsKeep: 30,
+    contractAddress: process.env.HANSEN_REGISTRY_ADDRESS || "0x797570358c2208ce0e225f07fe727174c9cc4500072967dd963e645c95c2a07d",
   };
 }
 

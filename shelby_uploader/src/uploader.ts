@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import crypto from "crypto";
 import axios from "axios";
 import chokidar from "chokidar";
 import { ShelbyNodeClient } from "@shelby-protocol/sdk/node";
@@ -98,7 +99,10 @@ async function recordUpload(
   blobName?: string,
   encryptionKey?: string,
   detail = "",
-  sizeBytes?: number
+  sizeBytes?: number,
+  merkleRootHex?: string,
+  onchainTxHash?: string,
+  onchainStatus?: "confirmed" | "failed" | "skipped"
 ): Promise<void> {
   await mutateTracker((tracker) => {
     const entry: TrackerEntry = {
@@ -109,6 +113,9 @@ async function recordUpload(
       ...(encryptionKey ? { encryptionKey } : {}),
       ...(detail ? { detail } : {}),
       ...(sizeBytes !== undefined ? { sizeBytes } : {}),
+      ...(merkleRootHex ? { merkleRootHex } : {}),
+      ...(onchainTxHash ? { onchainTxHash } : {}),
+      ...(onchainStatus ? { onchainStatus } : {}),
       ...(success ? { verified: false, verifyStatus: "pending" } : {}),
     };
     if (success) tracker.uploads.push(entry);
@@ -388,6 +395,85 @@ async function fundSignerOnce(): Promise<void> {
   }
 }
 
+async function recordOnChainAttestation(
+  blobName: string,
+  merkleRootHex: string,
+  dataType: string,
+  recordCount: number
+): Promise<{ txHash?: string; status: "confirmed" | "failed" | "skipped"; error?: string }> {
+  if (process.env.SHELBY_SKIP_ONCHAIN === "true") {
+    log("INFO", "On-chain attestation skipped via env", { blobName });
+    return { status: "skipped" };
+  }
+
+  try {
+    const timestampSecs = Math.floor(Date.now() / 1000);
+    const contractAddr = cfg.contractAddress;
+
+    const task = (async () => {
+      // 1. Ensure Registry is initialized under signer account
+      try {
+        const isInitRes = await client.aptos.view({
+          payload: {
+            function: `${contractAddr}::registry::is_initialized` as any,
+            typeArguments: [],
+            functionArguments: [signer.accountAddress.toString()],
+          },
+        });
+        const isInit = Boolean(isInitRes && isInitRes[0]);
+        if (!isInit) {
+          log("INFO", "Initializing HansenRegistry on-chain...", { address: signer.accountAddress.toString() });
+          const initTx = await client.aptos.transaction.build.simple({
+            sender: signer.accountAddress,
+            data: {
+              function: `${contractAddr}::registry::initialize` as any,
+              typeArguments: [],
+              functionArguments: [],
+            },
+          });
+          const initAuth = client.aptos.transaction.sign({ signer, transaction: initTx });
+          const initPending = await client.aptos.transaction.submit.simple({ transaction: initTx, senderAuthenticator: initAuth });
+          await client.aptos.waitForTransaction({ transactionHash: initPending.hash });
+          log("INFO", "HansenRegistry initialized on-chain", { txHash: initPending.hash });
+        }
+      } catch (initErr: any) {
+        log("WARN", "Registry check/init skipped or errored", { error: initErr.message });
+      }
+
+      // 2. Submit record_snapshot entry function
+      const tx = await client.aptos.transaction.build.simple({
+        sender: signer.accountAddress,
+        data: {
+          function: `${contractAddr}::registry::record_snapshot` as any,
+          typeArguments: [],
+          functionArguments: [
+            Array.from(Buffer.from(blobName, "utf8")),
+            Array.from(Buffer.from(merkleRootHex, "hex")),
+            timestampSecs,
+            Array.from(Buffer.from(dataType, "utf8")),
+            recordCount,
+          ],
+        },
+      });
+
+      const auth = client.aptos.transaction.sign({ signer, transaction: tx });
+      const pending = await client.aptos.transaction.submit.simple({ transaction: tx, senderAuthenticator: auth });
+      await client.aptos.waitForTransaction({ transactionHash: pending.hash });
+      return pending.hash;
+    })();
+
+    const txHash = await withTimeout(task, 15_000, "recordOnChainAttestation");
+    log("INFO", "On-Chain Move attestation recorded successfully", { txHash, blobName });
+    return { txHash, status: "confirmed" };
+  } catch (err: any) {
+    log("WARN", "On-Chain Move attestation skipped / degraded gracefully", {
+      error: err.message,
+      blobName,
+    });
+    return { status: "failed", error: err.message };
+  }
+}
+
 async function uploadFile(filePath: string): Promise<void> {
   const filename = path.basename(filePath);
 
@@ -413,6 +499,7 @@ async function uploadFile(filePath: string): Promise<void> {
     const stat = fs.statSync(filePath);
     let content: any;
 
+    let recordCount = 0;
     if (isDepth) {
       if (stat.size >= cfg.streamThresholdBytes) {
         log("INFO", "Engaging single-buffer stream encryption", {
@@ -438,7 +525,15 @@ async function uploadFile(filePath: string): Promise<void> {
     } else {
       content = fs.readFileSync(filePath);
       payloadSize = content.length;
+      try {
+        const parsed = JSON.parse(content.toString("utf8"));
+        if (Array.isArray(parsed.records)) {
+          recordCount = parsed.records.length;
+        }
+      } catch {}
     }
+
+    const merkleRootHex = crypto.createHash("sha256").update(content).digest("hex");
 
     if (client && "initializeAccount" in client) {
       await (client as any).initializeAccount({ signer });
@@ -461,11 +556,30 @@ async function uploadFile(filePath: string): Promise<void> {
 
     log("INFO", "Upload success", { file: filename, blobName, encrypted: isDepth });
 
+    // On-Chain Attestation via Aptos Move Smart Contract (graceful degradation)
+    const attestation = await recordOnChainAttestation(
+      blobName,
+      merkleRootHex,
+      isDepth ? "depth_archive" : "market_snapshot",
+      recordCount
+    );
+
     const destUploadedPath = path.join(cfg.uploadedDir, filename);
     fs.renameSync(filePath, destUploadedPath);
     retryCount.delete(filename);
 
-    await recordUpload(filename, true, isDepth ? "depth" : "snapshot", blobName, encryptionKeyHex, "", payloadSize);
+    await recordUpload(
+      filename,
+      true,
+      isDepth ? "depth" : "snapshot",
+      blobName,
+      encryptionKeyHex,
+      "",
+      payloadSize,
+      merkleRootHex,
+      attestation.txHash,
+      attestation.status
+    );
 
     enqueueVerification({
       filename,

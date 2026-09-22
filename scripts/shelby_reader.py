@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import argparse
 import hashlib
+import json
 import os
 import sys
 import urllib.parse
@@ -9,6 +10,7 @@ import urllib.error
 
 DEFAULT_ACCOUNT = "0x797570358c2208ce0e225f07fe727174c9cc4500072967dd963e645c95c2a07d"
 DEFAULT_RPC_URL = os.environ.get("SHELBY_RPC_URL", "https://shelby.shelbynet.shelby.xyz/shelby")
+DEFAULT_APTOS_RPC = os.environ.get("APTOS_RPC_URL", "https://api.testnet.aptoslabs.com/v1")
 
 
 def get_default_api_key():
@@ -227,6 +229,103 @@ def cmd_decrypt(args):
     print(f"[+] Saved plaintext to: {dest_path}")
 
 
+def cmd_onchain(args):
+    aptos_rpc = args.aptos_rpc.rstrip("/")
+    account = args.account.strip()
+    if not account.startswith("0x"):
+        account = "0x" + account
+    contract_addr = args.contract.strip() if args.contract else account
+    if not contract_addr.startswith("0x"):
+        contract_addr = "0x" + contract_addr
+
+    print("=" * 68)
+    print("  HANSEN ENGINE - ON-CHAIN ATTESTATION VERIFIER (APTOS MOVE)")
+    print("=" * 68)
+    print(f"[*] Aptos RPC Endpoint: {aptos_rpc}")
+    print(f"[*] Move Module:        {contract_addr}::registry")
+    print(f"[*] Registry Admin:     {account}")
+    print(f"[*] Record ID:          #{args.record_id}")
+    print("-" * 68)
+
+    view_url = f"{aptos_rpc}/view"
+    headers = {"Content-Type": "application/json", "User-Agent": "HansenShelbyReader/1.0"}
+
+    view_payload = {
+        "function": f"{contract_addr}::registry::get_snapshot_record",
+        "type_arguments": [],
+        "arguments": [account, str(args.record_id)],
+    }
+
+    try:
+        req_data = json.dumps(view_payload).encode("utf-8")
+        req = urllib.request.Request(view_url, data=req_data, headers=headers, method="POST")
+        with urllib.request.urlopen(req, timeout=args.timeout) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", errors="replace")
+        print(f"[-] Aptos RPC HTTP Error {e.code}: {e.reason}")
+        print(f"    Details: {body}")
+        sys.exit(1)
+    except Exception as e:
+        print(f"[-] Connection Error to Aptos Node: {e}")
+        sys.exit(1)
+
+    if not data or len(data) < 5:
+        print(f"[-] Unexpected view response structure: {data}")
+        sys.exit(1)
+
+    raw_blob_name, raw_merkle_root, raw_ts, raw_data_type, raw_count = data[0], data[1], data[2], data[3], data[4]
+
+    def decode_vec_u8(val):
+        if isinstance(val, str) and val.startswith("0x"):
+            return bytes.fromhex(val[2:])
+        elif isinstance(val, list):
+            return bytes(val)
+        return str(val).encode("utf-8")
+
+    blob_name = decode_vec_u8(raw_blob_name).decode("utf-8", errors="replace")
+    merkle_bytes = decode_vec_u8(raw_merkle_root)
+    merkle_root_hex = merkle_bytes.hex()
+    timestamp = int(raw_ts)
+    data_type = decode_vec_u8(raw_data_type).decode("utf-8", errors="replace")
+    record_count = int(raw_count)
+
+    from datetime import datetime, timezone
+    dt_str = datetime.fromtimestamp(timestamp, tz=timezone.utc).isoformat()
+
+    print("[+] ON-CHAIN ATTESTATION CONFIRMED ON LEDGER:")
+    print(f"    Record ID:     #{args.record_id}")
+    print(f"    Blob Name:     {blob_name}")
+    print(f"    Data Type:     {data_type}")
+    print(f"    Record Count:  {record_count:,} records")
+    print(f"    Timestamp:     {timestamp} ({dt_str})")
+    print(f"    Merkle Root:   {merkle_root_hex}")
+    print("-" * 68)
+
+    if args.verify_blob:
+        print(f"[*] Cross-verifying against Shelby blob: {blob_name}...")
+        url = build_blob_url(args.rpc, account, blob_name)
+        h_req = get_headers(args.api_key)
+        req = urllib.request.Request(url, headers=h_req)
+        try:
+            with urllib.request.urlopen(req, timeout=args.timeout) as b_resp:
+                hasher = hashlib.sha256()
+                while True:
+                    chunk = b_resp.read(64 * 1024)
+                    if not chunk:
+                        break
+                    hasher.update(chunk)
+                blob_hash = hasher.hexdigest()
+                print(f"    Calculated Blob SHA-256: {blob_hash}")
+                if blob_hash.lower() == merkle_root_hex.lower():
+                    print("[+] INTEGRITY CHECK PASSED: On-chain attestation matches Shelby blob digest exactly!")
+                else:
+                    print("[-] MISMATCH: On-chain hash does NOT match blob hash!")
+                    sys.exit(2)
+        except Exception as err:
+            print(f"[-] Failed to fetch Shelby blob for cross-verification: {err}")
+
+
 def main():
     default_key = get_default_api_key()
     parser = argparse.ArgumentParser(description="Hansen Engine Shelby Reader & Downstream Query CLI")
@@ -259,6 +358,12 @@ def main():
     p_dec.add_argument("--key", required=True, help="32-byte hex decryption key")
     p_dec.add_argument("--out", help="Output path for decrypted file")
 
+    p_onchain = subparsers.add_parser("onchain", help="Query on-chain attestation record from Aptos Move contract")
+    p_onchain.add_argument("record_id", type=int, help="Record ID in the registry table (1-indexed)")
+    p_onchain.add_argument("--contract", default=None, help=f"Contract module address (defaults to --account: {DEFAULT_ACCOUNT})")
+    p_onchain.add_argument("--aptos-rpc", default=DEFAULT_APTOS_RPC, help=f"Aptos RPC REST URL (default: {DEFAULT_APTOS_RPC})")
+    p_onchain.add_argument("--verify-blob", action="store_true", help="Fetch blob from Shelby and verify on-chain hash matches")
+
     args = parser.parse_args()
     if args.command == "inspect":
         cmd_inspect(args)
@@ -270,6 +375,8 @@ def main():
         cmd_verify(args)
     elif args.command == "decrypt":
         cmd_decrypt(args)
+    elif args.command == "onchain":
+        cmd_onchain(args)
 
 
 if __name__ == "__main__":

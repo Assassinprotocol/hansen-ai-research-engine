@@ -26,6 +26,7 @@ export interface UploaderConfig {
   verifyMaxRetries: number;
   maxUploadedDepthKeep: number;
   maxUploadedSnapshotsKeep: number;
+  contractAddress: string;
 }
 
 export interface TrackerEntry {
@@ -42,6 +43,9 @@ export interface TrackerEntry {
   verifyError?: string;
   sizeBytes?: number;
   remoteSizeBytes?: number;
+  merkleRootHex?: string;
+  onchainTxHash?: string;
+  onchainStatus?: "confirmed" | "failed" | "skipped";
 }
 
 export interface VerificationTask {
