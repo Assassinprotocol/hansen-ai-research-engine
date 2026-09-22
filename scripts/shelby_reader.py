@@ -8,9 +8,12 @@ import urllib.parse
 import urllib.request
 import urllib.error
 
-DEFAULT_ACCOUNT = "0x797570358c2208ce0e225f07fe727174c9cc4500072967dd963e645c95c2a07d"
+DEFAULT_ACCOUNT = os.environ.get(
+    "HANSEN_REGISTRY_ADDRESS",
+    os.environ.get("SHELBY_ACCOUNT", "0x797570358c2208ce0e225f07fe727174c9cc4500072967dd963e645c95c2a07d"),
+)
 DEFAULT_RPC_URL = os.environ.get("SHELBY_RPC_URL", "https://shelby.shelbynet.shelby.xyz/shelby")
-DEFAULT_APTOS_RPC = os.environ.get("APTOS_RPC_URL", "https://api.testnet.aptoslabs.com/v1")
+DEFAULT_APTOS_RPC = os.environ.get("APTOS_RPC_URL", "https://api.shelbynet.shelby.xyz/v1")
 
 
 def get_default_api_key():

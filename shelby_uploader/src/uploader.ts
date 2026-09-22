@@ -53,7 +53,7 @@ function loadOrCreateSigner(): Account {
 const signer = loadOrCreateSigner();
 
 const client = new ShelbyNodeClient({
-  network: "shelbynet" as any,
+  network: (process.env.SHELBY_NETWORK || "shelbynet") as any,
   apiKey: SHELBY_API_KEY,
 });
 
