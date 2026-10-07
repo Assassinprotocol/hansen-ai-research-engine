@@ -8,14 +8,17 @@ Hansen AI utilizes the **Shelby Protocol (shelbynet)** as the decentralized pers
 
 ## 2. Shelby Protocol Ergonomics & SDK Architecture
 
-The uploader service leverages `@shelby-protocol/sdk` (v0.7.0) and `@aptos-labs/ts-sdk` (v6.3.1) in a decoupled TypeScript daemon:
+The uploader service leverages `@shelby-protocol/sdk` (v0.9.2) and `@aptos-labs/ts-sdk` (v6.3.1) in a decoupled TypeScript daemon supporting dynamic multi-network resolution (`shelbynet`, `private_mainnet`, `testnet`, `localnet`):
 
 ```typescript
 import { ShelbyNodeClient } from "@shelby-protocol/sdk/node";
+import { resolveNetworkConfig } from "./network.js";
 
+const net = resolveNetworkConfig();
 const client = new ShelbyNodeClient({
-  network: "shelbynet",
+  network: net.networkType as any,
   apiKey: process.env.SHELBY_API_KEY,
+  locationHint: net.locationHint,
 });
 ```
 

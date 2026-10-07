@@ -429,12 +429,15 @@ Hansen AI uses [Shelby Protocol](https://shelby.xyz) as its decentralized storag
 * 📄 [Shelby Protocol Integration Guide](docs/shelby_integration.md)
 
 **Dual-Stream Pipeline:**
-- **Public Tier:** Enriched market snapshots (~30,000 records, ~5.1 MB each) uploaded every ~4 hours.
+- **Public Tier:** Enriched market snapshots (~30,000 records, compressed with native Gzip to ~730 KB `.json.gz`, 85.6% storage reduction) uploaded every ~4 hours.
 - **Encrypted Tier:** High-frequency depth archives (~21 MB/day) encrypted client-side using **AES-256-GCM** before upload.
+- **Multi-Network Architecture:** Dynamic 1-switch network toggle (`ACTIVE_NETWORK=shelbynet | private_mainnet | testnet | localnet`) powered by `@shelby-protocol/sdk@0.9.2`.
+- **Gas Safety Guard:** Automated signer balance floor (0.2 APT) and 5,000 Octas hard ceiling on Aptos Move attestation calls.
 - **On-Chain Proof:** Attestation via Aptos Move smart contract (`contract/sources/registry.move`).
-- **Downstream Tooling:** Reader CLI (`scripts/shelby_reader.py`) supporting inspection, byte-range queries, authenticated AES decryption, and on-chain ledger attestation (`onchain`).
+- **Downstream Tooling:** Reader CLI (`scripts/shelby_reader.py`) supporting inspection, transparent `.gz` decompression, byte-range queries, authenticated AES decryption, and on-chain ledger attestation (`onchain`).
+- **Empirical SLA:** Verified 100% Availability and sub-second TTFB latency (~811 ms).
 
-The background TypeScript uploader automatically publishes datasets to the `hansen_ai/market_pipeline/` namespace on the Shelby network.
+The background TypeScript uploader automatically publishes datasets to the `hansen_ai/market_pipeline/` namespace on the active Shelby network.
 
 \---
 

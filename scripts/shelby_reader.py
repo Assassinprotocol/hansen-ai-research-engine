@@ -8,12 +8,52 @@ import urllib.parse
 import urllib.request
 import urllib.error
 
-DEFAULT_ACCOUNT = os.environ.get(
-    "HANSEN_REGISTRY_ADDRESS",
-    os.environ.get("SHELBY_ACCOUNT", "0x797570358c2208ce0e225f07fe727174c9cc4500072967dd963e645c95c2a07d"),
-)
-DEFAULT_RPC_URL = os.environ.get("SHELBY_RPC_URL", "https://shelby.shelbynet.shelby.xyz/shelby")
-DEFAULT_APTOS_RPC = os.environ.get("APTOS_RPC_URL", "https://api.shelbynet.shelby.xyz/v1")
+NETWORK_PRESETS = {
+    "shelbynet": {
+        "name": "shelbynet",
+        "network_type": "shelbynet",
+        "rpc_url": "https://shelby.shelbynet.shelby.xyz/shelby",
+        "aptos_rpc_url": "https://api.shelbynet.shelby.xyz/v1",
+        "contract_address": "0x797570358c2208ce0e225f07fe727174c9cc4500072967dd963e645c95c2a07d",
+    },
+    "private_mainnet": {
+        "name": "private_mainnet",
+        "network_type": "custom",
+        "rpc_url": os.environ.get("PRIVATE_MAINNET_SHELBY_RPC", ""),
+        "aptos_rpc_url": os.environ.get("PRIVATE_MAINNET_APTOS_RPC", ""),
+        "contract_address": os.environ.get("PRIVATE_MAINNET_REGISTRY_ADDRESS", ""),
+    },
+    "testnet": {
+        "name": "testnet",
+        "network_type": "custom",
+        "rpc_url": os.environ.get("TESTNET_SHELBY_RPC", "https://shelby.testnet.shelby.xyz/shelby"),
+        "aptos_rpc_url": os.environ.get("TESTNET_APTOS_RPC", "https://api.testnet.aptoslabs.com/v1"),
+        "contract_address": os.environ.get("TESTNET_REGISTRY_ADDRESS", ""),
+    },
+    "localnet": {
+        "name": "localnet",
+        "network_type": "local",
+        "rpc_url": os.environ.get("LOCAL_SHELBY_RPC", "http://127.0.0.1:8080"),
+        "aptos_rpc_url": os.environ.get("LOCAL_APTOS_RPC", "http://127.0.0.1:8080/v1"),
+        "contract_address": os.environ.get("LOCAL_REGISTRY_ADDRESS", ""),
+    },
+}
+
+def get_network_config(target=None):
+    raw = (target or os.environ.get("ACTIVE_NETWORK") or os.environ.get("SHELBY_NETWORK") or "shelbynet").lower().strip()
+    preset = NETWORK_PRESETS.get(raw, NETWORK_PRESETS["shelbynet"])
+    return {
+        "name": preset["name"],
+        "network_type": preset["network_type"],
+        "rpc_url": os.environ.get("SHELBY_RPC_URL") or preset["rpc_url"],
+        "aptos_rpc_url": os.environ.get("APTOS_RPC_URL") or preset["aptos_rpc_url"],
+        "contract_address": os.environ.get("HANSEN_REGISTRY_ADDRESS") or os.environ.get("SHELBY_ACCOUNT") or preset["contract_address"],
+    }
+
+_NET = get_network_config()
+DEFAULT_ACCOUNT = _NET["contract_address"]
+DEFAULT_RPC_URL = _NET["rpc_url"]
+DEFAULT_APTOS_RPC = _NET["aptos_rpc_url"]
 
 
 def get_default_api_key():
@@ -85,11 +125,21 @@ def cmd_range(args):
             else:
                 preview = data[:64].hex()
                 print(f"[+] First {min(len(data), 64)} bytes (hex): {preview}")
-                try:
-                    text_preview = data[:128].decode("utf-8", errors="replace")
-                    print(f"[+] Text preview:\n{text_preview}")
-                except Exception:
-                    pass
+                if len(data) >= 2 and data[:2] == b"\x1f\x8b":
+                    print("[*] Detected Gzip compressed data (RFC 1952 magic 1f 8b).")
+                    try:
+                        import gzip
+                        uncompressed = gzip.decompress(data)
+                        text_preview = uncompressed[:128].decode("utf-8", errors="replace")
+                        print(f"[+] Decompressed preview:\n{text_preview}")
+                    except Exception as gz_err:
+                        print(f"[*] Note: Slice is a partial byte range ({gz_err}). Use 'download --unpack' to view full content.")
+                else:
+                    try:
+                        text_preview = data[:128].decode("utf-8", errors="replace")
+                        print(f"[+] Text preview:\n{text_preview}")
+                    except Exception:
+                        pass
     except urllib.error.HTTPError as e:
         print(f"[-] HTTP Error {e.code}: {e.reason}")
         sys.exit(1)
@@ -127,6 +177,14 @@ def cmd_download(args):
             print(f"\n[+] Download completed successfully!")
             print(f"[+] File Size:  {downloaded} bytes")
             print(f"[+] SHA-256:    {hasher.hexdigest()}")
+
+            if dest_path.endswith(".gz") and getattr(args, "unpack", False):
+                import gzip
+                unpacked_dest = dest_path[:-3]
+                print(f"[*] Auto-unpacking gzip archive to: {unpacked_dest}")
+                with gzip.open(dest_path, "rb") as gz_in, open(unpacked_dest, "wb") as raw_out:
+                    raw_out.write(gz_in.read())
+                print(f"[+] Successfully unpacked plaintext to: {unpacked_dest}")
     except urllib.error.HTTPError as e:
         print(f"\n[-] HTTP Error {e.code}: {e.reason}")
         sys.exit(1)
@@ -332,8 +390,9 @@ def cmd_onchain(args):
 def main():
     default_key = get_default_api_key()
     parser = argparse.ArgumentParser(description="Hansen Engine Shelby Reader & Downstream Query CLI")
-    parser.add_argument("--rpc", default=DEFAULT_RPC_URL, help=f"Shelby RPC Base URL (default: {DEFAULT_RPC_URL})")
-    parser.add_argument("--account", default=DEFAULT_ACCOUNT, help=f"Aptos Account Address (default: {DEFAULT_ACCOUNT})")
+    parser.add_argument("--network", default=None, help="Target network preset (shelbynet | private_mainnet | testnet | localnet)")
+    parser.add_argument("--rpc", default=None, help=f"Shelby RPC Base URL (default from network: {DEFAULT_RPC_URL})")
+    parser.add_argument("--account", default=None, help=f"Aptos Account Address (default from network: {DEFAULT_ACCOUNT})")
     parser.add_argument("--api-key", default=default_key, help="Shelby API Key (defaults to SHELBY_API_KEY from env)")
     parser.add_argument("--timeout", type=int, default=30, help="HTTP timeout in seconds (default: 30)")
 
@@ -351,6 +410,7 @@ def main():
     p_dl = subparsers.add_parser("download", help="Stream download full blob to disk")
     p_dl.add_argument("blob", help="Blob name in Shelby")
     p_dl.add_argument("--out", help="Output path (defaults to blob filename)")
+    p_dl.add_argument("--unpack", action="store_true", help="Automatically decompress .gz payload upon download")
 
     p_verify = subparsers.add_parser("verify", help="Stream blob and verify SHA-256 integrity")
     p_verify.add_argument("blob", help="Blob name in Shelby")
@@ -364,10 +424,19 @@ def main():
     p_onchain = subparsers.add_parser("onchain", help="Query on-chain attestation record from Aptos Move contract")
     p_onchain.add_argument("record_id", type=int, help="Record ID in the registry table (1-indexed)")
     p_onchain.add_argument("--contract", default=None, help=f"Contract module address (defaults to --account: {DEFAULT_ACCOUNT})")
-    p_onchain.add_argument("--aptos-rpc", default=DEFAULT_APTOS_RPC, help=f"Aptos RPC REST URL (default: {DEFAULT_APTOS_RPC})")
+    p_onchain.add_argument("--aptos-rpc", default=None, help=f"Aptos RPC REST URL (default: {DEFAULT_APTOS_RPC})")
     p_onchain.add_argument("--verify-blob", action="store_true", help="Fetch blob from Shelby and verify on-chain hash matches")
 
     args = parser.parse_args()
+
+    active_net = get_network_config(args.network)
+    if not args.rpc:
+        args.rpc = active_net["rpc_url"]
+    if not args.account:
+        args.account = active_net["contract_address"]
+    if hasattr(args, "aptos_rpc") and not args.aptos_rpc:
+        args.aptos_rpc = active_net["aptos_rpc_url"]
+
     if args.command == "inspect":
         cmd_inspect(args)
     elif args.command == "range":

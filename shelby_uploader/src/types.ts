@@ -27,6 +27,13 @@ export interface UploaderConfig {
   maxUploadedDepthKeep: number;
   maxUploadedSnapshotsKeep: number;
   contractAddress: string;
+  minSignerBalanceApt: number;
+  balanceCacheTtlMs: number;
+  maxAttestationGasAmount: number;
+  networkName: string;
+  networkType: "shelbynet" | "local" | "custom";
+  aptosRpcUrl: string;
+  locationHint: string;
 }
 
 export interface TrackerEntry {
@@ -34,6 +41,7 @@ export interface TrackerEntry {
   time: string;
   dataType?: "snapshot" | "depth";
   blobName?: string;
+  network?: string;
   encryptionKey?: string;
   detail?: string;
   verified?: boolean;

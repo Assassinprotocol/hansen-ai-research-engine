@@ -52,10 +52,34 @@ function loadOrCreateSigner(): Account {
 
 const signer = loadOrCreateSigner();
 
-const client = new ShelbyNodeClient({
-  network: (process.env.SHELBY_NETWORK || "shelbynet") as any,
-  apiKey: SHELBY_API_KEY,
-});
+function initShelbyClient(): ShelbyNodeClient {
+  if (cfg.networkType === "custom") {
+    log("INFO", "Initializing ShelbyNodeClient with custom endpoints", {
+      network: cfg.networkName,
+      rpcUrl: cfg.rpcUrl,
+      aptosRpcUrl: cfg.aptosRpcUrl,
+    });
+    return new ShelbyNodeClient({
+      network: Network.CUSTOM,
+      apiKey: SHELBY_API_KEY,
+      locationHint: cfg.locationHint,
+      aptos: {
+        fullnode: cfg.aptosRpcUrl,
+      },
+      rpc: {
+        baseUrl: cfg.rpcUrl,
+        apiKey: SHELBY_API_KEY,
+      },
+    });
+  }
+  return new ShelbyNodeClient({
+    network: cfg.networkType as any,
+    apiKey: SHELBY_API_KEY,
+    locationHint: cfg.locationHint,
+  });
+}
+
+const client = initShelbyClient();
 
 for (const dir of [cfg.uploadedDir, cfg.failedDir]) {
   fs.mkdirSync(dir, { recursive: true });
@@ -108,6 +132,7 @@ async function recordUpload(
     const entry: TrackerEntry = {
       file: filename,
       time: new Date().toISOString(),
+      network: cfg.networkName,
       ...(dataType ? { dataType } : {}),
       ...(blobName ? { blobName } : {}),
       ...(encryptionKey ? { encryptionKey } : {}),
@@ -285,24 +310,32 @@ function pruneUploadedDir(): void {
     const files = fs.readdirSync(cfg.uploadedDir);
 
     const depthFiles = files
-      .filter((f) => f.startsWith("depth_"))
+      .filter((f) => f.startsWith("depth_") && !f.endsWith("_meta.json"))
       .map((f) => ({ name: f, path: path.join(cfg.uploadedDir, f), mtime: fs.statSync(path.join(cfg.uploadedDir, f)).mtimeMs }))
       .sort((a, b) => b.mtime - a.mtime);
 
     if (depthFiles.length > cfg.maxUploadedDepthKeep) {
       for (const d of depthFiles.slice(cfg.maxUploadedDepthKeep)) {
         try { fs.unlinkSync(d.path); } catch {}
+        const metaPath = d.path.replace(/(\.tar\.gz|\.parquet|\.json)(\.enc)?$/, "_meta.json");
+        if (fs.existsSync(metaPath)) {
+          try { fs.unlinkSync(metaPath); } catch {}
+        }
       }
     }
 
     const snapFiles = files
-      .filter((f) => f.startsWith("snapshot_"))
+      .filter((f) => f.startsWith("snapshot_") && !f.endsWith("_meta.json"))
       .map((f) => ({ name: f, path: path.join(cfg.uploadedDir, f), mtime: fs.statSync(path.join(cfg.uploadedDir, f)).mtimeMs }))
       .sort((a, b) => b.mtime - a.mtime);
 
     if (snapFiles.length > cfg.maxUploadedSnapshotsKeep) {
       for (const s of snapFiles.slice(cfg.maxUploadedSnapshotsKeep)) {
         try { fs.unlinkSync(s.path); } catch {}
+        const metaPath = s.path.replace(/\.json(\.gz)?$/, "_meta.json");
+        if (fs.existsSync(metaPath)) {
+          try { fs.unlinkSync(metaPath); } catch {}
+        }
       }
     }
   } catch (err) {
@@ -351,20 +384,48 @@ function withTimeout<T>(promise: Promise<T>, ms: number, label: string): Promise
   ]);
 }
 
-async function checkSignerBalance(): Promise<void> {
+let cachedBalanceApt: number | null = null;
+let balanceLastFetchedAt = 0;
+let gasPauseUntil = 0;
+
+async function getSignerBalanceApt(forceRefresh = false): Promise<number> {
+  const now = Date.now();
+  if (!forceRefresh && cachedBalanceApt !== null && (now - balanceLastFetchedAt < cfg.balanceCacheTtlMs)) {
+    return cachedBalanceApt;
+  }
+
   try {
     const rawBalance = await withTimeout(
       client.aptos.getAccountAPTAmount({ accountAddress: signer.accountAddress }),
       10_000,
       "getAccountAPTAmount"
     );
-    const apt = Number(rawBalance) / 100_000_000;
+    cachedBalanceApt = Number(rawBalance) / 100_000_000;
+    balanceLastFetchedAt = now;
+    return cachedBalanceApt;
+  } catch (err) {
+    if (cachedBalanceApt !== null) {
+      log("WARN", "Signer balance refresh failed, falling back to cached balance", {
+        error: (err as Error).message,
+        cachedBalanceApt,
+      });
+      return cachedBalanceApt;
+    }
+    log("WARN", "Signer balance check skipped (no cache)", { error: (err as Error).message });
+    return 0;
+  }
+}
+
+async function checkSignerBalance(): Promise<void> {
+  try {
+    const apt = await getSignerBalanceApt(true);
     log("INFO", "Signer balance checked", {
       address: signer.accountAddress.toString(),
       aptBalance: `${apt.toFixed(4)} APT`,
+      minFloor: `${cfg.minSignerBalanceApt} APT`,
     });
   } catch (err) {
-    log("WARN", "Signer balance check skipped", { error: (err as Error).message });
+    log("WARN", "Signer balance check error", { error: (err as Error).message });
   }
 }
 
@@ -454,6 +515,9 @@ async function recordOnChainAttestation(
             recordCount,
           ],
         },
+        options: {
+          maxGasAmount: cfg.maxAttestationGasAmount,
+        },
       });
 
       const auth = client.aptos.transaction.sign({ signer, transaction: tx });
@@ -479,6 +543,28 @@ async function uploadFile(filePath: string): Promise<void> {
 
   if (processing.has(filename)) return;
   processing.add(filename);
+
+  if (Date.now() < gasPauseUntil) {
+    log("INFO", "[GAS GUARD] Upload deferred due to gas safety cooldown", { file: filename });
+    processing.delete(filename);
+    return;
+  }
+
+  const currentBalance = await getSignerBalanceApt().catch(() => 0);
+  if (currentBalance < cfg.minSignerBalanceApt) {
+    gasPauseUntil = Date.now() + cfg.balanceCacheTtlMs;
+    log("WARN", `[GAS GUARD] Signer balance (${currentBalance.toFixed(4)} APT) below safety floor (${cfg.minSignerBalanceApt} APT). Deferring upload.`, {
+      file: filename,
+      currentBalanceApt: currentBalance,
+      minRequiredApt: cfg.minSignerBalanceApt,
+      cooldownSecs: cfg.balanceCacheTtlMs / 1000,
+    });
+    if (process.env.SHELBY_AUTO_FAUCET === "true") {
+      await fundSignerOnce();
+    }
+    processing.delete(filename);
+    return;
+  }
 
   const attempts = (retryCount.get(filename) ?? 0) + 1;
   retryCount.set(filename, attempts);
@@ -525,12 +611,38 @@ async function uploadFile(filePath: string): Promise<void> {
     } else {
       content = fs.readFileSync(filePath);
       payloadSize = content.length;
-      try {
-        const parsed = JSON.parse(content.toString("utf8"));
-        if (Array.isArray(parsed.records)) {
-          recordCount = parsed.records.length;
+
+      // 1. Resolve recordCount from companion metadata if available (for .json.gz, .parquet, .json)
+      const metaCandidates = [
+        filePath.replace(/\.json(\.gz)?$/, "_meta.json"),
+        filePath.replace(/\.parquet$/, "_meta.json"),
+        filePath.replace(/\.tar\.gz$/, "_meta.json"),
+      ];
+      for (const mPath of metaCandidates) {
+        if (fs.existsSync(mPath)) {
+          try {
+            const meta = JSON.parse(fs.readFileSync(mPath, "utf8"));
+            if (typeof meta.record_count === "number" && meta.record_count > 0) {
+              recordCount = meta.record_count;
+              break;
+            }
+            if (typeof meta.total_records === "number" && meta.total_records > 0) {
+              recordCount = meta.total_records;
+              break;
+            }
+          } catch {}
         }
-      } catch {}
+      }
+
+      // 2. Fallback to parsing raw JSON if not binary and recordCount still unset
+      if (recordCount === 0 && !filename.endsWith(".gz") && !filename.endsWith(".parquet") && !filename.endsWith(".enc")) {
+        try {
+          const parsed = JSON.parse(content.toString("utf8"));
+          if (Array.isArray(parsed.records)) {
+            recordCount = parsed.records.length;
+          }
+        } catch {}
+      }
     }
 
     const merkleRootHex = crypto.createHash("sha256").update(content).digest("hex");
@@ -539,7 +651,7 @@ async function uploadFile(filePath: string): Promise<void> {
       await (client as any).initializeAccount({ signer });
     }
 
-    const location = attempts > 1 ? undefined : SHELBY_LOCATION_HINT;
+    const location = SHELBY_LOCATION_HINT;
     const uploadOptions = location
       ? ({ selectedLocation: location, locationHint: location } as any)
       : undefined;
@@ -548,7 +660,6 @@ async function uploadFile(filePath: string): Promise<void> {
       blobData: content,
       signer,
       blobName,
-      expirationMicros: Date.now() * 1000 + 90 * 24 * 60 * 60 * 1_000_000,
       options: uploadOptions,
     } as any);
 
@@ -566,6 +677,12 @@ async function uploadFile(filePath: string): Promise<void> {
 
     const destUploadedPath = path.join(cfg.uploadedDir, filename);
     fs.renameSync(filePath, destUploadedPath);
+    const companionMeta = filePath.replace(/\.json(\.gz)?$/, "_meta.json");
+    if (fs.existsSync(companionMeta)) {
+      try {
+        fs.renameSync(companionMeta, path.join(cfg.uploadedDir, path.basename(companionMeta)));
+      } catch {}
+    }
     retryCount.delete(filename);
 
     await recordUpload(
@@ -603,6 +720,12 @@ async function uploadFile(filePath: string): Promise<void> {
       log("ERROR", "Max retries reached, moving to failed/", { file: filename });
       try {
         fs.renameSync(filePath, path.join(cfg.failedDir, filename));
+        const companionMetaFail = filePath.replace(/\.json(\.gz)?$/, "_meta.json");
+        if (fs.existsSync(companionMetaFail)) {
+          try {
+            fs.renameSync(companionMetaFail, path.join(cfg.failedDir, path.basename(companionMetaFail)));
+          } catch {}
+        }
       } catch (mvErr) {
         log("ERROR", "Move to failed/ failed", { error: (mvErr as Error).message });
       }
@@ -614,13 +737,13 @@ async function uploadFile(filePath: string): Promise<void> {
   }
 }
 
-const WATCH_REGEX = /^(snapshot_.*|depth_.*)\.(json|parquet|tar\.gz)$/;
+const WATCH_REGEX = /^(snapshot_.*|depth_.*)\.(json|json\.gz|parquet|tar\.gz)$/;
 
 function getPendingSnapshots(): SnapshotFile[] {
   try {
     const files = fs
       .readdirSync(cfg.watchDir)
-      .filter((f) => WATCH_REGEX.test(f) && f !== "snapshot_state.json");
+      .filter((f) => WATCH_REGEX.test(f) && f !== "snapshot_state.json" && !f.endsWith("_meta.json"));
 
     const withStats: SnapshotFile[] = files
       .map((f) => {
@@ -641,6 +764,12 @@ function getPendingSnapshots(): SnapshotFile[] {
         log("WARN", "Exceeds max pending, moving oldest to failed/", { file: s.name });
         try {
           fs.renameSync(s.path, path.join(cfg.failedDir, s.name));
+          const companionMeta = s.path.replace(/\.json(\.gz)?$/, "_meta.json");
+          if (fs.existsSync(companionMeta)) {
+            try {
+              fs.renameSync(companionMeta, path.join(cfg.failedDir, path.basename(companionMeta)));
+            } catch {}
+          }
           recordUpload(s.name, false, undefined, undefined, undefined, "exceeded max pending limit");
         } catch (e) {
           log("ERROR", "Failed to move excess file", { error: (e as Error).message });
@@ -674,7 +803,7 @@ const watcher = chokidar.watch(cfg.watchDir, {
 
 watcher.on("add", async (filePath: string) => {
   const filename = path.basename(filePath);
-  if (!WATCH_REGEX.test(filename) || filename === "snapshot_state.json") return;
+  if (!WATCH_REGEX.test(filename) || filename === "snapshot_state.json" || filename.endsWith("_meta.json")) return;
   log("INFO", "New snapshot detected", { file: filename });
   await uploadFile(filePath);
 });
@@ -688,7 +817,7 @@ function reclaimFailedUploads(): void {
     if (!fs.existsSync(cfg.failedDir)) return;
     const failedFiles = fs
       .readdirSync(cfg.failedDir)
-      .filter((f) => WATCH_REGEX.test(f) && f !== "snapshot_state.json");
+      .filter((f) => WATCH_REGEX.test(f) && f !== "snapshot_state.json" && !f.endsWith("_meta.json"));
 
     if (failedFiles.length === 0) return;
 
@@ -698,6 +827,12 @@ function reclaimFailedUploads(): void {
       const dst = path.join(cfg.watchDir, f);
       try {
         fs.renameSync(src, dst);
+        const companionMeta = src.replace(/\.json(\.gz)?$/, "_meta.json");
+        if (fs.existsSync(companionMeta)) {
+          try {
+            fs.renameSync(companionMeta, path.join(cfg.watchDir, path.basename(companionMeta)));
+          } catch {}
+        }
         retryCount.delete(f);
         log("INFO", "Auto-Recovery: Reclaimed file to pending/", { file: f });
       } catch (err) {
@@ -710,6 +845,9 @@ function reclaimFailedUploads(): void {
 }
 
 log("INFO", "Shelby uploader started", {
+  network: cfg.networkName,
+  networkType: cfg.networkType,
+  contractAddress: cfg.contractAddress,
   watchDir: cfg.watchDir,
   uploadedDir: cfg.uploadedDir,
   failedDir: cfg.failedDir,
