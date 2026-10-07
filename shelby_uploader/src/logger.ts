@@ -126,13 +126,16 @@ export function log(level: LogLevel, msg: string, meta: Record<string, unknown> 
   if (msg === "Signer balance checked") {
     console.log(`${header} Signer Balance Checked`);
     console.log(`  ├─ Address     : ${meta.address || "-"}`);
-    console.log(`  └─ Balance     : ${meta.aptBalance || "-"} (Shelbynet)`);
+    console.log(`  ├─ Balance     : ${meta.aptBalance || "-"} (${meta.network || "shelbynet"})`);
+    console.log(`  └─ Safety Floor: ${meta.minFloor || "0.2000 APT"}`);
     return;
   }
 
   // 10. Engine Started
   if (msg === "Shelby uploader started") {
     console.log(`${header} Shelby Uploader Engine Started`);
+    console.log(`  ├─ Network     : ${meta.network || "shelbynet"} (${meta.networkType || "shelbynet"})`);
+    console.log(`  ├─ Contract    : ${meta.contractAddress || "-"}`);
     console.log(`  ├─ Watch Dir   : ${meta.watchDir || "-"}`);
     console.log(`  ├─ Uploaded Dir: ${meta.uploadedDir || "-"}`);
     console.log(`  ├─ Failed Dir  : ${meta.failedDir || "-"}`);

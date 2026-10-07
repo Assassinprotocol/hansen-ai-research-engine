@@ -423,6 +423,7 @@ async function checkSignerBalance(): Promise<void> {
       address: signer.accountAddress.toString(),
       aptBalance: `${apt.toFixed(4)} APT`,
       minFloor: `${cfg.minSignerBalanceApt} APT`,
+      network: cfg.networkName,
     });
   } catch (err) {
     log("WARN", "Signer balance check error", { error: (err as Error).message });
