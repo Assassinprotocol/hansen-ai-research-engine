@@ -681,6 +681,31 @@ async function uploadFile(filePath: string): Promise<void> {
     const companionMeta = filePath.replace(/\.json(\.gz)?$/, "_meta.json");
     if (fs.existsSync(companionMeta)) {
       try {
+        const metaBasename = path.basename(companionMeta);
+        const metaBlobName = `${prefix}/${metaBasename}`;
+        const metaContent = fs.readFileSync(companionMeta);
+        await client.upload({
+          blobData: metaContent,
+          signer,
+          blobName: metaBlobName,
+          options: uploadOptions,
+        } as any);
+        log("INFO", "Uploaded companion metadata blob to Shelby Hot Storage", { blobName: metaBlobName });
+        const metaMerkle = crypto.createHash("sha256").update(metaContent).digest("hex");
+        await recordUpload(
+          metaBasename,
+          true,
+          "snapshot",
+          metaBlobName,
+          undefined,
+          "",
+          metaContent.length,
+          metaMerkle
+        );
+      } catch (metaErr: any) {
+        log("WARN", "Companion metadata upload to Shelby Hot Storage skipped", { error: metaErr.message });
+      }
+      try {
         fs.renameSync(companionMeta, path.join(cfg.uploadedDir, path.basename(companionMeta)));
       } catch {}
     }

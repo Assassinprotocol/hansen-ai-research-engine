@@ -46,13 +46,13 @@ https://youtu.be/YyaH22LkkEA
 ## Key Features
 
 * Fully local AI market intelligence engine — sovereign, no cloud
-* 718 Binance Futures pairs monitored in real-time
+* 740+ Binance Futures pairs monitored in real-time (dynamic active cluster)
 * 90-day rolling historical dataset (1M+ records)
 * 8 interconnected intelligence modules feeding central AI brain
 * Local LLM reasoning via llama.cpp (Qwen 2.5 7B)
-* Automated enriched dataset generation every \~4 hours
-* On-chain verifiable dataset storage via Shelby Protocol
-* Real-time web dashboard with 15+ panels
+* Automated enriched dataset generation every ~4.5 hours (40,000+ records dynamic window)
+* Verifiable decentralized lake storage via Shelby Protocol (Hot & Cold tiers)
+* Real-time web dashboard & desktop telemetry widget (15+ panels)
 * AI-generated market reports (flash/daily/weekly)
 * Automatic narrative detection (12 market narratives)
 * Multi-chain crypto payments (BSC/ARB/ETH/SOL/BTC/Aptos)
@@ -141,40 +141,48 @@ npm run build && npm start
 ```mermaid
 graph TD
     %% TIER 1: INGESTION
-    FEED["Binance Futures Market Feed<br/>718 active pairs · real-time L2 websocket"]
+    FEED["Binance Futures Market Feed<br/>740+ active pairs · real-time L2 orderbook & ticker stream"]
 
     %% TIER 2: PARALLEL AGGREGATION
     FEED -->|5s tick stream| TICK["Market Collector<br/>tick aggregator"]
-    FEED -->|microstructure| DEPTH["Depth Collector<br/>orderbook sampler"]
+    FEED -->|microstructure depth| DEPTH["Depth Collector<br/>orderbook sampler"]
 
     %% TIER 3: INTELLIGENCE CORE
     TICK --> BRAIN["Market Brain<br/>multi-source state aggregator"]
+    DEPTH --> BRAIN
     BRAIN --> LLM["Local LLM Inference<br/>Qwen 2.5 7B · local runtime"]
 
-    %% TIER 4: OUTPUT SPLIT
-    LLM --> DASH["Web Dashboard<br/>live telemetry"]
-    LLM --> EXEC["Trade Engine<br/>order router"]
-    LLM -->|public tier · 4h| SNAP["Market Snapshots<br/>~5.1 MB JSON"]
-    DEPTH -->|encrypted tier · daily| ARCH["Depth Archives<br/>AES-256-GCM · ~21 MB"]
+    %% TIER 4: OUTPUT & FORENSIC SPLIT
+    LLM --> DASH["Web Dashboard & Eww Widget<br/>live telemetry & AI insights"]
+    LLM --> FORENSIC["Quantitative Forensics<br/>microstructure & regime analytics"]
+    BRAIN -->|hot header tier · uncompressed| META["Hot Lake Companion Header<br/>_meta.json · <50 KB"]
+    BRAIN -->|cold lake tier · 4.5h dynamic| SNAP["Market Snapshot<br/>snapshot_*.json.gz · 40K+ records"]
+    DEPTH -->|encrypted tier · daily| ARCH["Depth Archive<br/>AES-256-GCM · ~21 MB/day"]
 
-    %% TIER 5: DECENTRALIZED PERSISTENCE
-    SNAP --> SHELBY[("Shelby Protocol<br/>Decentralized Data Lake")]
-    ARCH --> SHELBY
+    %% TIER 5: DECENTRALIZED PERSISTENCE (SHELBY PROTOCOL)
+    META --> SHELBY_HOT[("Shelby Hot Storage<br/>uncompressed hot tier")]
+    SNAP --> SHELBY_COLD[("Shelby Cold Lake<br/>erasure-coded persistence")]
+    ARCH --> SHELBY_COLD
 
-    %% TIER 6: CONSUMPTION & PROOF
-    SHELBY --> CLI["Reader CLI<br/>query & decrypt"]
-    SHELBY --> APTOS["Aptos Move Contract<br/>on-chain attestation"]
+    %% TIER 6: ACTIVE RAG & VERIFIABLE PROOF
+    SHELBY_HOT -->|HTTP 206 byte-range <300ms| RAG["Active RAG Reader<br/>modules/shelby_reader.py"]
+    RAG -.->|microstructure context feedback| LLM
+    SHELBY_COLD --> CLI["External Reader CLI<br/>scripts/shelby_reader.py"]
+    SHELBY_HOT -->|on-chain attestation| APTOS["Aptos Move Contract<br/>on-chain Merkle & count attestation"]
+    SHELBY_COLD -->|on-chain attestation| APTOS
 
     classDef default font-family:sans-serif,font-size:12px;
     classDef nodeBase fill:#161b22,stroke:#30363d,color:#e6edf3,stroke-width:1px;
     classDef nodeFeed fill:#0d1926,stroke:#1f6feb,color:#e6edf3,stroke-width:1.5px;
-    classDef nodeExec fill:#072214,stroke:#238636,color:#e6edf3,stroke-width:1px;
+    classDef nodeForensic fill:#072214,stroke:#238636,color:#e6edf3,stroke-width:1.5px;
     classDef nodeShelby fill:#21180a,stroke:#d29922,color:#f0e6d2,stroke-width:1.5px;
+    classDef nodeRag fill:#1f132b,stroke:#a371f7,color:#e6edf3,stroke-width:1.5px;
 
     class FEED nodeFeed;
-    class TICK,DEPTH,BRAIN,LLM,DASH,SNAP,ARCH,CLI,APTOS nodeBase;
-    class EXEC nodeExec;
-    class SHELBY nodeShelby;
+    class TICK,DEPTH,BRAIN,LLM,DASH,META,SNAP,ARCH,CLI,APTOS nodeBase;
+    class FORENSIC nodeForensic;
+    class SHELBY_HOT,SHELBY_COLD nodeShelby;
+    class RAG nodeRag;
 ```
 
 \---
@@ -288,8 +296,17 @@ Each snapshot uploaded to Shelby contains the full market intelligence context:
 
 ```json
 {
-  "records": \["...30,000 price records..."],
-  "market\_regime": {"regime": "sideways", "breakdown": {}},
+  "lake_header": {
+    "schema_version": "2.1.0",
+    "storage_tier": "hot_slice",
+    "record_count": 40014,
+    "unique_symbols": 741,
+    "window_hours": 4.5,
+    "merkle_root": "a7d9f...",
+    "contract_address": "0x7975...a07d"
+  },
+  "records": ["...40,000+ price records across 740+ pairs (dynamic 4.5h window)..."],
+  "market_regime": {"regime": "sideways", "breakdown": {}},
   "volatility": {"index": 0.32, "level": "medium"},
   "market\_insight": \["BTC holds relative momentum..."],
   "top\_gainers": \[{"symbol": "PLAY", "change\_pct": 6.97}],
@@ -425,17 +442,18 @@ research "topic"              # Research topic
 ## Decentralized Data Lake (Shelby Protocol)
 
 Hansen AI uses [Shelby Protocol](https://shelby.xyz) as its decentralized storage layer for verifiable market intelligence data. Detailed technical specifications:
-* 📄 [System Architecture Specification](docs/architecture.md)
 * 📄 [Shelby Protocol Integration Guide](docs/shelby_integration.md)
 
-**Dual-Stream Pipeline:**
-- **Public Tier:** Enriched market snapshots (~30,000 records, compressed with native Gzip to ~730 KB `.json.gz`, 85.6% storage reduction) uploaded every ~4 hours.
-- **Encrypted Tier:** High-frequency depth archives (~21 MB/day) encrypted client-side using **AES-256-GCM** before upload.
+**Decentralized Lake Storage Architecture:**
+- **Hot Storage Tier:** Uncompressed `_meta.json` companion header blobs (<50 KB) uploaded to Shelby Hot Storage, providing zero-decompression sub-second HTTP 206 byte-range slicing (<300ms) for live Active RAG inferences.
+- **Cold Lake Tier:** Enriched market snapshots (40,000+ records across 740+ pairs via dynamic 4.5h window, compressed with native Gzip to ~730 KB `.json.gz`, 85.6% storage reduction) published cyclically.
+- **Encrypted Tier:** High-frequency depth archives (~21 MB/day) encrypted client-side using **AES-256-GCM** before decentralized placement.
+- **Active RAG Client:** Sub-second range reader (`modules/shelby_reader.py`) fetching hot lake headers directly from Shelby storage nodes for AI prompt augmentation with local fallback.
 - **Multi-Network Architecture:** Dynamic 1-switch network toggle (`ACTIVE_NETWORK=shelbynet | private_mainnet | testnet | localnet`) powered by `@shelby-protocol/sdk@0.9.2`.
 - **Gas Safety Guard:** Automated signer balance floor (0.2 APT) and 5,000 Octas hard ceiling on Aptos Move attestation calls.
-- **On-Chain Proof:** Attestation via Aptos Move smart contract (`contract/sources/registry.move`).
+- **On-Chain Proof:** Permanent attestation via Aptos Move smart contract (`contract/sources/registry.move`), notarizing Merkle roots and exact record counts.
 - **Downstream Tooling:** Reader CLI (`scripts/shelby_reader.py`) supporting inspection, transparent `.gz` decompression, byte-range queries, authenticated AES decryption, and on-chain ledger attestation (`onchain`).
-- **Empirical SLA:** Verified 100% Availability and sub-second TTFB latency (~811 ms).
+- **Empirical SLA:** Verified 100% Availability and sub-second TTFB latency (<300ms for hot slices, ~811 ms for cold blobs).
 
 The background TypeScript uploader automatically publishes datasets to the `hansen_ai/market_pipeline/` namespace on the active Shelby network.
 

@@ -23,11 +23,15 @@ const client = new ShelbyNodeClient({
 ```
 
 ### Key Technical Capabilities:
-1. **Clay Erasure Coding Stressing:**
-   - Ingesting dense uncompressed JSON (~5.1 MB) and encrypted depth archives (~21 MB) stresses Clay Erasure Codes across distributed storage nodes, moving far beyond in-memory toy payloads (<50 KB).
-2. **Multi-Location Geographic Routing:**
+1. **Multi-Tiered Lake Persistence:**
+   - **Hot Storage Tier (`_meta.json`):** Uncompressed companion metadata headers (<50 KB) containing `lake_header`, macro regime, and key microstructure indicators uploaded to Shelby Hot Storage for zero-decompression sub-second HTTP 206 byte-range slicing (<300ms).
+   - **Cold Persistence Tier (`.json.gz`):** Dense 40,000+ record historical snapshots across 740+ pairs compressed natively with Gzip (~730 KB, 85.6% reduction) for long-term verifiable storage.
+   - **Encrypted Tier (`.parquet.enc`):** Daily orderbook depth archives (~21 MB) encrypted client-side using AES-256-GCM.
+2. **Clay Erasure Coding & Sub-Second Slicing:**
+   - Ingesting large archives stresses Clay Erasure Codes across distributed storage nodes, while hot metadata blobs remain accessible within <300ms TTFB for real-time AI prompt augmentation.
+3. **Multi-Location Geographic Routing:**
    - Upload operations specify `locationHint` / `selectedLocation` (`"shelbynet-1"`) to steer placement across storage provider clusters.
-3. **Deterministic Retention:**
+4. **Deterministic Retention:**
    - Snapshots declare a 90-day retention horizon via `expirationMicros`:
      `expirationMicros: Date.now() * 1000 + 90 * 24 * 60 * 60 * 1_000_000`
 
@@ -143,3 +147,14 @@ External consumers and AI agents query, verify, and decrypt market telemetry usi
    # Query and cross-verify with Shelby blob in one step
    python scripts/shelby_reader.py onchain 1 --verify-blob
    ```
+
+---
+
+## 6. Internal Active RAG Client (`modules/shelby_reader.py`)
+
+Hansen Engine's local intelligence core leverages `modules/shelby_reader.py` for real-time prompt augmentation directly from Shelby Hot Storage:
+
+### Architecture & APIs:
+* **`fetch_blob_slice(blob_name, start_byte, end_byte)`**: Direct HTTP 206 byte-range slicing on Shelby storage nodes. Measures TTFB latency (typically <300ms) and returns decoded byte slices.
+* **`fetch_historical_lake_headers(limit=5)`**: Resolves recent lake headers directly from Shelby Hot Storage `_meta.json` blobs, falling back to local snapshots seamlessly if offline.
+* **Zero-Decompression Querying**: Targets uncompressed hot companion headers to index macro indicators without the multi-second overhead of decompressing multi-megabyte datasets.
