@@ -104,7 +104,7 @@ The architecture eliminates reliance on third-party cloud infrastructure by enfo
    - Empirical SLA benchmarks confirm 100% Availability with <300ms TTFB on hot slices.
 
 3. **On-Chain Ledger Attestation:**
-   - Every uploaded blob name and SHA-256 Merkle root digest is permanently anchored to the Aptos blockchain via the `hansen::registry` smart contract.
+   - Every uploaded blob name and SHA-256 payload digest (anchored in the historical `merkle_root` field) is permanently recorded to the Aptos blockchain via the `hansen::registry` smart contract.
    - External researchers and consumer nodes can verify that downloaded snapshots match the exact digest signed by Hansen Engine at the time of creation.
 
 4. **Active RAG Prompt Augmentation:**

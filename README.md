@@ -157,7 +157,7 @@ graph TD
     %% TIER 6: CONSUMPTION & PROOF
     SHELBY_HOT -->|HTTP 206 byte-range <300ms| RAG["Active RAG Reader<br/>modules/shelby_reader.py (AI prompt context)"]
     SHELBY_COLD --> CLI["External Reader CLI<br/>scripts/shelby_reader.py"]
-    SHELBY_HOT -->|on-chain attestation| APTOS["Aptos Move Contract<br/>on-chain Merkle & count attestation"]
+    SHELBY_HOT -->|on-chain attestation| APTOS["Aptos Move Contract<br/>on-chain digest & count attestation"]
     SHELBY_COLD -->|on-chain attestation| APTOS
 
     classDef default font-family:sans-serif,font-size:12px;
@@ -442,7 +442,7 @@ Hansen AI uses [Shelby Protocol](https://shelby.xyz) as its decentralized storag
 - **Active RAG Client:** Sub-second range reader (`modules/shelby_reader.py`) fetching hot lake headers directly from Shelby storage nodes for AI prompt augmentation with local fallback.
 - **Multi-Network Architecture:** Dynamic 1-switch network toggle (`ACTIVE_NETWORK=shelbynet | private_mainnet | testnet | localnet`) powered by `@shelby-protocol/sdk@0.9.2`.
 - **Gas Safety Guard:** Automated signer balance floor (0.2 APT) and 5,000 Octas hard ceiling on Aptos Move attestation calls.
-- **On-Chain Proof:** Permanent attestation via Aptos Move smart contract (`contract/sources/registry.move`), notarizing Merkle roots and exact record counts.
+- **On-Chain Proof:** Permanent attestation via Aptos Move smart contract (`contract/sources/registry.move`), notarizing SHA-256 payload digests (stored in historical `merkle_root` field) and exact record counts.
 - **Downstream Tooling:** Reader CLI (`scripts/shelby_reader.py`) supporting inspection, transparent `.gz` decompression, byte-range queries, authenticated AES decryption, and on-chain ledger attestation (`onchain`).
 - **Empirical SLA:** Verified 100% Availability and sub-second TTFB latency (<300ms for hot slices, ~811 ms for cold blobs).
 

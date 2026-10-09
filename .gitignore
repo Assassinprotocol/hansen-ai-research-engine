@@ -17,6 +17,7 @@ venv/
 # Proprietary Engine Files
 scripts/*
 !scripts/shelby_reader.py
+!scripts/benchmark_sla.py
 !scripts/pre-commit
 /tests/
 skills/
