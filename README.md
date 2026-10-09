@@ -16,7 +16,7 @@
   <img src="https://img.shields.io/badge/Dataset-Shelby_Protocol-green" />
   <img src="https://img.shields.io/badge/status-active-success" />
   <img src="https://img.shields.io/badge/license-proprietary-red" />
-  <img src="https://img.shields.io/badge/modules-30+-purple" />
+  <img src="https://img.shields.io/badge/modules-50+-purple" />
 </p>
 
 ---
@@ -40,16 +40,15 @@ Powered by local LLMs with optional Groq API fallback for high-availability. Onl
 
 https://youtu.be/YyaH22LkkEA
 
-
-\---
+---
 
 ## Key Features
 
 * Fully local AI market intelligence engine — sovereign, no cloud
-* 740+ Binance Futures pairs monitored in real-time (dynamic active cluster)
+* 740+ Binance Futures pairs monitored in real-time (741 active cluster)
 * 90-day rolling historical dataset (1M+ records)
-* 8 interconnected intelligence modules feeding central AI brain
-* Local LLM reasoning via llama.cpp (Qwen 2.5 7B)
+* 10 interconnected intelligence sources feeding central AI brain
+* Local LLM reasoning via llama.cpp (Qwen 2.5 7B) with Groq Cloud failover
 * Automated enriched dataset generation every ~4.5 hours (40,000+ records dynamic window)
 * Verifiable decentralized lake storage via Shelby Protocol (Hot & Cold tiers)
 * Real-time web dashboard with 15+ panels
@@ -57,22 +56,23 @@ https://youtu.be/YyaH22LkkEA
 * Automatic narrative detection (12 market narratives)
 * Multi-chain crypto payments (BSC/ARB/ETH/SOL/BTC/Aptos)
 
-\---
+---
 
 ## Tech Stack
 
 |Layer|Technology|
-|-|-|
+|---|---|
 |Language|Python 3.14|
 |Web Framework|Flask|
 |LLM Inference|llama.cpp (local) + Groq Cloud failover|
 |Database|SQLite|
-|Uploader|Node.js|
-|Market Data|Binance Futures API (public)|
+|Uploader|Node.js / TypeScript (`@shelby-protocol/sdk@0.9.2` + `@aptos-labs/ts-sdk`)|
+|Market Data|Binance Futures API (public websocket + REST)|
 |Dataset Storage|Shelby Protocol (shelbynet)|
+|Attestation|Aptos Move Smart Contract (`hansen::registry`)|
 |Frontend|Vanilla HTML/CSS/JS, Font Awesome, Sora + JetBrains Mono|
 
-\---
+---
 
 ## Quick Start
 
@@ -88,7 +88,7 @@ cd hansen-ai-research-engine
 
 ```bash
 python -m venv venv
-activate venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
@@ -102,29 +102,19 @@ cd ~/AI/llama.cpp
 **Start engine:**
 
 ```bash
-source ~/AI/hansen_engine/venv/bin/activate
-cd ~/AI/hansen_engine
+source venv/bin/activate
 python engine.py run
 ```
 
 **Start dashboard:**
 
 ```bash
-python -m dashboard.web\_dashboard
-```
-
-**Open Browser (Frontend & Backend):**
-
-```bash
-# Next.js Frontend (UI in active development)
-cd ~/AI/hansen-web && npm run dev
-# Browser: http://localhost:3000
-
-# Flask Backend API
+source venv/bin/activate
+python -m dashboard.web_dashboard
 # Browser: http://localhost:5000
 ```
 
-**Optional — Shelby publisher:**
+**Optional — Shelby publisher daemon:**
 
 ```bash
 cd ./shelby_uploader
@@ -134,7 +124,7 @@ npm run build && npm start
 # npm run dev
 ```
 
-\---
+---
 
 ## Architecture Overview
 
@@ -184,7 +174,7 @@ graph TD
     class RAG nodeRag;
 ```
 
-\---
+---
 
 ## Intelligence Modules
 
@@ -212,7 +202,7 @@ graph TD
 
 ### P5 — Sentiment + Narrative
 
-* **Fear \& Greed Index**: 4-component composite (momentum 40%, volatility 20%, volume 20%, breadth 20%)
+* **Fear & Greed Index**: 4-component composite (momentum 40%, volatility 20%, volume 20%, breadth 20%)
 * **12 Narratives**: Alt Season, BTC Dominance, Meme Mania, DeFi Revival, AI Narrative, L2 Pump, Market Fear, Capitulation, Accumulation, Gaming Surge, RWA Momentum, High Funding Warning
 
 ### P6 — Onchain Intelligence
@@ -230,16 +220,16 @@ graph TD
 
 ### Market Brain
 
-Central hub aggregating all 8 data sources into unified reasoning context. Powers AI reports, snapshot enrichment, and the `/api/v1/brain/context` endpoint.
+Central hub aggregating 10 data sources (`adv_regime`, `sector_performance`, `sentiment`, `alerts`, `whale_activity`, `screener`, `derivatives`, `correlation`, `mtf_confluence`, `breadth_div`) into a unified reasoning context. Powers AI reports, snapshot enrichment, and the `/api/v1/brain/context` endpoint.
 
-\---
+---
 
 ## Web Dashboard
 
 ### Dashboard Panels
 
 |Panel|Description|
-|-|-|
+|---|---|
 |Market Regime|Bull/Bear/Sideways per coin|
 |Volatility Index|Market-wide volatility level|
 |System Stats|Records, symbols, snapshot ETA, uploads|
@@ -264,12 +254,12 @@ Professional scrollytelling design with 3D rotating logo, parallax scroll, glass
 
 User management, payment tracking, audit log, role-based access (Viewer/Analyst/Admin).
 
-\---
+---
 
 ## API Endpoints
 
 |Method|Endpoint|Description|
-|-|-|-|
+|---|---|---|
 |GET|`/api/v1/movers`|Top movers|
 |GET|`/api/v1/system`|System statistics|
 |GET|`/api/v1/derivatives`|Funding, OI, liquidations|
@@ -287,7 +277,7 @@ User management, payment tracking, audit log, role-based access (Viewer/Analyst/
 |GET|`/api/v1/brain/context`|Full AI context|
 |GET|`/api/v1/ai-insight`|Latest AI analysis|
 
-\---
+---
 
 ## Enriched Snapshot Structure
 
@@ -296,105 +286,106 @@ Each snapshot uploaded to Shelby contains the full market intelligence context:
 ```json
 {
   "lake_header": {
-    "schema_version": "2.1.0",
-    "storage_tier": "hot_slice",
-    "record_count": 40014,
-    "unique_symbols": 741,
-    "window_hours": 4.5,
-    "merkle_root": "a7d9f...",
-    "contract_address": "0x7975...a07d"
+    "market_phase": "CHOP",
+    "energy_level": "LOW",
+    "liquidity_magnet": "Liquidation density is concentrated in a tight band immediately surrounding spot price, with long-dominant liquidations acting as the primary downside magnet if the range breaks.",
+    "systemic_risk": "NORMAL",
+    "positioning_imbalance": "Positioning z-scores are flat with neutral funding (0.0017) and no OI spikes, indicating a lack of directional conviction.",
+    "forensic_narrative": "Microstructure telemetry reveals a high-strength range regime with zero directional signal agreement and neutral funding rates."
   },
   "records": ["...40,000+ price records across 740+ pairs (dynamic 4.5h window)..."],
   "market_regime": {"regime": "sideways", "breakdown": {}},
   "volatility": {"index": 0.32, "level": "medium"},
-  "market\_insight": \["BTC holds relative momentum..."],
-  "top\_gainers": \[{"symbol": "PLAY", "change\_pct": 6.97}],
-  "top\_losers": \[{"symbol": "LYN", "change\_pct": -7.89}],
-  "sector\_performance": {
-    "ranking": \["...16 sectors ranked..."],
-    "top\_3": \["AI / Compute", "Infrastructure", "Meme"]
+  "market_insight": ["BTC holds relative momentum..."],
+  "top_gainers": [{"symbol": "PLAY", "change_pct": 6.97}],
+  "top_losers": [{"symbol": "LYN", "change_pct": -7.89}],
+  "sector_performance": {
+    "ranking": ["...16 sectors ranked..."],
+    "top_3": ["AI / Compute", "Infrastructure", "Meme"]
   },
-  "sector\_rotation": {"rotating\_in": \[], "rotating\_out": \[]},
-  "sentiment": {"score": 41.9, "level": "Cautious", "components": {}},
-  "active\_narratives": \[
-    {"label": "Accumulation Phase", "strength": 93.3},
-    {"label": "AI Narrative Hot", "strength": 10.9}
+  "sector_rotation": {"rotating_in": [], "rotating_out": []},
+  "sentiment": {"score": 38.2, "level": "Cautious", "components": {}},
+  "active_narratives": [
+    {"label": "Accumulation Phase", "strength": 93.3}
   ],
-  "alerts\_summary": {"stats": {"last\_24h": 643, "critical\_24h": 263}},
-  "whale\_activity": {"total\_signals": 6},
-  "exchange\_flow": {"net\_sentiment": "neutral"},
+  "alerts_summary": {"stats": {"last_24h": 643, "critical_24h": 263}},
+  "whale_activity": {"total_signals": 6},
+  "exchange_flow": {"net_sentiment": "neutral"},
   "opportunities": {
-    "momentum\_kings": \[],
-    "dip\_buys": \[],
-    "breakout\_candidates": \[]
+    "momentum_kings": [],
+    "dip_buys": [],
+    "breakout_candidates": []
   },
-  "correlation": {"strongest\_pairs": \[], "high\_beta": \[]},
+  "correlation": {"strongest_pairs": [], "high_beta": []},
   "derivatives": {
-    "funding\_summary": {},
-    "oi\_summary": {},
-    "liq\_summary": {},
-    "cascade\_alert": {}
+    "funding_summary": {},
+    "oi_summary": {},
+    "liq_summary": {}
   },
-  "brain\_data\_sources": 8,
-  "generated\_at": "2026-03-13T08:30:00"
+  "brain_total_sources": 10,
+  "generated_at": "2026-10-09T16:58:40"
 }
 ```
 
-\---
+---
 
 ## Module Structure
 
 ```
-hansen\_engine/
+hansen_engine/
 ├── engine.py                        # Core engine + Market Brain + market logger
 ├── config.py                        # System configuration
 │
-├── modules/                         # 30+ intelligence modules
-│   ├── market\_data.py               # Binance API (prices, ticker, klines)
-│   ├── market\_brain.py              # Central AI reasoning hub
-│   ├── sector\_performance.py        # 16-sector analysis (110+ coins)
-│   ├── correlation\_matrix.py        # 25-coin correlation + beta
-│   ├── alert\_engine.py              # Multi-type alert system
-│   ├── market\_heatmap.py            # Sector heatmap generator
-│   ├── smart\_screener.py            # 6-preset screener
-│   ├── sentiment\_engine.py          # Fear/Greed + narratives
-│   ├── onchain\_intel.py             # Whale, flow, stablecoin
-│   ├── ai\_reports.py                # LLM report generator
-│   ├── derivatives\_collector.py     # Funding, OI, liquidation
-│   ├── market\_regime.py             # Regime detection
-│   ├── momentum\_engine.py           # Momentum ranking
-│   ├── volatility\_index.py          # Volatility index
-│   ├── top\_movers.py                # Top movers detection
-│   ├── market\_intelligence.py       # Legacy sector analysis
-│   ├── funding\_rate.py              # Funding tracker
-│   ├── open\_interest.py             # OI history
-│   ├── liquidation\_feed.py          # Liquidation monitor
-│   └── ...                          # + 15 more utility modules
+├── modules/                         # 50+ intelligence & infrastructure modules
+│   ├── market_data.py               # Binance API (prices, ticker, klines)
+│   ├── market_brain.py              # Central AI reasoning hub (10 data sources)
+│   ├── sector_performance.py        # 16-sector analysis (110+ coins)
+│   ├── correlation_matrix.py        # 25-coin correlation + beta
+│   ├── alert_engine.py              # Multi-type alert system
+│   ├── market_heatmap.py            # Sector heatmap generator
+│   ├── smart_screener.py            # 6-preset screener
+│   ├── sentiment_engine.py          # Fear/Greed + 12 narratives
+│   ├── derivatives_collector.py     # Funding rates, OI, liquidation feeds
+│   ├── market_regime.py             # Advanced regime detector
+│   ├── mtf_confluence.py            # Multi-timeframe confluence scorer
+│   ├── momentum_engine.py           # Momentum ranking & velocity
+│   ├── depth_collector.py           # Orderbook depth sampler
+│   ├── binance_guard.py             # Anti-ban adaptive rate limiter
+│   ├── ai_reports.py                # LLM report generator (Flash/Daily/Weekly)
+│   └── ...                          # + 35 more factor & utility modules
 │
-├── dashboard/                       # Web + CLI dashboards
-│   ├── web\_dashboard.py             # Flask dashboard (15+ panels)
-│   ├── landing\_page.py              # Scrollytelling landing page
-│   ├── dashboard\_config.py          # Configuration
-│   ├── db\_manager.py                # SQLite user DB
-│   ├── email\_service.py             # Gmail SMTP
-│   ├── payment\_detector.py          # Multi-chain payments
-│   └── ...                          # + CLI dashboards
+├── dashboard/                       # Web & CLI telemetry
+│   ├── web_dashboard.py             # Flask dashboard (15+ panels)
+│   ├── landing_page.py              # Scrollytelling landing page
+│   ├── dashboard_config.py          # Configuration
+│   ├── db_manager.py                # SQLite user DB
+│   ├── email_service.py             # Gmail SMTP
+│   └── payment_detector.py          # Multi-chain crypto payments
 │
-├── agents/                          # Autonomous agents
-├── pipeline/                        # Training + research pipelines
-├── core/                            # Logger, profile, insight
+├── contract/                        # On-chain attestation
+│   ├── Move.toml                    # Aptos package manifest
+│   └── sources/registry.move        # hansen::registry smart contract
+│
+├── shelby_uploader/                 # Decentralized uploader daemon
+│   ├── src/uploader.ts              # TypeScript uploader daemon
+│   ├── src/network.ts               # Dynamic multi-network resolver
+│   └── src/crypto.ts                # AES-256-GCM authenticated encryption
+│
+├── scripts/                         # Downstream tooling & verification
+│   ├── shelby_reader.py             # Consumer query CLI (range/verify/decrypt/onchain)
+│   └── benchmark_sla.py             # Empirical TTFB & availability probe
+│
+├── agents/                          # Autonomous agent stubs
+├── core/                            # Engine core, logger, profile, memory
 ├── router/                          # Intent routing
 ├── rag/                             # Retrieval-augmented generation
-├── data/                            # Runtime data + AI reports
 └── dataset/                         # Snapshot lifecycle
     ├── pending/                     # Awaiting upload
     ├── uploaded/                    # Successfully uploaded
-    ├── failed/                      # Failed uploads
-    ├── processed/                   # Processed for training
-    └── training/                    # Training-ready datasets
+    └── failed/                      # Failed uploads (auto-recovery)
 ```
 
-\---
+---
 
 ## CLI Usage
 
@@ -421,26 +412,27 @@ train                         # Training pipeline
 research "topic"              # Research topic
 ```
 
-\---
+---
 
 ## Roadmap
 
-* \[x] AI Trade Signals
-* \[x] Advanced regime detection
-* \[x] Multi-timeframe analysis (15m / 1h / 4h)
-* \[x] High-frequency depth collection
-* \[/] Multi-exchange support (partial)
-* \[ ] Next.js dashboard frontend
-* \[ ] Public dataset explorer
-* \[ ] Shelby mainnet dataset publishing
-* \[ ] Discord bot + webhook alerts (P8)
-* \[ ] API monetization layer
+* [x] AI Trade Signals
+* [x] Advanced regime detection
+* [x] Multi-timeframe analysis (15m / 1h / 4h)
+* [x] High-frequency depth collection
+* [/] Multi-exchange support (partial)
+* [ ] Next.js dashboard frontend
+* [ ] Public dataset explorer
+* [ ] Shelby mainnet dataset publishing
+* [ ] Discord bot + webhook alerts (P8)
+* [ ] API monetization layer
 
-\---
+---
 
 ## Decentralized Data Lake (Shelby Protocol)
 
 Hansen AI uses [Shelby Protocol](https://shelby.xyz) as its decentralized storage layer for verifiable market intelligence data. Detailed technical specifications:
+* 📄 [System Architecture Specification](docs/architecture.md)
 * 📄 [Shelby Protocol Integration Guide](docs/shelby_integration.md)
 
 **Decentralized Lake Storage Architecture:**
@@ -456,19 +448,17 @@ Hansen AI uses [Shelby Protocol](https://shelby.xyz) as its decentralized storag
 
 The background TypeScript uploader automatically publishes datasets to the `hansen_ai/market_pipeline/` namespace on the active Shelby network.
 
-\---
+---
 
 ## System Requirements
 
 * Python 3.14+
-* Node.js (Shelby uploader)
+* Node.js (Shelby uploader daemon)
 * llama.cpp server at `http://127.0.0.1:8080`
-* WSL with Shelby CLI (dataset upload)
 * Binance Futures API access (public, no key required)
 
-\---
+---
 
 ## License
 
 Proprietary. All rights reserved.
-
