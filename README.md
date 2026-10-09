@@ -52,7 +52,7 @@ https://youtu.be/YyaH22LkkEA
 * Local LLM reasoning via llama.cpp (Qwen 2.5 7B)
 * Automated enriched dataset generation every ~4.5 hours (40,000+ records dynamic window)
 * Verifiable decentralized lake storage via Shelby Protocol (Hot & Cold tiers)
-* Real-time web dashboard & desktop telemetry widget (15+ panels)
+* Real-time web dashboard with 15+ panels
 * AI-generated market reports (flash/daily/weekly)
 * Automatic narrative detection (12 market narratives)
 * Multi-chain crypto payments (BSC/ARB/ETH/SOL/BTC/Aptos)
@@ -153,7 +153,7 @@ graph TD
     BRAIN --> LLM["Local LLM Inference<br/>Qwen 2.5 7B · local runtime"]
 
     %% TIER 4: OUTPUT & FORENSIC SPLIT
-    LLM --> DASH["Web Dashboard & Eww Widget<br/>live telemetry & AI insights"]
+    LLM --> DASH["Web Dashboard<br/>live telemetry & AI insights"]
     LLM --> FORENSIC["Quantitative Forensics<br/>microstructure & regime analytics"]
     BRAIN -->|hot header tier · uncompressed| META["Hot Lake Companion Header<br/>_meta.json · <50 KB"]
     BRAIN -->|cold lake tier · 4.5h dynamic| SNAP["Market Snapshot<br/>snapshot_*.json.gz · 40K+ records"]
@@ -164,9 +164,8 @@ graph TD
     SNAP --> SHELBY_COLD[("Shelby Cold Lake<br/>erasure-coded persistence")]
     ARCH --> SHELBY_COLD
 
-    %% TIER 6: ACTIVE RAG & VERIFIABLE PROOF
-    SHELBY_HOT -->|HTTP 206 byte-range <300ms| RAG["Active RAG Reader<br/>modules/shelby_reader.py"]
-    RAG -.->|microstructure context feedback| LLM
+    %% TIER 6: CONSUMPTION & PROOF
+    SHELBY_HOT -->|HTTP 206 byte-range <300ms| RAG["Active RAG Reader<br/>modules/shelby_reader.py (AI prompt context)"]
     SHELBY_COLD --> CLI["External Reader CLI<br/>scripts/shelby_reader.py"]
     SHELBY_HOT -->|on-chain attestation| APTOS["Aptos Move Contract<br/>on-chain Merkle & count attestation"]
     SHELBY_COLD -->|on-chain attestation| APTOS

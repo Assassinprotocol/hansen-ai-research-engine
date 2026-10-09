@@ -680,10 +680,10 @@ async function uploadFile(filePath: string): Promise<void> {
     fs.renameSync(filePath, destUploadedPath);
     const companionMeta = filePath.replace(/\.json(\.gz)?$/, "_meta.json");
     if (fs.existsSync(companionMeta)) {
+      const metaBasename = path.basename(companionMeta);
+      const metaBlobName = `${prefix}/${metaBasename}`;
+      const metaContent = fs.readFileSync(companionMeta);
       try {
-        const metaBasename = path.basename(companionMeta);
-        const metaBlobName = `${prefix}/${metaBasename}`;
-        const metaContent = fs.readFileSync(companionMeta);
         await client.upload({
           blobData: metaContent,
           signer,
@@ -703,7 +703,40 @@ async function uploadFile(filePath: string): Promise<void> {
           metaMerkle
         );
       } catch (metaErr: any) {
-        log("WARN", "Companion metadata upload to Shelby Hot Storage skipped", { error: metaErr.message });
+        if (
+          metaErr.message?.includes("E_INSUFFICIENT_FUNDS") &&
+          typeof (client as any).fundAccountWithShelbyUSD === "function"
+        ) {
+          try {
+            log("INFO", "Auto-topping up ShelbyUSD storage credits after E_INSUFFICIENT_FUNDS...");
+            await (client as any).fundAccountWithShelbyUSD({
+              address: signer.accountAddress,
+              amount: 100_000_000,
+            });
+            await client.upload({
+              blobData: metaContent,
+              signer,
+              blobName: metaBlobName,
+              options: uploadOptions,
+            } as any);
+            log("INFO", "Uploaded companion metadata blob to Shelby Hot Storage after topup", { blobName: metaBlobName });
+            const metaMerkle = crypto.createHash("sha256").update(metaContent).digest("hex");
+            await recordUpload(
+              metaBasename,
+              true,
+              "snapshot",
+              metaBlobName,
+              undefined,
+              "",
+              metaContent.length,
+              metaMerkle
+            );
+          } catch (retryErr: any) {
+            log("WARN", "Companion metadata upload retry failed", { error: retryErr.message });
+          }
+        } else {
+          log("WARN", "Companion metadata upload to Shelby Hot Storage skipped", { error: metaErr.message });
+        }
       }
       try {
         fs.renameSync(companionMeta, path.join(cfg.uploadedDir, path.basename(companionMeta)));
