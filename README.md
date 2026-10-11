@@ -66,7 +66,7 @@ https://youtu.be/YyaH22LkkEA
 |Web Framework|Flask|
 |LLM Inference|llama.cpp (local) + Groq Cloud failover|
 |Database|SQLite|
-|Uploader|Node.js / TypeScript (`@shelby-protocol/sdk@0.9.2` + `@aptos-labs/ts-sdk`)|
+|Uploader|Node.js / TypeScript (`@shelby-protocol/sdk@0.10.0` + `@aptos-labs/ts-sdk`)|
 |Market Data|Binance Futures API (public websocket + REST)|
 |Dataset Storage|Shelby Protocol (shelbynet)|
 |Attestation|Aptos Move Smart Contract (`hansen::registry`)|
@@ -440,7 +440,7 @@ Hansen AI uses [Shelby Protocol](https://shelby.xyz) as its decentralized storag
 - **Cold Lake Tier:** Enriched market snapshots (40,000+ records across 740+ pairs via dynamic 4.5h window, compressed with native Gzip to ~730 KB `.json.gz`, 85.6% storage reduction) published cyclically.
 - **Encrypted Tier:** High-frequency depth archives (~21 MB/day) encrypted client-side using **AES-256-GCM** before decentralized placement.
 - **Active RAG Client:** Sub-second range reader (`modules/shelby_reader.py`) fetching hot lake headers directly from Shelby storage nodes for AI prompt augmentation with local fallback.
-- **Multi-Network Architecture:** Dynamic 1-switch network toggle (`ACTIVE_NETWORK=shelbynet | private_mainnet | testnet | localnet`) powered by `@shelby-protocol/sdk@0.9.2`.
+- **Multi-Network Architecture:** Dynamic 1-switch network toggle (`ACTIVE_NETWORK=shelbynet | private_mainnet | testnet | localnet`) powered by `@shelby-protocol/sdk@0.10.0`.
 - **Gas Safety Guard:** Automated signer balance floor (0.2 APT) and 5,000 Octas hard ceiling on Aptos Move attestation calls.
 - **On-Chain Proof:** Permanent attestation via Aptos Move smart contract (`contract/sources/registry.move`), notarizing SHA-256 payload digests (stored in historical `merkle_root` field) and exact record counts.
 - **Downstream Tooling:** Reader CLI (`scripts/shelby_reader.py`) supporting inspection, transparent `.gz` decompression, byte-range queries, authenticated AES decryption, and on-chain ledger attestation (`onchain`).

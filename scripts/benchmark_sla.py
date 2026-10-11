@@ -16,20 +16,47 @@ import urllib.error
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "modules"))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-try:
-    from modules.network_config import get_network_config
-except ImportError:
-    try:
-        from network_config import get_network_config
-    except ImportError:
-        def get_network_config(target=None):
-            return {
-                "name": "shelbynet",
-                "network_type": "shelbynet",
-                "rpc_url": os.environ.get("SHELBY_RPC_URL", "https://shelby.shelbynet.shelby.xyz/shelby"),
-                "aptos_rpc_url": os.environ.get("APTOS_RPC_URL", "https://api.shelbynet.shelby.xyz/v1"),
-                "contract_address": os.environ.get("HANSEN_REGISTRY_ADDRESS", os.environ.get("SHELBY_ACCOUNT", "0x797570358c2208ce0e225f07fe727174c9cc4500072967dd963e645c95c2a07d")),
-            }
+NETWORK_PRESETS = {
+    "shelbynet": {
+        "name": "shelbynet",
+        "network_type": "shelbynet",
+        "rpc_url": "https://shelby.shelbynet.shelby.xyz/shelby",
+        "aptos_rpc_url": "https://api.shelbynet.shelby.xyz/v1",
+        "contract_address": "0x797570358c2208ce0e225f07fe727174c9cc4500072967dd963e645c95c2a07d",
+    },
+    "private_mainnet": {
+        "name": "private_mainnet",
+        "network_type": "custom",
+        "rpc_url": os.environ.get("PRIVATE_MAINNET_SHELBY_RPC", ""),
+        "aptos_rpc_url": os.environ.get("PRIVATE_MAINNET_APTOS_RPC", ""),
+        "contract_address": os.environ.get("PRIVATE_MAINNET_REGISTRY_ADDRESS", ""),
+    },
+    "testnet": {
+        "name": "testnet",
+        "network_type": "custom",
+        "rpc_url": os.environ.get("TESTNET_SHELBY_RPC", "https://shelby.testnet.shelby.xyz/shelby"),
+        "aptos_rpc_url": os.environ.get("TESTNET_APTOS_RPC", "https://api.testnet.aptoslabs.com/v1"),
+        "contract_address": os.environ.get("TESTNET_REGISTRY_ADDRESS", ""),
+    },
+    "localnet": {
+        "name": "localnet",
+        "network_type": "local",
+        "rpc_url": os.environ.get("LOCAL_SHELBY_RPC", "http://127.0.0.1:8080"),
+        "aptos_rpc_url": os.environ.get("LOCAL_APTOS_RPC", "http://127.0.0.1:8080/v1"),
+        "contract_address": os.environ.get("LOCAL_REGISTRY_ADDRESS", ""),
+    },
+}
+
+def get_network_config(target=None):
+    raw = (target or os.environ.get("ACTIVE_NETWORK") or os.environ.get("SHELBY_NETWORK") or "shelbynet").lower().strip()
+    preset = NETWORK_PRESETS.get(raw, NETWORK_PRESETS["shelbynet"])
+    return {
+        "name": preset["name"],
+        "network_type": preset["network_type"],
+        "rpc_url": os.environ.get("SHELBY_RPC_URL") or preset["rpc_url"],
+        "aptos_rpc_url": os.environ.get("APTOS_RPC_URL") or preset["aptos_rpc_url"],
+        "contract_address": os.environ.get("HANSEN_REGISTRY_ADDRESS") or os.environ.get("SHELBY_ACCOUNT") or preset["contract_address"],
+    }
 
 _NET = get_network_config()
 DEFAULT_ACCOUNT = _NET.get("contract_address", "0x797570358c2208ce0e225f07fe727174c9cc4500072967dd963e645c95c2a07d")
