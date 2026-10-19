@@ -387,6 +387,7 @@ function withTimeout<T>(promise: Promise<T>, ms: number, label: string): Promise
 let cachedBalanceApt: number | null = null;
 let balanceLastFetchedAt = 0;
 let gasPauseUntil = 0;
+let lastFaucetAttemptMs = 0;
 
 async function getSignerBalanceApt(forceRefresh = false): Promise<number> {
   const now = Date.now();
@@ -430,11 +431,29 @@ async function checkSignerBalance(): Promise<void> {
   }
 }
 
-async function fundSignerOnce(): Promise<void> {
+async function fundSignerOnce(reason = "manual"): Promise<void> {
   if (process.env.SHELBY_AUTO_FAUCET !== "true") {
     log("INFO", "Auto-faucet disabled (production/credits mode)");
     return;
   }
+
+  const currentApt = await getSignerBalanceApt().catch(() => 0);
+  if (currentApt >= cfg.minSignerBalanceApt) {
+    log("INFO", `[FAUCET:SKIPPED] Balance (${currentApt.toFixed(4)} APT) >= floor (${cfg.minSignerBalanceApt} APT). Faucet not needed.`, { reason });
+    return;
+  }
+
+  const now = Date.now();
+  const elapsed = now - lastFaucetAttemptMs;
+  if (lastFaucetAttemptMs > 0 && elapsed < cfg.faucetCooldownMs) {
+    const remainingMins = Math.ceil((cfg.faucetCooldownMs - elapsed) / 60_000);
+    log("WARN", `[FAUCET:THROTTLE] Faucet requested too soon (${reason}). Cooldown active for next ${remainingMins}m.`);
+    return;
+  }
+
+  lastFaucetAttemptMs = now;
+  log("INFO", `[FAUCET:REQUEST] Requesting testnet drip (${reason}). Current balance: ${currentApt.toFixed(4)} APT`);
+
   try {
     await withTimeout(
       client.fundAccountWithAPT({ address: signer.accountAddress, amount: 100_000_000 }),
@@ -442,6 +461,7 @@ async function fundSignerOnce(): Promise<void> {
       "fundAccountWithAPT"
     );
     log("INFO", "Funded signer with testnet APT");
+    cachedBalanceApt = null;
   } catch (err) {
     log("WARN", "APT funding skipped", { error: (err as Error).message });
   }
@@ -657,12 +677,16 @@ async function uploadFile(filePath: string): Promise<void> {
       ? ({ selectedLocation: location, locationHint: location } as any)
       : undefined;
 
-    await client.upload({
-      blobData: content,
-      signer,
-      blobName,
-      options: uploadOptions,
-    } as any);
+    await withTimeout(
+      client.upload({
+        blobData: content,
+        signer,
+        blobName,
+        options: uploadOptions,
+      } as any),
+      120_000,
+      "client.upload"
+    );
 
     content = null;
 
@@ -684,12 +708,16 @@ async function uploadFile(filePath: string): Promise<void> {
       const metaBlobName = `${prefix}/${metaBasename}`;
       const metaContent = fs.readFileSync(companionMeta);
       try {
-        await client.upload({
-          blobData: metaContent,
-          signer,
-          blobName: metaBlobName,
-          options: uploadOptions,
-        } as any);
+        await withTimeout(
+          client.upload({
+            blobData: metaContent,
+            signer,
+            blobName: metaBlobName,
+            options: uploadOptions,
+          } as any),
+          60_000,
+          "client.upload companionMeta"
+        );
         log("INFO", "Uploaded companion metadata blob to Shelby Hot Storage", { blobName: metaBlobName });
         const metaMerkle = crypto.createHash("sha256").update(metaContent).digest("hex");
         await recordUpload(
@@ -713,12 +741,16 @@ async function uploadFile(filePath: string): Promise<void> {
               address: signer.accountAddress,
               amount: 100_000_000,
             });
-            await client.upload({
-              blobData: metaContent,
-              signer,
-              blobName: metaBlobName,
-              options: uploadOptions,
-            } as any);
+            await withTimeout(
+              client.upload({
+                blobData: metaContent,
+                signer,
+                blobName: metaBlobName,
+                options: uploadOptions,
+              } as any),
+              60_000,
+              "client.upload companionMeta retry"
+            );
             log("INFO", "Uploaded companion metadata blob to Shelby Hot Storage after topup", { blobName: metaBlobName });
             const metaMerkle = crypto.createHash("sha256").update(metaContent).digest("hex");
             await recordUpload(

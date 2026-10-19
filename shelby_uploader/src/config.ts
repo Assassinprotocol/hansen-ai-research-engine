@@ -1,20 +1,22 @@
+import path from "path";
 import dotenv from "dotenv";
 import type { UploaderConfig } from "./types.js";
 import { log } from "./logger.js";
 import { resolveNetworkConfig } from "./network.js";
 
 export function loadConfig(): UploaderConfig {
-  const envPath = "/home/hansen/AI/hansen_engine/.env";
+  const baseDir = process.env.HANSEN_BASE_DIR || path.resolve(process.cwd(), "..");
+  const envPath = process.env.SHELBY_ENV_PATH || path.resolve(process.cwd(), ".env");
   dotenv.config({ path: envPath });
   const net = resolveNetworkConfig();
 
   return {
     envPath,
-    keyFile: "/home/hansen/AI/shelby_uploader/.aptos_key",
-    watchDir: "/home/hansen/AI/hansen_engine/dataset/pending",
-    uploadedDir: "/home/hansen/AI/hansen_engine/dataset/uploaded",
-    failedDir: "/home/hansen/AI/hansen_engine/dataset/failed",
-    trackerFile: "/home/hansen/AI/hansen_engine/data/upload_tracker.json",
+    keyFile: process.env.SHELBY_KEY_FILE || path.resolve(process.cwd(), ".aptos_key"),
+    watchDir: process.env.SHELBY_WATCH_DIR || path.join(baseDir, "dataset/pending"),
+    uploadedDir: process.env.SHELBY_UPLOADED_DIR || path.join(baseDir, "dataset/uploaded"),
+    failedDir: process.env.SHELBY_FAILED_DIR || path.join(baseDir, "dataset/failed"),
+    trackerFile: process.env.SHELBY_TRACKER_FILE || path.join(baseDir, "data/upload_tracker.json"),
     maxRetries: 3,
     maxPending: 20,
     scanIntervalMs: 60_000,
@@ -29,8 +31,9 @@ export function loadConfig(): UploaderConfig {
     maxUploadedDepthKeep: 2,
     maxUploadedSnapshotsKeep: 30,
     contractAddress: net.contractAddress,
-    minSignerBalanceApt: Number(process.env.SHELBY_MIN_GAS_APT) || 0.2,
+    minSignerBalanceApt: Number(process.env.SHELBY_MIN_GAS_APT) || 2.1,
     balanceCacheTtlMs: Number(process.env.SHELBY_BALANCE_CACHE_TTL_MS) || 300_000,
+    faucetCooldownMs: Number(process.env.SHELBY_FAUCET_COOLDOWN_MS) || 3600_000,
     maxAttestationGasAmount: Number(process.env.SHELBY_MAX_ATTESTATION_GAS) || 5_000,
   };
 }

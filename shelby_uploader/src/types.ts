@@ -29,6 +29,7 @@ export interface UploaderConfig {
   contractAddress: string;
   minSignerBalanceApt: number;
   balanceCacheTtlMs: number;
+  faucetCooldownMs: number;
   maxAttestationGasAmount: number;
   networkName: string;
   networkType: "shelbynet" | "local" | "custom";

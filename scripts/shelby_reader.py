@@ -162,7 +162,8 @@ def cmd_download(args):
             downloaded = 0
             hasher = hashlib.sha256()
 
-            with open(dest_path, "wb") as f:
+            temp_dest = dest_path + ".tmp"
+            with open(temp_dest, "wb") as f:
                 while True:
                     chunk = resp.read(64 * 1024)
                     if not chunk:
@@ -174,6 +175,7 @@ def cmd_download(args):
                         pct = (downloaded / total_size) * 100
                         print(f"\r[*] Progress: {downloaded}/{total_size} bytes ({pct:.1f}%)", end="", flush=True)
 
+            os.replace(temp_dest, dest_path)
             print(f"\n[+] Download completed successfully!")
             print(f"[+] File Size:  {downloaded} bytes")
             print(f"[+] SHA-256:    {hasher.hexdigest()}")
@@ -186,9 +188,19 @@ def cmd_download(args):
                     raw_out.write(gz_in.read())
                 print(f"[+] Successfully unpacked plaintext to: {unpacked_dest}")
     except urllib.error.HTTPError as e:
+        if os.path.exists(dest_path + ".tmp"):
+            try:
+                os.remove(dest_path + ".tmp")
+            except OSError:
+                pass
         print(f"\n[-] HTTP Error {e.code}: {e.reason}")
         sys.exit(1)
     except Exception as e:
+        if os.path.exists(dest_path + ".tmp"):
+            try:
+                os.remove(dest_path + ".tmp")
+            except OSError:
+                pass
         print(f"\n[-] Download Failed: {e}")
         sys.exit(1)
 
