@@ -135,7 +135,7 @@ async function recordUpload(
       network: cfg.networkName,
       ...(dataType ? { dataType } : {}),
       ...(blobName ? { blobName } : {}),
-      ...(encryptionKey ? { encryptionKey } : {}),
+      // encryptionKey intentionally excluded from tracker
       ...(detail ? { detail } : {}),
       ...(sizeBytes !== undefined ? { sizeBytes } : {}),
       ...(merkleRootHex ? { merkleRootHex } : {}),
